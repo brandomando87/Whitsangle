@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Whit's Angle of Life Photography — Peoria &amp; Central Illinois</title>
-  <meta name="description" content="Whit's Angle of Life Photography in Peoria & Central Illinois. Editorial portraits, candid couples, brand shoots, and twilight storytelling." />
+  <title>Whit's Angle of Life — A Visual Journal</title>
+  <meta name="description" content="Whit's Angle of Life — a living photo journal capturing everyday moments, twilight skies, riverfront views, and street details around Peoria, Illinois." />
 
   <!-- Google Fonts: Editorial Display Serif, Expressive Script, Clean Modern UI Sans -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -70,7 +70,7 @@
         radial-gradient(ellipse 40% 34% at 14% 20%, rgba(74, 144, 245, 0.06), transparent 70%);
     }
 
-    .cta-riverfront-glow {
+    .closing-riverfront-glow {
       background:
         radial-gradient(ellipse 52% 85% at 18% 100%, rgba(74, 144, 245, 0.22), transparent 65%),
         radial-gradient(ellipse 44% 75% at 50% 100%, rgba(242, 180, 65, 0.16), transparent 65%),
@@ -131,10 +131,10 @@
       background-color: #0D1017;
       border: 2.5px solid rgba(255, 255, 255, 0.95);
       box-shadow:
-        0 18px 42px -10px rgba(0, 0, 0, 0.92),
+        0 20px 48px -10px rgba(0, 0, 0, 0.94),
         0 0 0 4px rgba(10, 13, 18, 0.9),
-        0 0 26px -2px rgba(74, 144, 245, 0.36),
-        0 0 42px -12px rgba(242, 180, 65, 0.28);
+        0 0 28px -2px rgba(74, 144, 245, 0.38),
+        0 0 46px -12px rgba(242, 180, 65, 0.3);
       overflow: hidden;
       transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.4s ease;
     }
@@ -142,13 +142,13 @@
     .logo-medallion:hover {
       transform: scale(1.045);
       box-shadow:
-        0 22px 48px -10px rgba(0, 0, 0, 0.96),
+        0 24px 52px -10px rgba(0, 0, 0, 0.96),
         0 0 0 4px rgba(10, 13, 18, 0.95),
-        0 0 34px 0px rgba(74, 144, 245, 0.5),
-        0 0 48px -8px rgba(242, 180, 65, 0.38);
+        0 0 36px 0px rgba(74, 144, 245, 0.52),
+        0 0 52px -8px rgba(242, 180, 65, 0.4);
     }
 
-    /* Glowing Book Now Pill Button */
+    /* Glowing Pill Button */
     .btn-glow-pill {
       background: linear-gradient(135deg, rgba(74, 144, 245, 0.18), rgba(242, 180, 65, 0.14));
       border: 1px solid rgba(74, 144, 245, 0.55);
@@ -231,7 +231,7 @@
       z-index: 2;
     }
 
-    /* Portfolio Filter Pills */
+    /* Journal Filter Pills */
     .filter-tab {
       font-size: 0.7rem;
       letter-spacing: 0.18em;
@@ -338,16 +338,16 @@
 <body class="selection:bg-[#4A90F5]/35 selection:text-white">
 
   <!-- ========================================================================
-       1. MINIMALIST SPLIT NAVIGATION WITH OVERSIZED FLOATING LOGO MEDALLION
+       1. MINIMALIST SPLIT NAVIGATION WITH LARGER FLOATING LOGO MEDALLION
        ======================================================================== -->
   <header id="site-header" class="glass-nav sticky top-0 z-40 w-full">
     <div class="max-w-[1340px] mx-auto px-4 sm:px-8">
-      <div class="h-20 md:h-[88px] flex items-center justify-between gap-4 relative">
+      <div class="h-24 md:h-[100px] flex items-center justify-between gap-4 relative">
 
         <!-- Left Navigation Links (Desktop) -->
         <nav class="hidden lg:flex items-center gap-10 flex-1" aria-label="Primary left navigation">
-          <a href="#portfolio" class="nav-item">Portfolio</a>
-          <a href="#sessions" class="nav-item">Sessions</a>
+          <a href="#journal-grid" class="nav-item">Photo Journal</a>
+          <a href="#featured" class="nav-item">Featured</a>
         </nav>
 
         <!-- Mobile Hamburger Trigger -->
@@ -364,38 +364,37 @@
           </button>
         </div>
 
-        <!-- Center Oversized Floating Circular Logo Medallion (UNCHANGED) -->
+        <!-- Center Oversized Floating Circular Logo Medallion (ENLARGED) -->
         <a
           href="#top"
-          aria-label="Whit's Angle of Life Photography — Home"
-          class="relative z-30 flex items-center justify-center shrink-0 translate-y-4 md:translate-y-6"
+          aria-label="Whit's Angle of Life — Home"
+          class="relative z-30 flex items-center justify-center shrink-0 translate-y-6 sm:translate-y-7 md:translate-y-9"
         >
-          <div class="logo-medallion w-[84px] h-[84px] sm:w-[98px] sm:h-[98px] md:w-[118px] md:h-[118px] flex items-center justify-center">
-            <!-- Loads Wesbitelogo.jpg seamlessly when placed in the same directory -->
+          <div class="logo-medallion w-[104px] h-[104px] sm:w-[124px] sm:h-[124px] md:w-[148px] md:h-[148px] flex items-center justify-center">
+            <!-- Main Logo (Unchanged) -->
             <img
               src="Wesbitelogo.jpg"
               alt="Whit's Angle of Life Photography Logo"
               class="w-full h-full object-cover"
               onerror="this.style.display='none'; this.nextElementSibling.style.display='block';"
             />
-            <!-- Detailed Inline SVG Recreation Fallback -->
+            <!-- Inline SVG Fallback -->
             <div class="w-full h-full hidden" data-logo-svg="header"></div>
           </div>
         </a>
 
-        <!-- Right Navigation Links + Glowing Book Now Pill -->
+        <!-- Right Navigation Links + Slideshow Pill -->
         <div class="flex items-center justify-end gap-6 lg:gap-9 flex-1">
           <nav class="hidden lg:flex items-center gap-9" aria-label="Primary right navigation">
-            <a href="#about" class="nav-item">About</a>
-            <a href="#journal" class="nav-item">Journal</a>
+            <a href="#about" class="nav-item">Whit's View</a>
           </nav>
 
           <button
             type="button"
-            onclick="openBookingModal()"
+            onclick="openLightboxByIndex(0)"
             class="btn-glow-pill px-4 sm:px-6 py-2.5 rounded-full text-[10.5px] sm:text-[11px] font-semibold tracking-[0.2em] uppercase cursor-pointer whitespace-nowrap"
           >
-            Book Now
+            Slideshow
           </button>
         </div>
       </div>
@@ -413,7 +412,7 @@
         <div class="flex items-center justify-between pb-6 mb-7 border-b border-[#1E2736]">
           <div>
             <p class="font-serif-display text-xl tracking-[0.12em] uppercase text-[#F4F6FA]">Whit's Angle</p>
-            <p class="text-[10px] tracking-[0.22em] uppercase text-[#F2B441] mt-0.5">Peoria, Illinois</p>
+            <p class="text-[10px] tracking-[0.22em] uppercase text-[#F2B441] mt-0.5">Live Photo Journal</p>
           </div>
           <button type="button" onclick="toggleMobileMenu()" aria-label="Close menu" class="p-2 rounded-lg text-[#9AA5B8] hover:text-white hover:bg-white/5 cursor-pointer">
             <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
@@ -423,85 +422,84 @@
         </div>
 
         <nav class="flex flex-col gap-5">
-          <a href="#portfolio" onclick="toggleMobileMenu()" class="nav-item !text-xs">Portfolio</a>
-          <a href="#sessions" onclick="toggleMobileMenu()" class="nav-item !text-xs">Sessions</a>
-          <a href="#about" onclick="toggleMobileMenu()" class="nav-item !text-xs">About Whit</a>
-          <a href="#journal" onclick="toggleMobileMenu()" class="nav-item !text-xs">Client Notes</a>
+          <a href="#journal-grid" onclick="toggleMobileMenu()" class="nav-item !text-xs">Photo Journal</a>
+          <a href="#featured" onclick="toggleMobileMenu()" class="nav-item !text-xs">Featured Moment</a>
+          <a href="#about" onclick="toggleMobileMenu()" class="nav-item !text-xs">Whit's View</a>
         </nav>
       </div>
 
       <div class="pt-6 border-t border-[#1E2736] space-y-3">
-        <button type="button" onclick="toggleMobileMenu(); openBookingModal();" class="btn-primary-gold w-full py-3 rounded-full text-[11px] tracking-[0.2em] uppercase cursor-pointer">
-          Book a Session
+        <button type="button" onclick="toggleMobileMenu(); openLightboxByIndex(0);" class="btn-primary-gold w-full py-3 rounded-full text-[11px] tracking-[0.2em] uppercase cursor-pointer">
+          Open Slideshow
         </button>
-        <p class="text-[10.5px] text-center text-[#6C778C] tracking-wider">Peoria &amp; Central Illinois</p>
+        <p class="text-[10.5px] text-center text-[#6C778C] tracking-wider">Peoria, Illinois</p>
       </div>
     </aside>
   </div>
 
   <!-- ========================================================================
-       2. ASYMMETRIC SPLIT HERO WITH MIXED-GEOMETRY COLLAGE
+       2. ASYMMETRIC SPLIT HERO WITH MIXED-GEOMETRY COLLAGE (ONLY YOUR PHOTOS)
        ======================================================================== -->
-  <section id="top" class="relative hero-glow-field pt-16 sm:pt-20 lg:pt-24 pb-20 sm:pb-24 lg:pb-28 overflow-hidden">
+  <section id="top" class="relative hero-glow-field pt-24 sm:pt-28 lg:pt-32 pb-20 sm:pb-24 lg:pb-28 overflow-hidden">
     <div class="max-w-[1320px] mx-auto px-5 sm:px-8">
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-14 lg:gap-10 items-center">
 
-        <!-- LEFT COLUMN: Editorial Headline, Authentic Intro, Dual CTAs & Trust Highlights -->
+        <!-- LEFT COLUMN: Personal Journal Intro & Actions -->
         <div class="lg:col-span-6 xl:col-span-5 text-left reveal">
           <!-- Eyebrow Tag -->
           <div class="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-[#11161F]/90 border border-[#1E2736] mb-7">
             <span class="w-1.5 h-1.5 rounded-full bg-[#4A90F5] shadow-[0_0_8px_#4A90F5]"></span>
             <span class="text-[10px] sm:text-[10.5px] font-medium tracking-[0.24em] uppercase text-[#9AA5B8]">
-              Peoria, IL <span class="text-[#F2B441] mx-1">&bull;</span> Natural &amp; Twilight Photography
+              Peoria, IL <span class="text-[#F2B441] mx-1">&bull;</span> Live Photo Journal
             </span>
           </div>
 
           <!-- Serif + Gold Script Headline -->
           <h1 class="font-serif-display font-light text-[2.85rem] sm:text-[3.85rem] xl:text-[4.45rem] leading-[1.03] tracking-[0.02em] text-[#F4F6FA] mb-6">
-            Stories Framed<br />
-            From Every
+            Life Seen<br />
+            From Whit's
             <span class="font-script text-[3.9rem] sm:text-[5rem] xl:text-[5.7rem] text-[#F2B441] inline-block ml-1.5 sm:ml-2.5 align-baseline translate-y-2 drop-shadow-[0_4px_24px_rgba(242,180,65,0.28)]">
               Angle
             </span>
           </h1>
 
-          <!-- Authentic Intro Copy -->
+          <!-- Authentic Journal Intro Copy -->
           <p class="text-sm sm:text-[15.5px] leading-[1.82] text-[#9AA5B8] font-light max-w-lg mb-9">
-            Moody twilight reflections along the Illinois River, sun-drenched golden hour in the bluffs, and candid portraits that feel like a frame pulled straight from your favorite film—crafted with zero stiff posing.
+            A living visual diary of the little things worth pausing for—the moon hanging over a red light, reflections along the Illinois River, and color tucked into quiet corners of Peoria.
           </p>
 
-          <!-- Dual CTAs -->
+          <!-- Dual Journal Actions -->
           <div class="flex flex-wrap items-center gap-3.5 sm:gap-4 mb-11">
-            <a href="#portfolio" class="btn-primary-gold px-7 py-3.5 rounded-full text-[11px] tracking-[0.2em] uppercase inline-flex items-center gap-2">
-              <span>View Selected Work</span>
+            <a href="#journal-grid" class="btn-primary-gold px-7 py-3.5 rounded-full text-[11px] tracking-[0.2em] uppercase inline-flex items-center gap-2">
+              <span>Browse The Journal</span>
               <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
               </svg>
             </a>
 
-            <button type="button" onclick="openBookingModal()" class="btn-ghost-blue px-7 py-3.5 rounded-full text-[11px] font-medium tracking-[0.2em] uppercase cursor-pointer">
-              Book a Session
+            <button type="button" onclick="openLightboxByIndex(0)" class="btn-ghost-blue px-7 py-3.5 rounded-full text-[11px] font-medium tracking-[0.2em] uppercase cursor-pointer">
+              Fullscreen Slideshow
             </button>
           </div>
 
-          <!-- 3 Minimal Trust Highlights -->
+          <!-- 3 Minimal Journal Highlights -->
           <div class="grid grid-cols-3 gap-4 pt-7 border-t border-[#1E2736] max-w-lg">
             <div>
-              <p class="font-serif-display text-2xl sm:text-[1.7rem] text-[#F4F6FA] leading-none">140<span class="text-[#F2B441]">+</span></p>
-              <p class="text-[10px] tracking-[0.16em] uppercase text-[#6C778C] mt-1.5">Stories Captured</p>
+              <p id="entry-count" class="font-serif-display text-2xl sm:text-[1.7rem] text-[#F4F6FA] leading-none">05</p>
+              <p class="text-[10px] tracking-[0.16em] uppercase text-[#6C778C] mt-1.5">Live Entries</p>
             </div>
             <div>
-              <p class="font-serif-display text-2xl sm:text-[1.7rem] text-[#F4F6FA] leading-none">72<span class="text-[#4A90F5] text-lg ml-0.5">hr</span></p>
-              <p class="text-[10px] tracking-[0.16em] uppercase text-[#6C778C] mt-1.5">Sneak Peeks</p>
+              <p class="font-serif-display text-2xl sm:text-[1.7rem] text-[#F4F6FA] leading-none">Peoria</p>
+              <p class="text-[10px] tracking-[0.16em] uppercase text-[#6C778C] mt-1.5">Home Base</p>
             </div>
             <div>
-              <p class="font-serif-display text-2xl sm:text-[1.7rem] text-[#F4F6FA] leading-none">5.0<span class="text-[#DF4B50] text-lg ml-0.5">★</span></p>
-              <p class="text-[10px] tracking-[0.16em] uppercase text-[#6C778C] mt-1.5">Peoria Local</p>
+              <p class="font-serif-display text-2xl sm:text-[1.7rem] text-[#F4F6FA] leading-none">100<span class="text-[#F2B441]">%</span></p>
+              <p class="text-[10px] tracking-[0.16em] uppercase text-[#6C778C] mt-1.5">Real Moments</p>
             </div>
           </div>
         </div>
 
-        <!-- RIGHT COLUMN: Layered Mixed-Geometry Photo Cluster (Updated with Whit's Photos) -->
+        <!-- RIGHT COLUMN: Layered Mixed-Geometry Photo Cluster (Only Whit's Photos) -->
         <div class="lg:col-span-6 xl:col-span-7 relative reveal" style="transition-delay: 140ms;">
           <!-- Ambient Blue & Gold Radial Glows Behind Collage -->
           <div class="pointer-events-none absolute -inset-6 rounded-full opacity-70 blur-3xl" style="background: radial-gradient(circle at 35% 30%, rgba(74,144,245,0.22), transparent 55%), radial-gradient(circle at 75% 75%, rgba(242,180,65,0.18), transparent 55%);"></div>
@@ -516,9 +514,8 @@
             >
               <img
                 src="IMG_20261124_080345.jpg"
-                alt="Glowing moon above autumn trees at blue hour in Central Illinois"
+                alt="Glowing moon above autumn trees at blue hour"
                 class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                onerror="this.src='https://placehold.co/700x920/11161F/F2B441?text=Blue+Hour+Moon';"
               />
               <div class="absolute inset-0 bg-gradient-to-t from-[#0A0D12]/80 via-transparent to-transparent"></div>
               <div class="absolute bottom-4 left-5 right-4 flex items-center justify-between">
@@ -529,7 +526,7 @@
 
             <!-- Right Stacked Mixed-Geometry Pair -->
             <div class="col-span-5 flex flex-col gap-3.5 sm:gap-5">
-              <!-- Box 2: Sharp-Edged Architectural Rectangular Landscape Card — Peoria Bridge & Skyline -->
+              <!-- Box 2: Sharp-Edged Landscape Card — Peoria Bridge & Skyline -->
               <div
                 onclick="openLightboxById('riverfront-bridge')"
                 class="relative sm:-ml-10 z-20 group cursor-pointer rounded-none overflow-hidden border border-[#4A90F5]/40 bg-[#11161F] aspect-[16/11] shadow-[0_24px_50px_-16px_rgba(0,0,0,0.95)]"
@@ -538,7 +535,6 @@
                   src="IMG_20261124_080445.jpg"
                   alt="Peoria steel truss bridge and downtown skyline reflected on the Illinois River"
                   class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                  onerror="this.src='https://placehold.co/800x550/11161F/4A90F5?text=Peoria+Riverfront';"
                 />
                 <div class="absolute top-2.5 left-2.5 px-2.5 py-1 bg-[#0A0D12]/80 backdrop-blur-md border border-white/10">
                   <span class="text-[9px] tracking-[0.22em] uppercase text-[#F2B441]">Peoria Riverfront</span>
@@ -552,16 +548,15 @@
               >
                 <img
                   src="IMG_20261124_080351.jpg"
-                  alt="Glowing harvest moon framed above glowing red city traffic signals at dusk"
+                  alt="Glowing full moon framed above red traffic lights at dusk"
                   class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                  onerror="this.src='https://placehold.co/650x700/171D28/F2B441?text=Twilight+Signal';"
                 />
                 <div class="absolute inset-0 bg-gradient-to-t from-[#0A0D12]/70 via-transparent to-transparent"></div>
                 <span class="absolute bottom-3 left-3.5 text-[9.5px] tracking-[0.2em] uppercase text-[#F4F6FA]/90">City Twilight</span>
               </div>
             </div>
 
-            <!-- Floating Dark-Glass Booking Badge -->
+            <!-- Floating Dark-Glass Live Journal Badge -->
             <div class="col-span-12 sm:col-span-auto sm:absolute sm:-bottom-5 sm:left-4 z-30 mt-1 sm:mt-0">
               <div class="inline-flex items-center gap-3 px-4 sm:px-5 py-3 rounded-xl bg-[#11161F]/88 backdrop-blur-md border border-[#1E2736] shadow-[0_18px_40px_-10px_rgba(0,0,0,0.9)]">
                 <span class="relative flex h-2.5 w-2.5 shrink-0">
@@ -569,7 +564,7 @@
                   <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-[#F2B441]"></span>
                 </span>
                 <p class="text-[10.5px] sm:text-[11px] tracking-[0.16em] uppercase text-[#F4F6FA] font-medium">
-                  Booking 2026–2027 <span class="text-[#4A90F5] mx-1">&bull;</span> <span class="text-[#9AA5B8] font-normal">Golden Hour &amp; City Lights</span>
+                  Live Photo Journal <span class="text-[#4A90F5] mx-1">&bull;</span> <span class="text-[#9AA5B8] font-normal">Updated As Life Happens</span>
                 </p>
               </div>
             </div>
@@ -589,302 +584,185 @@
       <!-- Copy 1 -->
       <div class="flex items-center shrink-0">
         <span class="mx-6 w-1.5 h-1.5 rounded-full bg-[#4A90F5] shadow-[0_0_8px_#4A90F5]"></span>
-        <span class="text-[#F4F6FA]">Candid Moments</span>
+        <span class="text-[#F4F6FA]">Everyday Angles</span>
         <span class="mx-6 w-1.5 h-1.5 rounded-full bg-[#F2B441] shadow-[0_0_8px_#F2B441]"></span>
-        <span>Golden Hour &amp; City Lights</span>
+        <span>Twilight &amp; Riverfront Skies</span>
         <span class="mx-6 w-1.5 h-1.5 rounded-full bg-[#DF4B50] shadow-[0_0_8px_#DF4B50]"></span>
-        <span class="text-[#F4F6FA]">Portraits With Soul</span>
+        <span class="text-[#F4F6FA]">Visual Diary</span>
         <span class="mx-6 w-1.5 h-1.5 rounded-full bg-[#4A90F5] shadow-[0_0_8px_#4A90F5]"></span>
-        <span>Peoria &amp; Central Illinois</span>
+        <span>Peoria &amp; Beyond</span>
         <span class="mx-6 w-1.5 h-1.5 rounded-full bg-[#F2B441] shadow-[0_0_8px_#F2B441]"></span>
-        <span class="text-[#F4F6FA]">Authentic Storytelling</span>
+        <span class="text-[#F4F6FA]">Unfiltered Perspectives</span>
       </div>
       <!-- Copy 2 (Seamless Infinite Loop) -->
       <div class="flex items-center shrink-0" aria-hidden="true">
         <span class="mx-6 w-1.5 h-1.5 rounded-full bg-[#4A90F5] shadow-[0_0_8px_#4A90F5]"></span>
-        <span class="text-[#F4F6FA]">Candid Moments</span>
+        <span class="text-[#F4F6FA]">Everyday Angles</span>
         <span class="mx-6 w-1.5 h-1.5 rounded-full bg-[#F2B441] shadow-[0_0_8px_#F2B441]"></span>
-        <span>Golden Hour &amp; City Lights</span>
+        <span>Twilight &amp; Riverfront Skies</span>
         <span class="mx-6 w-1.5 h-1.5 rounded-full bg-[#DF4B50] shadow-[0_0_8px_#DF4B50]"></span>
-        <span class="text-[#F4F6FA]">Portraits With Soul</span>
+        <span class="text-[#F4F6FA]">Visual Diary</span>
         <span class="mx-6 w-1.5 h-1.5 rounded-full bg-[#4A90F5] shadow-[0_0_8px_#4A90F5]"></span>
-        <span>Peoria &amp; Central Illinois</span>
+        <span>Peoria &amp; Beyond</span>
         <span class="mx-6 w-1.5 h-1.5 rounded-full bg-[#F2B441] shadow-[0_0_8px_#F2B441]"></span>
-        <span class="text-[#F4F6FA]">Authentic Storytelling</span>
+        <span class="text-[#F4F6FA]">Unfiltered Perspectives</span>
       </div>
     </div>
   </div>
 
   <!-- ========================================================================
-       4. MIXED-BOX EDITORIAL BENTO PORTFOLIO ("SELECTED STORIES")
+       4. LIVE PHOTO JOURNAL BENTO GRID ("RECENT FRAMES")
        ======================================================================== -->
-  <section id="portfolio" class="py-24 sm:py-28 px-5 sm:px-8">
+  <section id="journal-grid" class="py-24 sm:py-28 px-5 sm:px-8">
     <div class="max-w-[1320px] mx-auto">
 
       <!-- Section Header + Interactive Filter Tabs -->
       <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-7 mb-12 reveal">
         <div>
           <p class="text-[10.5px] font-medium tracking-[0.3em] uppercase text-[#4A90F5] mb-3">
-            Portfolio Archive
+            The Live Journal
           </p>
           <h2 class="font-serif-display font-light text-4xl sm:text-5xl tracking-[0.04em] text-[#F4F6FA]">
-            Selected <span class="font-script text-5xl sm:text-6xl text-[#F2B441] ml-1.5">Stories</span>
+            Recent <span class="font-script text-5xl sm:text-6xl text-[#F2B441] ml-1.5">Frames</span>
           </h2>
         </div>
 
         <!-- Category Filter Tabs -->
-        <div class="flex flex-wrap items-center gap-2.5" role="tablist" aria-label="Filter stories by category">
-          <button type="button" onclick="setPortfolioFilter('all', this)" class="filter-tab active">All</button>
-          <button type="button" onclick="setPortfolioFilter('couples', this)" class="filter-tab">Couples</button>
-          <button type="button" onclick="setPortfolioFilter('portraits', this)" class="filter-tab">Portraits</button>
-          <button type="button" onclick="setPortfolioFilter('brand', this)" class="filter-tab">Brand &amp; Lifestyle</button>
-          <button type="button" onclick="setPortfolioFilter('events', this)" class="filter-tab">Events</button>
+        <div class="flex flex-wrap items-center gap-2.5" role="tablist" aria-label="Filter journal entries by theme">
+          <button type="button" onclick="setJournalFilter('all', this)" class="filter-tab active">All Frames</button>
+          <button type="button" onclick="setJournalFilter('riverfront', this)" class="filter-tab">Riverfront</button>
+          <button type="button" onclick="setJournalFilter('skies', this)" class="filter-tab">Skies &amp; Dusk</button>
+          <button type="button" onclick="setJournalFilter('street', this)" class="filter-tab">Street &amp; Details</button>
         </div>
       </div>
 
-      <!-- Asymmetric Mixed-Geometry Bento Grid (Populated via JS for smooth filtering) -->
-      <div id="bento-grid" class="grid grid-cols-1 md:grid-cols-12 gap-5 lg:gap-6 auto-rows-[270px] sm:auto-rows-[300px] reveal">
-        <!-- Rendered dynamically by renderBentoPortfolio() -->
+      <!-- Asymmetric Mixed-Geometry Bento Grid (Populated via JS from Whit's Photos) -->
+      <div id="bento-grid" class="grid grid-cols-1 md:grid-cols-12 gap-5 lg:gap-6 auto-rows-[280px] sm:auto-rows-[310px] reveal">
+        <!-- Rendered dynamically by renderJournalGrid() -->
       </div>
 
     </div>
   </section>
 
   <!-- ========================================================================
-       5. REMIXED SERVICES SHOWCASE ("WAYS WE CAN SHOOT" — MIXED-BOX GRID)
+       5. FEATURED JOURNAL MOMENT & TEXTURE FILLERS (REPLACES BOOKING/PRICING)
        ======================================================================== -->
-  <section id="sessions" class="py-24 sm:py-28 px-5 sm:px-8 relative" style="background: linear-gradient(180deg, #0A0D12 0%, #0E131C 50%, #0A0D12 100%);">
+  <section id="featured" class="py-24 sm:py-28 px-5 sm:px-8 relative" style="background: linear-gradient(180deg, #0A0D12 0%, #0E131C 50%, #0A0D12 100%);">
     <div class="max-w-[1260px] mx-auto">
 
       <!-- Heading -->
       <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-14 reveal">
         <div>
           <p class="text-[10.5px] font-medium tracking-[0.3em] uppercase text-[#F2B441] mb-3">
-            Sessions &amp; Investment
+            Spotlight Entry
           </p>
           <h2 class="font-serif-display font-light text-4xl sm:text-5xl tracking-[0.04em] text-[#F4F6FA]">
-            Ways We Can <span class="font-script text-5xl sm:text-6xl text-[#4A90F5] ml-1.5">Shoot</span>
+            A Closer <span class="font-script text-5xl sm:text-6xl text-[#4A90F5] ml-1.5">Look</span>
           </h2>
         </div>
         <p class="text-sm font-light text-[#9AA5B8] max-w-md leading-relaxed">
-          Every collection includes location scouting across Peoria &amp; Central Illinois, styling guidance, and a full high-resolution online gallery.
+          No staged sets or checklists—just noticing how the light hits the water, the sky, and the streets on an ordinary day.
         </p>
       </div>
 
-      <!-- A. TOP FEATURED WIDE HORIZONTAL SPLIT CARD (COUPLES & ENGAGEMENTS) -->
+      <!-- Featured Wide Horizontal Split Card -->
       <article class="bridge-gradient-border rounded-2xl overflow-hidden grid grid-cols-1 lg:grid-cols-12 mb-7 shadow-[0_28px_60px_-24px_rgba(0,0,0,0.9)] reveal">
-        <!-- Left 50%: Moody Photography -->
-        <div class="lg:col-span-6 relative min-h-[300px] lg:min-h-[430px] overflow-hidden bg-[#171D28]">
+        <!-- Left 55%: Peoria Riverfront Skyline Photo -->
+        <div
+          onclick="openLightboxById('peoria-skyline-wide')"
+          class="lg:col-span-7 relative min-h-[300px] lg:min-h-[420px] overflow-hidden bg-[#171D28] group cursor-pointer"
+        >
           <img
-            src="https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?auto=format&fit=crop&w=1100&q=85"
-            alt="Couples and engagement twilight session in Peoria"
-            class="w-full h-full object-cover"
-            onerror="this.src='https://placehold.co/900x700/171D28/4A90F5?text=Couples+%26+Engagements';"
+            src="IMG_20261124_080441.jpg"
+            alt="Wide view of downtown Peoria skyline across the Illinois River"
+            class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
           />
           <div class="absolute inset-0 bg-gradient-to-r from-transparent via-transparent to-[#11161F]/70 hidden lg:block"></div>
           <span class="absolute top-5 left-5 px-3.5 py-1.5 rounded-full bg-[#0A0D12]/80 backdrop-blur-md border border-[#4A90F5]/40 text-[10px] tracking-[0.22em] uppercase text-[#F4F6FA]">
-            Most Popular
+            Entry 01 &bull; Riverfront
           </span>
         </div>
 
-        <!-- Right 50%: Editorial Typography, Deliverables & CTA -->
-        <div class="lg:col-span-6 p-8 sm:p-10 lg:p-12 flex flex-col justify-between bg-[#11161F]">
+        <!-- Right 45%: Field Note Reflection -->
+        <div class="lg:col-span-5 p-8 sm:p-10 lg:p-12 flex flex-col justify-between bg-[#11161F]">
           <div>
-            <div class="flex items-center justify-between gap-4 mb-4">
-              <span class="text-[10.5px] tracking-[0.26em] uppercase text-[#4A90F5] font-medium">01 &bull; Signature Experience</span>
-              <span class="font-serif-display text-2xl sm:text-3xl text-[#F2B441]">From $375</span>
-            </div>
+            <span class="text-[10.5px] tracking-[0.26em] uppercase text-[#4A90F5] font-medium block mb-4">Peoria, Illinois</span>
 
             <h3 class="font-serif-display text-3xl sm:text-4xl text-[#F4F6FA] tracking-[0.03em] mb-4">
-              Couples &amp; Engagements
+              Across The Water
             </h3>
-            <p class="text-sm font-light leading-relaxed text-[#9AA5B8] mb-7">
-              Unscripted golden-hour walks along Grandview Drive, cozy downtown coffee stops, or glowing riverfront evenings designed around real chemistry and movement.
+            <p class="text-sm font-light leading-[1.85] text-[#9AA5B8] mb-7">
+              Stepping back to the opposite bank changes the whole rhythm of the city. The skyline softens, the bridge anchors the horizon, and the river turns everything into a quiet reflection.
             </p>
-
-            <ul class="space-y-2.5 text-xs sm:text-[13px] text-[#F4F6FA]/85 mb-9">
-              <li class="flex items-center gap-3">
-                <span class="w-1.5 h-1.5 rounded-full bg-[#4A90F5]"></span>
-                <span>90-minute session across up to 2 Peoria / Central IL locations</span>
-              </li>
-              <li class="flex items-center gap-3">
-                <span class="w-1.5 h-1.5 rounded-full bg-[#F2B441]"></span>
-                <span>65+ hand-edited high-resolution frames + print release</span>
-              </li>
-              <li class="flex items-center gap-3">
-                <span class="w-1.5 h-1.5 rounded-full bg-[#DF4B50]"></span>
-                <span>Outfit coordination guide &amp; 72-hour sneak peek gallery</span>
-              </li>
-            </ul>
           </div>
 
           <div class="flex flex-wrap items-center justify-between gap-4 pt-6 border-t border-[#1E2736]">
-            <span class="text-[11px] tracking-[0.16em] uppercase text-[#6C778C]">2 Outfit Changes Included</span>
+            <span class="text-[11px] tracking-[0.16em] uppercase text-[#6C778C]">Click photo to expand</span>
             <button
               type="button"
-              onclick="openBookingModal('Couples & Engagements ($375+)')"
-              class="btn-primary-gold px-7 py-3 rounded-full text-[11px] tracking-[0.2em] uppercase cursor-pointer"
+              onclick="openLightboxById('peoria-skyline-wide')"
+              class="btn-ghost-blue px-6 py-2.5 rounded-full text-[10.5px] font-semibold tracking-[0.2em] uppercase cursor-pointer"
             >
-              Book Couples
+              View Full Frame
             </button>
           </div>
         </div>
       </article>
 
-      <!-- B. MIDDLE ASYMMETRIC 2-COLUMN ROW (7/12 SHARP ARCHITECTURAL + 5/12 DEEP PILL-TOP) -->
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-7 mb-7 items-stretch">
-
-        <!-- Left (7/12): PORTRAITS & SENIORS — Sharp Architectural Corners, Recessed Photo Header, Warm Gold Line -->
-        <article class="lg:col-span-7 bg-[#11161F] border border-[#1E2736] rounded-none p-6 sm:p-8 flex flex-col justify-between shadow-[0_24px_50px_-24px_rgba(0,0,0,0.85)] reveal">
-          <div>
-            <!-- Recessed Architectural Photo Header -->
-            <div class="relative h-56 sm:h-64 overflow-hidden mb-7 border border-[#1E2736] bg-[#171D28]">
-              <img
-                src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=1000&q=85"
-                alt="Editorial senior and solo portrait photography"
-                class="w-full h-full object-cover"
-                onerror="this.src='https://placehold.co/900x520/171D28/F2B441?text=Portraits+%26+Seniors';"
-              />
-              <div class="absolute bottom-0 inset-x-0 h-[3px] bg-gradient-to-r from-[#F2B441] via-[#F5D085] to-transparent"></div>
-            </div>
-
-            <div class="flex items-baseline justify-between gap-4 mb-3">
-              <span class="text-[10.5px] tracking-[0.26em] uppercase text-[#F2B441] font-medium">02 &bull; Individual Editorial</span>
-              <span class="font-serif-display text-2xl sm:text-3xl text-[#F4F6FA]">From $275</span>
-            </div>
-
-            <h3 class="font-serif-display text-3xl text-[#F4F6FA] tracking-[0.03em] mb-3.5">
-              Portraits &amp; Seniors
-            </h3>
-            <p class="text-sm font-light leading-relaxed text-[#9AA5B8] mb-6">
-              Senior milestones, creative solo portraits, and moody blue-hour city shoots tailored to your exact personality—bold, effortless, and never cookie-cutter.
-            </p>
-
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5 text-xs text-[#F4F6FA]/80 mb-8">
-              <div class="flex items-center gap-2.5 py-2 px-3 bg-[#171D28] border border-[#1E2736]">
-                <span class="text-[#F2B441]">✦</span> 60-Minute Editorial Shoot
-              </div>
-              <div class="flex items-center gap-2.5 py-2 px-3 bg-[#171D28] border border-[#1E2736]">
-                <span class="text-[#F2B441]">✦</span> 40+ Curated Edited Photos
-              </div>
-            </div>
-          </div>
-
-          <div class="flex items-center justify-between pt-5 border-t border-[#1E2736]">
-            <span class="text-[10.5px] tracking-[0.2em] uppercase text-[#6C778C]">Up to 3 Outfits</span>
-            <button
-              type="button"
-              onclick="openBookingModal('Portraits & Seniors ($275+)')"
-              class="btn-ghost-blue px-6 py-2.5 rounded-none text-[10.5px] font-semibold tracking-[0.22em] uppercase cursor-pointer"
-            >
-              Book Portraits
-            </button>
-          </div>
-        </article>
-
-        <!-- Right (5/12): BRAND & CREATIVE SHOOTS — Deep Rounded Pill-Top Corners + Subtle Street Art Filler Texture -->
-        <article class="lg:col-span-5 relative rounded-t-[160px] rounded-b-2xl bg-gradient-to-b from-[#171D28]/95 to-[#11161F] border border-[#1E2736] px-8 pt-16 pb-8 flex flex-col justify-between overflow-hidden shadow-[0_24px_50px_-24px_rgba(0,0,0,0.9)] reveal" style="transition-delay: 120ms;">
-          <!-- Subtle Street Art Background Filler -->
+      <!-- Subtle Visual Filler Strip (Using Your Street Art & Riverfront Photos) -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 reveal">
+        <!-- Filler Card 1: Street Texture -->
+        <div
+          onclick="openLightboxById('street-art-wall')"
+          class="relative overflow-hidden rounded-2xl bg-[#11161F] border border-[#1E2736] p-7 sm:p-8 cursor-pointer group min-h-[180px] flex flex-col justify-end"
+        >
           <img
             src="IMG_20261124_080432.jpg"
-            alt=""
-            aria-hidden="true"
-            class="pointer-events-none absolute inset-0 w-full h-full object-cover opacity-[0.14] mix-blend-luminosity"
+            alt="Colorful street art and graffiti on a concrete wall"
+            class="absolute inset-0 w-full h-full object-cover opacity-30 group-hover:opacity-45 group-hover:scale-105 transition-all duration-700"
           />
-          <div class="pointer-events-none absolute inset-0 bg-gradient-to-b from-[#11161F]/80 via-[#11161F]/88 to-[#11161F]"></div>
-
-          <!-- Subtle Crimson-to-Blue Top Accent Bar -->
-          <div class="absolute top-0 left-1/2 -translate-x-1/2 w-36 h-1 rounded-b-full bg-gradient-to-r from-[#DF4B50] via-[#4A90F5] to-[#DF4B50] shadow-[0_0_16px_rgba(223,75,80,0.6)] z-10"></div>
-
-          <div class="relative z-10 text-center">
-            <span class="inline-block text-[10.5px] tracking-[0.28em] uppercase text-[#DF4B50] font-medium mb-4">03 &bull; Visual Identity</span>
-            <h3 class="font-serif-display text-3xl sm:text-[2.15rem] leading-tight text-[#F4F6FA] mb-3">
-              Brand &amp; Creative<br />
-              <span class="font-script text-4xl sm:text-5xl text-[#4A90F5] inline-block mt-1">Shoots</span>
-            </h3>
-            <p class="font-serif-display text-2xl text-[#F2B441] mb-6">From $425</p>
-
-            <p class="text-sm font-light leading-relaxed text-[#9AA5B8] mb-7 max-w-xs mx-auto">
-              Scroll-stopping visual storytelling for Peoria founders, artists, musicians, and local makers ready to elevate their website and social presence.
-            </p>
-
-            <ul class="space-y-2.5 text-xs text-[#F4F6FA]/85 text-left max-w-xs mx-auto mb-8">
-              <li class="flex items-center gap-2.5">
-                <span class="w-1.5 h-1.5 rounded-full bg-[#DF4B50]"></span>
-                <span>Pre-shoot creative moodboard &amp; shot list</span>
-              </li>
-              <li class="flex items-center gap-2.5">
-                <span class="w-1.5 h-1.5 rounded-full bg-[#4A90F5]"></span>
-                <span>2 hours on location or in-studio lighting</span>
-              </li>
-              <li class="flex items-center gap-2.5">
-                <span class="w-1.5 h-1.5 rounded-full bg-[#F2B441]"></span>
-                <span>60+ web, print &amp; social-ready commercial files</span>
-              </li>
-            </ul>
-          </div>
-
-          <div class="relative z-10 pt-5 border-t border-[#1E2736] text-center">
-            <button
-              type="button"
-              onclick="openBookingModal('Brand & Creative Shoot ($425+)')"
-              class="btn-glow-pill w-full py-3 rounded-full text-[10.5px] font-semibold tracking-[0.22em] uppercase cursor-pointer"
-            >
-              Book Brand Shoot
-            </button>
-          </div>
-        </article>
-      </div>
-
-      <!-- C. BOTTOM COMPACT FULL-WIDTH BANNER BOX (WITH PEORIA RIVERFRONT SKYLINE FILLER) -->
-      <div class="relative overflow-hidden rounded-xl bg-[#11161F] border border-[#1E2736] px-6 sm:px-9 py-6 sm:py-7 flex flex-col md:flex-row items-start md:items-center justify-between gap-6 shadow-[0_20px_44px_-22px_rgba(0,0,0,0.85)] reveal">
-        <!-- Subtle Peoria Riverfront Filler Backdrop -->
-        <img
-          src="IMG_20261124_080441.jpg"
-          alt=""
-          aria-hidden="true"
-          class="pointer-events-none absolute inset-0 w-full h-full object-cover object-center opacity-[0.16]"
-        />
-        <div class="pointer-events-none absolute inset-0 bg-gradient-to-r from-[#0D121B]/95 via-[#11161F]/85 to-[#0D121B]/92"></div>
-
-        <div class="relative z-10 flex items-start sm:items-center gap-4 sm:gap-5">
-          <div class="w-11 h-11 rounded-lg bg-[#171D28]/90 border border-[#4A90F5]/35 flex items-center justify-center shrink-0 text-[#F2B441]">
-            <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M6.827 6.175A2.31 2.31 0 015.186 7.23c-.38.054-.757.112-1.134.175C2.999 7.58 2.25 8.507 2.25 9.574V18a2.25 2.25 0 002.25 2.25h15A2.25 2.25 0 0021.75 18V9.574c0-1.067-.75-1.994-1.802-2.169a47.865 47.865 0 00-1.134-.175 2.31 2.31 0 01-1.64-1.055l-.822-1.316a2.192 2.192 0 00-1.736-1.039 48.774 48.774 0 00-5.232 0 2.192 2.192 0 00-1.736 1.039l-.821 1.316z" />
-              <path stroke-linecap="round" stroke-linejoin="round" d="M16.5 12.75a4.5 4.5 0 11-9 0 4.5 4.5 0 019 0z" />
-            </svg>
-          </div>
-          <div>
-            <div class="flex flex-wrap items-center gap-x-3 gap-y-1">
-              <h3 class="font-serif-display text-2xl text-[#F4F6FA] tracking-[0.03em]">Events &amp; Riverfront Mini Sessions</h3>
-              <span class="text-[10px] tracking-[0.22em] uppercase px-2.5 py-0.5 rounded bg-[#171D28]/90 text-[#4A90F5] border border-[#1E2736]">Custom Hourly &amp; Seasonal Drops</span>
-            </div>
-            <p class="text-xs sm:text-[13px] font-light text-[#9AA5B8] mt-1">
-              Intimate celebrations, live music, proposal surprises, and limited 25-minute sunset/bridge-light minis along the Peoria Riverfront.
+          <div class="absolute inset-0 bg-gradient-to-t from-[#0A0D12]/95 via-[#0A0D12]/65 to-[#0A0D12]/35"></div>
+          <div class="relative z-10">
+            <span class="text-[10px] tracking-[0.24em] uppercase text-[#DF4B50] font-medium">Street &amp; Texture</span>
+            <h3 class="font-serif-display text-2xl sm:text-3xl text-[#F4F6FA] mt-1">Found Messages &amp; Color</h3>
+            <p class="text-xs sm:text-[13px] font-light text-[#9AA5B8] mt-1.5">
+              Raw concrete walls and unexpected notes left behind around town.
             </p>
           </div>
         </div>
 
-        <button
-          type="button"
-          onclick="openBookingModal('Events & Riverfront Mini Sessions')"
-          class="relative z-10 shrink-0 px-6 py-3 rounded-lg bg-[#171D28]/95 hover:bg-[#1E2736] border border-[#F2B441]/45 text-[#F4F6FA] text-[10.5px] font-semibold tracking-[0.2em] uppercase transition-all cursor-pointer whitespace-nowrap"
+        <!-- Filler Card 2: Skies & Dusk -->
+        <div
+          onclick="openLightboxById('dusk-signal-moon')"
+          class="relative overflow-hidden rounded-2xl bg-[#11161F] border border-[#1E2736] p-7 sm:p-8 cursor-pointer group min-h-[180px] flex flex-col justify-end"
         >
-          Request Custom Quote
-        </button>
+          <img
+            src="IMG_20261124_080351.jpg"
+            alt="Moon rising above red traffic lights at twilight"
+            class="absolute inset-0 w-full h-full object-cover opacity-35 group-hover:opacity-50 group-hover:scale-105 transition-all duration-700"
+          />
+          <div class="absolute inset-0 bg-gradient-to-t from-[#0A0D12]/95 via-[#0A0D12]/65 to-[#0A0D12]/35"></div>
+          <div class="relative z-10">
+            <span class="text-[10px] tracking-[0.24em] uppercase text-[#F2B441] font-medium">Skies &amp; Dusk</span>
+            <h3 class="font-serif-display text-2xl sm:text-3xl text-[#F4F6FA] mt-1">Pausing At Red Lights</h3>
+            <p class="text-xs sm:text-[13px] font-light text-[#9AA5B8] mt-1.5">
+              Catching the moon and evening sky in the middle of everyday drives.
+            </p>
+          </div>
+        </div>
       </div>
 
     </div>
   </section>
 
   <!-- ========================================================================
-       6. BEHIND THE LENS ("MEET WHIT")
+       6. BEHIND THE LENS ("WHIT'S VIEW")
        ======================================================================== -->
   <section id="about" class="py-24 sm:py-28 px-5 sm:px-8">
     <div class="max-w-[1220px] mx-auto">
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-14 lg:gap-16 items-center">
 
-        <!-- Left: Layered Portrait Frame with Offset Glowing Blue & Gold Geometric Border -->
+        <!-- Left: Layered Frame Using Whit's Own Photo (Swap anytime if you add a portrait of Whit) -->
         <div class="lg:col-span-5 reveal">
           <div class="relative max-w-[420px] mx-auto lg:mx-0">
             <!-- Offset Glowing Geometric Accent Frame (Bridge Blue + Starlight Gold) -->
@@ -897,13 +775,15 @@
               style="border-right: 1.5px solid rgba(242, 180, 65, 0.65); border-bottom: 1.5px solid rgba(242, 180, 65, 0.65);"
             ></div>
 
-            <!-- Main Portrait Container -->
-            <div class="relative z-10 overflow-hidden rounded-2xl aspect-[4/5] bg-[#11161F] border border-[#1E2736] shadow-[0_28px_60px_-20px_rgba(0,0,0,0.95)]">
+            <!-- Main Photo Container -->
+            <div
+              onclick="openLightboxById('autumn-moon')"
+              class="relative z-10 overflow-hidden rounded-2xl aspect-[4/5] bg-[#11161F] border border-[#1E2736] shadow-[0_28px_60px_-20px_rgba(0,0,0,0.95)] cursor-pointer group"
+            >
               <img
-                src="https://images.unsplash.com/photo-1452587925148-ce544e77e70d?auto=format&fit=crop&w=950&q=85"
-                alt="Whit behind the camera — Peoria photographer"
-                class="w-full h-full object-cover"
-                onerror="this.src='https://placehold.co/760x950/11161F/F2B441?text=Meet+Whit';"
+                src="IMG_20261124_080345.jpg"
+                alt="Evening moon through autumn trees — Whit's Angle of Life"
+                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
               />
               <div class="absolute inset-0 bg-gradient-to-t from-[#0A0D12]/70 via-transparent to-transparent"></div>
             </div>
@@ -912,29 +792,30 @@
             <div class="absolute -bottom-5 left-5 z-20 px-4 py-2.5 rounded-xl bg-[#11161F]/92 backdrop-blur-md border border-[#1E2736] shadow-2xl flex items-center gap-2.5">
               <span class="w-2 h-2 rounded-full bg-[#DF4B50] shadow-[0_0_8px_#DF4B50]"></span>
               <div>
-                <p class="text-[10px] font-semibold tracking-[0.22em] uppercase text-[#F4F6FA]">Peoria Local</p>
-                <p class="text-[10px] text-[#9AA5B8]">40.6936° N · Central IL</p>
+                <p class="text-[10px] font-semibold tracking-[0.22em] uppercase text-[#F4F6FA]">Peoria, Illinois</p>
+                <p class="text-[10px] text-[#9AA5B8]">40.6936° N · Everyday Moments</p>
               </div>
             </div>
           </div>
         </div>
 
-        <!-- Right: Authentic Story & Script Signature -->
+        <!-- Right: Authentic Journal Story & Script Signature -->
         <div class="lg:col-span-7 reveal" style="transition-delay: 120ms;">
           <p class="text-[10.5px] font-medium tracking-[0.3em] uppercase text-[#4A90F5] mb-3.5">
             Behind The Lens
           </p>
           <h2 class="font-serif-display font-light text-4xl sm:text-5xl text-[#F4F6FA] leading-[1.12] mb-7">
-            Meet Whit — Chasing Real Emotion &amp;
-            <span class="font-script text-5xl sm:text-6xl text-[#F2B441] inline-block ml-1.5 align-baseline">twilight</span>
+            Life As I See It — One Quiet
+            <span class="font-script text-5xl sm:text-6xl text-[#F2B441] inline-block ml-1.5 align-baseline">frame</span>
+            at a time
           </h2>
 
           <div class="space-y-5 text-sm sm:text-[15.5px] font-light leading-[1.86] text-[#9AA5B8]">
             <p>
-              I started <strong class="text-[#F4F6FA] font-medium">Whit's Angle of Life Photography</strong> with one simple obsession: noticing the quiet angles everyone else walks right past—the way bridge lights ripple blue, gold, and crimson across dark river water, or the split second someone forgets the camera is even there.
+              <strong class="text-[#F4F6FA] font-medium">Whit's Angle of Life</strong> isn't about staged shoots or chasing perfection—it's simply a place to keep the moments that catch my eye along the way.
             </p>
             <p>
-              Whether we are shooting on the Peoria riverfront after sundown, tucked into the Warehouse District, or out in golden Midwest fields, my priority is making you feel completely relaxed. I'll guide you with natural movement and easy prompts so your gallery looks bold, moody, and unmistakably <em>you</em>.
+              From a full moon rising behind autumn leaves and red traffic lights, to calm water reflecting the Peoria skyline and street art tucked under concrete walls, this journal grows every time something makes me stop and look twice.
             </p>
           </div>
 
@@ -942,11 +823,11 @@
             <div>
               <p class="font-script text-5xl text-[#F4F6FA] leading-none">— Whit</p>
               <p class="text-[10.5px] tracking-[0.22em] uppercase text-[#6C778C] mt-2">
-                Photographer &amp; Visual Storyteller
+                Personal Visual Journal
               </p>
             </div>
-            <button type="button" onclick="openBookingModal()" class="btn-ghost-blue px-7 py-3 rounded-full text-[11px] font-medium tracking-[0.2em] uppercase cursor-pointer">
-              Say Hello &amp; Plan a Shoot
+            <button type="button" onclick="openLightboxByIndex(0)" class="btn-ghost-blue px-7 py-3 rounded-full text-[11px] font-medium tracking-[0.2em] uppercase cursor-pointer">
+              Watch Slideshow
             </button>
           </div>
         </div>
@@ -956,79 +837,17 @@
   </section>
 
   <!-- ========================================================================
-       7. CLIENT NOTES (STAGGERED TESTIMONIALS) & HIGH-IMPACT DARK BOOKING CTA
+       7. CLOSING VISUAL BANNER (WITH YOUR PEORIA BRIDGE PHOTO AS FILLER)
        ======================================================================== -->
-  <section id="journal" class="py-20 sm:py-24 px-5 sm:px-8">
+  <section class="pb-20 sm:pb-24 px-5 sm:px-8">
     <div class="max-w-[1260px] mx-auto">
-
-      <!-- Testimonials Header -->
-      <div class="text-center max-w-xl mx-auto mb-14 reveal">
-        <p class="text-[10.5px] font-medium tracking-[0.3em] uppercase text-[#F2B441] mb-3">
-          Kind Words
-        </p>
-        <h2 class="font-serif-display font-light text-4xl sm:text-5xl text-[#F4F6FA]">
-          Notes From <span class="font-script text-5xl sm:text-6xl text-[#4A90F5] ml-1">Clients</span>
-        </h2>
-      </div>
-
-      <!-- 3-Card Asymmetric Staggered Testimonial Row -->
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-7 items-start mb-24 reveal">
-
-        <!-- Note 1 -->
-        <blockquote class="p-7 sm:p-8 rounded-2xl bg-[#11161F] border border-[#1E2736] relative">
-          <span class="font-serif-display text-5xl leading-none text-[#F2B441] block mb-3">&ldquo;</span>
-          <p class="text-sm font-light leading-[1.82] text-[#9AA5B8] mb-6">
-            Whit made us feel like we were just hanging out with a friend instead of posing for engagement photos. The blue-hour shots with the bridge lights behind us literally made my jaw drop.
-          </p>
-          <footer class="pt-4 border-t border-[#1E2736] flex items-center justify-between">
-            <div>
-              <p class="text-xs font-semibold tracking-[0.14em] uppercase text-[#F4F6FA]">Hannah &amp; Caleb</p>
-              <p class="text-[11px] text-[#6C778C] mt-0.5">Peoria Riverfront Engagement</p>
-            </div>
-            <span class="w-2 h-2 rounded-full bg-[#4A90F5]"></span>
-          </footer>
-        </blockquote>
-
-        <!-- Note 2 (Staggered Down Slightly on Desktop) -->
-        <blockquote class="md:mt-8 p-7 sm:p-8 rounded-none bg-[#171D28]/90 border border-[#1E2736] relative shadow-[0_22px_48px_-22px_rgba(0,0,0,0.9)]">
-          <span class="font-serif-display text-5xl leading-none text-[#F2B441] block mb-3">&ldquo;</span>
-          <p class="text-sm font-light leading-[1.82] text-[#9AA5B8] mb-6">
-            I usually hate being in front of a camera, but Whit nailed the lighting, the vibe, and the angles for my brand relaunch. Every single photo feels rich, cinematic, and genuinely me.
-          </p>
-          <footer class="pt-4 border-t border-[#1E2736] flex items-center justify-between">
-            <div>
-              <p class="text-xs font-semibold tracking-[0.14em] uppercase text-[#F4F6FA]">Marcus D.</p>
-              <p class="text-[11px] text-[#6C778C] mt-0.5">Brand &amp; Creative Shoot</p>
-            </div>
-            <span class="w-2 h-2 rounded-full bg-[#F2B441]"></span>
-          </footer>
-        </blockquote>
-
-        <!-- Note 3 -->
-        <blockquote class="p-7 sm:p-8 rounded-t-[44px] rounded-b-xl bg-[#11161F] border border-[#1E2736] relative">
-          <span class="font-serif-display text-5xl leading-none text-[#F2B441] block mb-3">&ldquo;</span>
-          <p class="text-sm font-light leading-[1.82] text-[#9AA5B8] mb-6">
-            Our senior session turned out better than anything on Pinterest. We caught golden hour in the bluffs and finished downtown at dusk—and got sneak peeks two days later!
-          </p>
-          <footer class="pt-4 border-t border-[#1E2736] flex items-center justify-between">
-            <div>
-              <p class="text-xs font-semibold tracking-[0.14em] uppercase text-[#F4F6FA]">Elena R.</p>
-              <p class="text-[11px] text-[#6C778C] mt-0.5">Senior Portrait Collection</p>
-            </div>
-            <span class="w-2 h-2 rounded-full bg-[#DF4B50]"></span>
-          </footer>
-        </blockquote>
-
-      </div>
-
-      <!-- Dramatic Full-Width Dark CTA Banner with Subtle Peoria Bridge Background Filler -->
-      <div class="cta-riverfront-glow relative rounded-3xl border border-[#1E2736] px-6 sm:px-14 py-16 sm:py-20 text-center overflow-hidden shadow-[0_32px_70px_-24px_rgba(0,0,0,0.95)] reveal">
+      <div class="closing-riverfront-glow relative rounded-3xl border border-[#1E2736] px-6 sm:px-14 py-16 sm:py-20 text-center overflow-hidden shadow-[0_32px_70px_-24px_rgba(0,0,0,0.95)] reveal">
         <!-- Ambient Peoria Bridge Filler -->
         <img
           src="IMG_20261124_080445.jpg"
           alt=""
           aria-hidden="true"
-          class="pointer-events-none absolute inset-0 w-full h-full object-cover object-center opacity-[0.15]"
+          class="pointer-events-none absolute inset-0 w-full h-full object-cover object-center opacity-[0.18]"
         />
         <div class="pointer-events-none absolute inset-0 bg-gradient-to-b from-[#0A0D12]/80 via-[#0D121B]/72 to-[#0A0D12]/88"></div>
 
@@ -1037,37 +856,35 @@
 
         <div class="relative z-10 max-w-2xl mx-auto">
           <p class="text-[10.5px] font-medium tracking-[0.32em] uppercase text-[#F2B441] mb-4">
-            2026 &amp; 2027 Calendar Open
+            Always Growing
           </p>
-          <h2 class="font-serif-display font-light text-4xl sm:text-5xl md:text-[3.45rem] leading-[1.1] text-[#F4F6FA] mb-5">
-            Ready to capture your
-            <span class="font-script text-5xl sm:text-6xl md:text-[4.3rem] text-[#F2B441] inline-block ml-1.5 align-baseline">angle?</span>
+          <h2 class="font-serif-display font-light text-4xl sm:text-5xl md:text-[3.3rem] leading-[1.1] text-[#F4F6FA] mb-5">
+            More moments added as life
+            <span class="font-script text-5xl sm:text-6xl md:text-[4.2rem] text-[#F2B441] inline-block ml-1.5 align-baseline">unfolds</span>
           </h2>
-          <p class="text-sm sm:text-[15px] font-light text-[#9AA5B8] leading-relaxed mb-9 max-w-lg mx-auto">
-            Tell me what you're dreaming up—whether it's an intimate couples session, moody senior portraits, or a creative brand shoot anywhere in Central Illinois.
+          <p class="text-sm sm:text-[15px] font-light text-[#9AA5B8] leading-relaxed mb-8 max-w-lg mx-auto">
+            Check back anytime to see new skies, riverfront walks, and everyday details through Whit's lens.
           </p>
-          <button
-            type="button"
-            onclick="openBookingModal()"
-            class="btn-primary-gold px-9 py-4 rounded-full text-[11.5px] tracking-[0.22em] uppercase cursor-pointer"
+          <a
+            href="#journal-grid"
+            class="btn-primary-gold inline-block px-9 py-4 rounded-full text-[11.5px] tracking-[0.22em] uppercase cursor-pointer"
           >
-            Start Your Inquiry
-          </button>
+            Back To The Journal
+          </a>
         </div>
       </div>
-
     </div>
   </section>
 
   <!-- ========================================================================
-       8. REFINED DARK FOOTER WITH PROMINENT 128PX CIRCULAR LOGO (UNCHANGED)
+       8. REFINED DARK FOOTER WITH LARGER CIRCULAR LOGO MEDALLION
        ======================================================================== -->
   <footer class="pt-16 pb-12 px-5 sm:px-8 bg-[#080B10] border-t border-[#1E2736]">
     <div class="max-w-[1260px] mx-auto flex flex-col items-center text-center">
 
-      <!-- Prominent 128px Circular Logo Medallion -->
+      <!-- Prominent Enlarged Circular Logo Medallion -->
       <a href="#top" aria-label="Back to top" class="mb-7">
-        <div class="logo-medallion w-[124px] h-[124px] sm:w-[132px] sm:h-[132px] flex items-center justify-center">
+        <div class="logo-medallion w-[148px] h-[148px] sm:w-[164px] sm:h-[164px] flex items-center justify-center">
           <img
             src="Wesbitelogo.jpg"
             alt="Whit's Angle of Life Photography Logo"
@@ -1079,10 +896,10 @@
       </a>
 
       <h3 class="font-serif-display text-2xl sm:text-[1.75rem] tracking-[0.12em] uppercase text-[#F4F6FA] mb-2">
-        Whit's Angle of Life Photography
+        Whit's Angle of Life
       </h3>
       <p class="text-xs tracking-[0.2em] uppercase text-[#9AA5B8] mb-7">
-        Serving Peoria, Pekin, East Peoria, Bloomington &amp; Central Illinois
+        A Personal Photo Journal &bull; Peoria, Illinois
       </p>
 
       <!-- Signature Glowing Bridge-Light Divider -->
@@ -1090,59 +907,20 @@
 
       <!-- Footer Links -->
       <nav class="flex flex-wrap items-center justify-center gap-x-8 gap-y-3 mb-8" aria-label="Footer navigation">
-        <a href="#portfolio" class="nav-item">Portfolio</a>
-        <a href="#sessions" class="nav-item">Sessions</a>
-        <a href="#about" class="nav-item">About</a>
-        <a href="#journal" class="nav-item">Client Notes</a>
-        <button type="button" onclick="openBookingModal()" class="nav-item cursor-pointer">Book Now</button>
+        <a href="#journal-grid" class="nav-item">Photo Journal</a>
+        <a href="#featured" class="nav-item">Featured</a>
+        <a href="#about" class="nav-item">Whit's View</a>
+        <button type="button" onclick="openLightboxByIndex(0)" class="nav-item cursor-pointer">Slideshow</button>
       </nav>
 
-      <!-- Social Links (Instagram, Facebook, Email) -->
-      <div class="flex items-center justify-center gap-3.5 mb-9">
-        <a
-          href="https://instagram.com"
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="Instagram"
-          class="w-10 h-10 rounded-full bg-[#11161F] border border-[#1E2736] hover:border-[#4A90F5] text-[#F4F6FA] flex items-center justify-center transition-all hover:-translate-y-0.5"
-        >
-          <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="1.7" viewBox="0 0 24 24">
-            <rect x="2.5" y="2.5" width="19" height="19" rx="5" />
-            <circle cx="12" cy="12" r="4.2" />
-            <circle cx="17.5" cy="6.5" r="0.9" fill="currentColor" stroke="none" />
-          </svg>
-        </a>
-        <a
-          href="https://facebook.com"
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="Facebook"
-          class="w-10 h-10 rounded-full bg-[#11161F] border border-[#1E2736] hover:border-[#F2B441] text-[#F4F6FA] flex items-center justify-center transition-all hover:-translate-y-0.5"
-        >
-          <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
-            <path d="M14 13.5h2.5l1-4H14v-2c0-1.03 0-2 2-2h1.5V2.14c-.326-.043-1.557-.14-2.857-.14C11.928 2 10 3.657 10 6.7v2.8H7v4h3V22h4v-8.5z" />
-          </svg>
-        </a>
-        <button
-          type="button"
-          onclick="openBookingModal()"
-          aria-label="Email / Contact Whit"
-          class="w-10 h-10 rounded-full bg-[#11161F] border border-[#1E2736] hover:border-[#DF4B50] text-[#F4F6FA] flex items-center justify-center transition-all hover:-translate-y-0.5 cursor-pointer"
-        >
-          <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="1.7" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" />
-          </svg>
-        </button>
-      </div>
-
       <p class="text-[11px] tracking-[0.14em] text-[#6C778C]">
-        &copy; 2026 Whit's Angle of Life Photography. All Rights Reserved.
+        &copy; 2026 Whit's Angle of Life. All Photos By Whit.
       </p>
     </div>
   </footer>
 
   <!-- ========================================================================
-       MODAL 1: FULLSCREEN DARK LIGHTBOX MODAL (FOR BENTO PORTFOLIO & HERO)
+       FULLSCREEN DARK LIGHTBOX / SLIDESHOW MODAL
        ======================================================================== -->
   <div id="lightbox-modal" class="modal-backdrop fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-6 bg-[#05070B]/92 backdrop-blur-lg" aria-hidden="true">
     <div onclick="closeLightbox()" class="absolute inset-0"></div>
@@ -1152,15 +930,15 @@
       <div class="flex items-center justify-between gap-4 px-5 sm:px-7 py-4 border-b border-[#1E2736]">
         <div>
           <div class="flex items-center gap-2.5">
-            <span id="lb-category" class="text-[10px] font-semibold tracking-[0.26em] uppercase text-[#4A90F5]">Category</span>
+            <span id="lb-entry" class="text-[10px] font-semibold tracking-[0.26em] uppercase text-[#4A90F5]">Entry 01</span>
             <span class="text-[#6C778C]">&bull;</span>
             <span id="lb-location" class="text-[10px] tracking-[0.2em] uppercase text-[#F2B441]">Peoria, IL</span>
           </div>
-          <h4 id="lb-title" class="font-serif-display text-xl sm:text-2xl text-[#F4F6FA] mt-0.5">Story Title</h4>
+          <h4 id="lb-title" class="font-serif-display text-xl sm:text-2xl text-[#F4F6FA] mt-0.5">Frame Title</h4>
         </div>
 
         <div class="flex items-center gap-4">
-          <span id="lb-counter" class="text-xs tracking-[0.18em] text-[#9AA5B8]">1 / 8</span>
+          <span id="lb-counter" class="text-xs tracking-[0.18em] text-[#9AA5B8]">1 / 5</span>
           <button
             type="button"
             onclick="closeLightbox()"
@@ -1175,11 +953,11 @@
       </div>
 
       <!-- High-Res Image Stage -->
-      <div class="relative bg-[#070A0F] flex items-center justify-center h-[54vh] sm:h-[64vh]">
+      <div class="relative bg-[#070A0F] flex items-center justify-center h-[54vh] sm:h-[66vh]">
         <img
           id="lb-img"
           src=""
-          alt="Selected story frame"
+          alt="Selected journal photo"
           class="max-w-full max-h-full object-contain transition-opacity duration-300"
         />
 
@@ -1207,154 +985,26 @@
         </button>
       </div>
 
-      <!-- Bottom Story Caption & Quick Book Action -->
+      <!-- Bottom Caption & Next Frame Button -->
       <div class="px-5 sm:px-7 py-4 border-t border-[#1E2736] flex flex-col sm:flex-row sm:items-center justify-between gap-4 bg-[#11161F]">
         <p id="lb-caption" class="text-xs sm:text-sm font-light text-[#9AA5B8] leading-relaxed"></p>
         <button
           type="button"
-          onclick="bookFromLightbox()"
+          onclick="stepLightbox(1)"
           class="shrink-0 btn-glow-pill px-5 py-2 rounded-full text-[10px] font-semibold tracking-[0.2em] uppercase cursor-pointer"
         >
-          Book This Vibe
+          Next Frame &rarr;
         </button>
       </div>
     </div>
   </div>
 
   <!-- ========================================================================
-       MODAL 2: INTERACTIVE DARK-GLASS BOOKING / INQUIRY MODAL
-       ======================================================================== -->
-  <div id="booking-modal" class="modal-backdrop fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 bg-[#05070B]/85 backdrop-blur-md" aria-hidden="true">
-    <div onclick="closeBookingModal()" class="absolute inset-0"></div>
-    <div class="modal-panel relative z-10 w-full max-w-xl max-h-[92vh] overflow-y-auto rounded-2xl bg-[#11161F] border border-[#1E2736] p-7 sm:p-9 shadow-[0_32px_80px_rgba(0,0,0,0.95)]">
-
-      <!-- Close Button -->
-      <button
-        type="button"
-        onclick="closeBookingModal()"
-        aria-label="Close booking modal"
-        class="absolute top-5 right-5 w-9 h-9 rounded-full bg-[#171D28] hover:bg-[#1E2736] text-[#9AA5B8] hover:text-white flex items-center justify-center transition-colors cursor-pointer"
-      >
-        <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
-        </svg>
-      </button>
-
-      <!-- Booking Form -->
-      <div id="booking-form-view">
-        <p class="text-[10px] font-medium tracking-[0.28em] uppercase text-[#4A90F5] mb-2">Peoria &amp; Central Illinois</p>
-        <h3 class="font-serif-display text-3xl sm:text-[2.2rem] text-[#F4F6FA] leading-tight mb-2">
-          Let's Plan Your <span class="font-script text-4xl sm:text-5xl text-[#F2B441] ml-1">Session</span>
-        </h3>
-        <p class="text-xs sm:text-[13px] font-light text-[#9AA5B8] mb-6">
-          Share a few details below and Whit will reply within 24 hours with open sunset/twilight dates and location recommendations.
-        </p>
-
-        <form id="booking-form" onsubmit="submitBookingForm(event)" class="space-y-4">
-          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-            <div>
-              <label for="in-name" class="block text-[10px] tracking-[0.2em] uppercase text-[#9AA5B8] mb-1.5">Your Name *</label>
-              <input
-                id="in-name"
-                type="text"
-                required
-                placeholder="Jordan Taylor"
-                class="w-full px-4 py-3 rounded-xl bg-[#0A0D12] border border-[#1E2736] focus:border-[#4A90F5] text-sm text-[#F4F6FA] placeholder-[#525D73] outline-none transition-colors"
-              />
-            </div>
-            <div>
-              <label for="in-email" class="block text-[10px] tracking-[0.2em] uppercase text-[#9AA5B8] mb-1.5">Email Address *</label>
-              <input
-                id="in-email"
-                type="email"
-                required
-                placeholder="you@example.com"
-                class="w-full px-4 py-3 rounded-xl bg-[#0A0D12] border border-[#1E2736] focus:border-[#4A90F5] text-sm text-[#F4F6FA] placeholder-[#525D73] outline-none transition-colors"
-              />
-            </div>
-          </div>
-
-          <div>
-            <label for="in-package" class="block text-[10px] tracking-[0.2em] uppercase text-[#9AA5B8] mb-1.5">Session Package</label>
-            <select
-              id="in-package"
-              class="w-full px-4 py-3 rounded-xl bg-[#0A0D12] border border-[#1E2736] focus:border-[#4A90F5] text-sm text-[#F4F6FA] outline-none transition-colors"
-            >
-              <option value="Couples & Engagements ($375+)">Couples &amp; Engagements ($375+)</option>
-              <option value="Portraits & Seniors ($275+)">Portraits &amp; Seniors ($275+)</option>
-              <option value="Brand & Creative Shoot ($425+)">Brand &amp; Creative Shoot ($425+)</option>
-              <option value="Events & Riverfront Mini Sessions">Events &amp; Riverfront Mini Sessions</option>
-            </select>
-          </div>
-
-          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-            <div>
-              <label for="in-date" class="block text-[10px] tracking-[0.2em] uppercase text-[#9AA5B8] mb-1.5">Target Date</label>
-              <input
-                id="in-date"
-                type="date"
-                class="w-full px-4 py-3 rounded-xl bg-[#0A0D12] border border-[#1E2736] focus:border-[#4A90F5] text-sm text-[#F4F6FA] outline-none transition-colors [color-scheme:dark]"
-              />
-            </div>
-            <div>
-              <label for="in-location" class="block text-[10px] tracking-[0.2em] uppercase text-[#9AA5B8] mb-1.5">Location / Vibe Idea</label>
-              <input
-                id="in-location"
-                type="text"
-                placeholder="Peoria Riverfront, Grandview..."
-                class="w-full px-4 py-3 rounded-xl bg-[#0A0D12] border border-[#1E2736] focus:border-[#4A90F5] text-sm text-[#F4F6FA] placeholder-[#525D73] outline-none transition-colors"
-              />
-            </div>
-          </div>
-
-          <div>
-            <label for="in-message" class="block text-[10px] tracking-[0.2em] uppercase text-[#9AA5B8] mb-1.5">Tell Me About Your Vision *</label>
-            <textarea
-              id="in-message"
-              rows="3"
-              required
-              placeholder="Share who's joining, golden hour vs. twilight city lights, or any inspiration you love..."
-              class="w-full px-4 py-3 rounded-xl bg-[#0A0D12] border border-[#1E2736] focus:border-[#4A90F5] text-sm text-[#F4F6FA] placeholder-[#525D73] outline-none transition-colors resize-none"
-            ></textarea>
-          </div>
-
-          <div class="pt-2">
-            <button type="submit" class="btn-primary-gold w-full py-3.5 rounded-full text-[11px] tracking-[0.22em] uppercase cursor-pointer">
-              Send Inquiry To Whit
-            </button>
-          </div>
-        </form>
-      </div>
-
-      <!-- Instant Confirmation State -->
-      <div id="booking-confirm-view" class="hidden text-center py-6">
-        <div class="w-16 h-16 mx-auto mb-5 rounded-full bg-[#4A90F5]/15 border border-[#4A90F5]/50 flex items-center justify-center text-[#F2B441] shadow-[0_0_30px_-6px_rgba(74,144,245,0.6)]">
-          <svg class="w-8 h-8" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
-          </svg>
-        </div>
-        <p class="text-[10.5px] tracking-[0.28em] uppercase text-[#4A90F5] mb-2">Inquiry Sent</p>
-        <h4 class="font-serif-display text-3xl text-[#F4F6FA] mb-3">
-          Can't Wait, <span id="out-name" class="text-[#F2B441]">Friend</span>!
-        </h4>
-        <p class="text-sm font-light text-[#9AA5B8] leading-relaxed max-w-md mx-auto mb-7">
-          Your inquiry for <strong id="out-package" class="text-[#F4F6FA] font-medium"></strong> has been received. Whit will reach out shortly with available times and custom location ideas around <span id="out-location" class="text-[#F4F6FA]">Peoria</span>.
-        </p>
-        <button type="button" onclick="resetAndCloseBooking()" class="btn-ghost-blue px-8 py-3 rounded-full text-[11px] font-medium tracking-[0.2em] uppercase cursor-pointer">
-          Back To Homepage
-        </button>
-      </div>
-
-    </div>
-  </div>
-
-  <!-- ========================================================================
-       JAVASCRIPT: DETAILED SVG LOGO FALLBACK, BENTO PORTFOLIO, LIGHTBOX & MODALS
+       JAVASCRIPT: LOGO FALLBACK, LIVE JOURNAL ENTRIES & LIGHTBOX
        ======================================================================== -->
   <script>
     /* ========================================================================
        1. CRISP INLINE SVG FALLBACK RECREATION OF WESBITELOGO.JPG (UNCHANGED)
-       Displays automatically if Wesbitelogo.jpg is not in the local directory.
        ======================================================================== */
     function createBrandLogoSVG(uid) {
       return `
@@ -1481,125 +1131,98 @@
     });
 
     /* ========================================================================
-       2. CURATED BENTO PORTFOLIO STORIES (UPDATED WITH YOUR 5 PHOTOS)
+       2. LIVE PHOTO JOURNAL ENTRIES (ADD NEW PHOTOS RIGHT HERE ANYTIME)
        ======================================================================== */
-    const portfolioStories = [
+    const journalEntries = [
       {
         id: 'riverfront-bridge',
-        title: 'Illinois River & Bridge Reflections',
-        category: 'events',
-        categoryLabel: 'Events & City',
+        entryNumber: 'Entry 05',
+        title: 'Through The Branches',
+        categories: ['riverfront'],
+        categoryLabel: 'Riverfront',
         location: 'Peoria Riverfront',
-        packageName: 'Events & Riverfront Mini Sessions',
         url: 'IMG_20261124_080445.jpg',
-        caption: 'Overhanging riverfront branches framing the steel truss bridge and downtown Peoria skyline mirrored across the Illinois River.',
+        caption: 'Overhanging riverfront leaves framing the steel truss bridge and downtown skyline mirrored over the Illinois River.',
         bentoClass: 'md:col-span-7 md:row-span-1 rounded-2xl',
         accent: '#4A90F5'
       },
       {
-        id: 'twilight-portrait',
-        title: 'Blue Hour Solo Editorial',
-        category: 'portraits',
-        categoryLabel: 'Portraits',
-        location: 'Warehouse District, Peoria',
-        packageName: 'Portraits & Seniors ($275+)',
-        url: 'https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=1100&q=85',
-        caption: 'Moody dusk portraiture framed against city light bokeh and crisp brick textures right after sundown.',
+        id: 'autumn-moon',
+        entryNumber: 'Entry 04',
+        title: 'Autumn Moon At Blue Hour',
+        categories: ['skies'],
+        categoryLabel: 'Skies & Dusk',
+        location: 'Peoria, IL',
+        url: 'IMG_20261124_080345.jpg',
+        caption: 'A bright moon glowing between changing autumn leaves just as the evening sky settles into cool blue.',
         bentoClass: 'md:col-span-5 md:row-span-2 rounded-t-[200px] rounded-b-xl',
         accent: '#F2B441'
       },
       {
-        id: 'autumn-moon',
-        title: 'Autumn Moon at Blue Hour',
-        category: 'portraits',
-        categoryLabel: 'Portraits & Nature',
-        location: 'Central Illinois',
-        packageName: 'Portraits & Seniors ($275+)',
-        url: 'IMG_20261124_080345.jpg',
-        caption: 'A bright full moon rising through autumn foliage just as the Midwest sky shifts into deep twilight blue.',
+        id: 'dusk-signal-moon',
+        entryNumber: 'Entry 03',
+        title: 'Yield To The Moon',
+        categories: ['skies', 'street'],
+        categoryLabel: 'Skies & Street',
+        location: 'Peoria Streets',
+        url: 'IMG_20261124_080351.jpg',
+        caption: 'Warm lunar glow balanced right above glowing red traffic lights—finding a quiet frame while waiting at the intersection.',
         bentoClass: 'md:col-span-4 md:row-span-1 rounded-none',
-        accent: '#F2B441'
+        accent: '#DF4B50'
       },
       {
         id: 'street-art-wall',
-        title: 'Urban Wall & Street Art',
-        category: 'brand',
-        categoryLabel: 'Brand & Lifestyle',
+        entryNumber: 'Entry 02',
+        title: 'Don’t Stop — Street Art Wall',
+        categories: ['street'],
+        categoryLabel: 'Street & Details',
         location: 'Peoria, IL',
-        packageName: 'Brand & Creative Shoot ($425+)',
         url: 'IMG_20261124_080432.jpg',
-        caption: 'Raw concrete texture and colorful local graffiti—built for edgy, unscripted urban brand and creative sessions.',
+        caption: 'Hand-painted notes, doodles, and bursts of color layered across weathered concrete.',
         bentoClass: 'md:col-span-3 md:row-span-1 rounded-xl',
         accent: '#DF4B50'
       },
       {
-        id: 'bluffs-couples',
-        title: 'Golden Hour on the Bluffs',
-        category: 'couples',
-        categoryLabel: 'Couples',
-        location: 'Grandview Drive, Peoria Heights',
-        packageName: 'Couples & Engagements ($375+)',
-        url: 'https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&w=1200&q=85',
-        caption: 'Warm amber sunset light, windblown movement, and unposed laughter overlooking the Illinois River valley.',
-        bentoClass: 'md:col-span-4 md:row-span-2 rounded-[140px]',
-        accent: '#4A90F5'
-      },
-      {
         id: 'peoria-skyline-wide',
-        title: 'Downtown Peoria Across the Water',
-        category: 'events',
-        categoryLabel: 'Events & City',
-        location: 'East Peoria Riverfront View',
-        packageName: 'Events & Riverfront Mini Sessions',
+        entryNumber: 'Entry 01',
+        title: 'Downtown Across The Water',
+        categories: ['riverfront'],
+        categoryLabel: 'Riverfront',
+        location: 'Illinois River View',
         url: 'IMG_20261124_080441.jpg',
-        caption: 'Wide panoramic view of the Peoria skyline, historic spires, and riverfront shoreline reflecting over calm water.',
-        bentoClass: 'md:col-span-8 md:row-span-1 rounded-none',
+        caption: 'A wide, calm look back at the Peoria skyline, twin church spires, and the bridge stretching across the water.',
+        bentoClass: 'md:col-span-12 md:row-span-1 rounded-2xl',
         accent: '#4A90F5'
-      },
-      {
-        id: 'dusk-signal-moon',
-        title: 'Yield to the Moon',
-        category: 'brand',
-        categoryLabel: 'Brand & Lifestyle',
-        location: 'Peoria Streets at Dusk',
-        packageName: 'Brand & Creative Shoot ($425+)',
-        url: 'IMG_20261124_080351.jpg',
-        caption: 'Warm lunar glow balanced against crisp crimson traffic lights—noticing the cinematic angles in everyday city moments.',
-        bentoClass: 'md:col-span-4 md:row-span-1 rounded-2xl',
-        accent: '#DF4B50'
-      },
-      {
-        id: 'downtown-couple',
-        title: 'Unscripted Downtown Dusk',
-        category: 'couples',
-        categoryLabel: 'Couples',
-        location: 'Water Street, Peoria',
-        packageName: 'Couples & Engagements ($375+)',
-        url: 'https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?auto=format&fit=crop&w=1300&q=85',
-        caption: 'An intimate anniversary stroll through glowing evening storefronts with rich shadow play and real connection.',
-        bentoClass: 'md:col-span-4 md:row-span-1 rounded-xl',
-        accent: '#F2B441'
       }
     ];
 
+    // Keep the hero live entry count synced automatically as you add more photos
+    const countEl = document.getElementById('entry-count');
+    if (countEl) {
+      countEl.textContent = String(journalEntries.length).padStart(2, '0');
+    }
+
     let currentFilter = 'all';
-    let visibleStories = [...portfolioStories];
+    let visibleEntries = [...journalEntries];
     let currentLightboxIndex = 0;
 
-    function renderBentoPortfolio(filter = 'all') {
+    function renderJournalGrid(filter = 'all') {
       const grid = document.getElementById('bento-grid');
       currentFilter = filter;
-      visibleStories = filter === 'all'
-        ? [...portfolioStories]
-        : portfolioStories.filter((story) => story.category === filter);
+      visibleEntries = filter === 'all'
+        ? [...journalEntries]
+        : journalEntries.filter((entry) => entry.categories.includes(filter));
 
-      grid.innerHTML = visibleStories.map((story, idx) => {
-        // When filtered to a single category (2 items), give them a dramatic asymmetric 7/5 mixed-shape showcase
-        let layoutClass = story.bentoClass;
+      grid.innerHTML = visibleEntries.map((entry, idx) => {
+        let layoutClass = entry.bentoClass;
         if (filter !== 'all') {
-          layoutClass = idx === 0
-            ? 'md:col-span-7 md:row-span-2 rounded-2xl'
-            : 'md:col-span-5 md:row-span-2 rounded-t-[180px] rounded-b-xl';
+          if (visibleEntries.length === 1) {
+            layoutClass = 'md:col-span-12 md:row-span-2 rounded-2xl';
+          } else {
+            layoutClass = idx % 2 === 0
+              ? 'md:col-span-7 md:row-span-2 rounded-2xl'
+              : 'md:col-span-5 md:row-span-2 rounded-t-[180px] rounded-b-xl';
+          }
         }
 
         return `
@@ -1608,30 +1231,29 @@
             class="bento-card group cursor-pointer ${layoutClass}"
           >
             <img
-              src="${story.url}"
-              alt="${story.title} — ${story.location}"
+              src="${entry.url}"
+              alt="${entry.title} — ${entry.location}"
               loading="lazy"
               class="w-full h-full object-cover"
-              onerror="this.src='https://placehold.co/900x700/171D28/F2B441?text=${encodeURIComponent(story.title)}';"
             />
             <!-- Deep Gradient Overlay -->
-            <div class="absolute inset-0 bg-gradient-to-t from-[#0A0D12]/92 via-[#0A0D12]/25 to-transparent opacity-80 group-hover:opacity-95 transition-opacity duration-300"></div>
+            <div class="absolute inset-0 bg-gradient-to-t from-[#0A0D12]/92 via-[#0A0D12]/20 to-transparent opacity-80 group-hover:opacity-95 transition-opacity duration-300"></div>
 
             <!-- Hover Content -->
             <div class="absolute inset-x-0 bottom-0 p-5 sm:p-6 flex items-end justify-between gap-4">
               <div>
                 <div class="inline-flex items-center gap-2 mb-1.5">
-                  <span class="w-1.5 h-1.5 rounded-full" style="background-color: ${story.accent};"></span>
-                  <span class="text-[9.5px] font-semibold tracking-[0.24em] uppercase text-[#9AA5B8]">${story.categoryLabel}</span>
+                  <span class="w-1.5 h-1.5 rounded-full" style="background-color: ${entry.accent};"></span>
+                  <span class="text-[9.5px] font-semibold tracking-[0.24em] uppercase text-[#9AA5B8]">${entry.entryNumber} &bull; ${entry.categoryLabel}</span>
                 </div>
                 <h3 class="font-serif-display text-xl sm:text-2xl text-[#F4F6FA] leading-tight">
-                  ${story.title}
+                  ${entry.title}
                 </h3>
-                <p class="text-[11px] text-[#9AA5B8] mt-0.5">${story.location}</p>
+                <p class="text-[11px] text-[#9AA5B8] mt-0.5">${entry.location}</p>
               </div>
 
               <span class="shrink-0 inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-[#0A0D12]/75 border border-white/15 text-[9.5px] tracking-[0.2em] uppercase text-[#F4F6FA] opacity-85 group-hover:opacity-100 group-hover:border-[#F2B441]/60 transition-all">
-                View Story
+                View
                 <span class="text-[#F2B441]">&rarr;</span>
               </span>
             </div>
@@ -1640,16 +1262,16 @@
       }).join('');
     }
 
-    function setPortfolioFilter(category, buttonEl) {
+    function setJournalFilter(category, buttonEl) {
       document.querySelectorAll('.filter-tab').forEach((btn) => btn.classList.remove('active'));
       buttonEl.classList.add('active');
-      renderBentoPortfolio(category);
+      renderJournalGrid(category);
     }
 
-    renderBentoPortfolio('all');
+    renderJournalGrid('all');
 
     /* ========================================================================
-       3. FULLSCREEN DARK LIGHTBOX MODAL
+       3. FULLSCREEN DARK LIGHTBOX / SLIDESHOW
        ======================================================================== */
     function openLightboxByIndex(index) {
       currentLightboxIndex = index;
@@ -1657,41 +1279,37 @@
       openModal('lightbox-modal');
     }
 
-    function openLightboxById(storyId) {
-      const inVisible = visibleStories.findIndex((s) => s.id === storyId);
+    function openLightboxById(entryId) {
+      const inVisible = visibleEntries.findIndex((e) => e.id === entryId);
       if (inVisible !== -1) {
         currentLightboxIndex = inVisible;
       } else {
-        visibleStories = [...portfolioStories];
-        currentLightboxIndex = Math.max(0, visibleStories.findIndex((s) => s.id === storyId));
+        visibleEntries = [...journalEntries];
+        currentLightboxIndex = Math.max(0, visibleEntries.findIndex((e) => e.id === entryId));
       }
       populateLightbox();
       openModal('lightbox-modal');
     }
 
     function populateLightbox() {
-      const story = visibleStories[currentLightboxIndex];
-      if (!story) return;
+      const entry = visibleEntries[currentLightboxIndex];
+      if (!entry) return;
 
       const img = document.getElementById('lb-img');
       img.style.opacity = '0.2';
-      img.src = story.url;
+      img.src = entry.url;
       img.onload = () => { img.style.opacity = '1'; };
-      img.onerror = () => {
-        img.src = `https://placehold.co/1200x800/11161F/F2B441?text=${encodeURIComponent(story.title)}`;
-        img.style.opacity = '1';
-      };
 
-      document.getElementById('lb-category').textContent = story.categoryLabel;
-      document.getElementById('lb-location').textContent = story.location;
-      document.getElementById('lb-title').textContent = story.title;
-      document.getElementById('lb-caption').textContent = story.caption;
-      document.getElementById('lb-counter').textContent = `${currentLightboxIndex + 1} / ${visibleStories.length}`;
+      document.getElementById('lb-entry').textContent = `${entry.entryNumber} · ${entry.categoryLabel}`;
+      document.getElementById('lb-location').textContent = entry.location;
+      document.getElementById('lb-title').textContent = entry.title;
+      document.getElementById('lb-caption').textContent = entry.caption;
+      document.getElementById('lb-counter').textContent = `${currentLightboxIndex + 1} / ${visibleEntries.length}`;
     }
 
     function stepLightbox(delta) {
-      if (!visibleStories.length) return;
-      currentLightboxIndex = (currentLightboxIndex + delta + visibleStories.length) % visibleStories.length;
+      if (!visibleEntries.length) return;
+      currentLightboxIndex = (currentLightboxIndex + delta + visibleEntries.length) % visibleEntries.length;
       populateLightbox();
     }
 
@@ -1699,15 +1317,6 @@
       closeModal('lightbox-modal');
     }
 
-    function bookFromLightbox() {
-      const story = visibleStories[currentLightboxIndex];
-      closeLightbox();
-      openBookingModal(story ? story.packageName : undefined);
-    }
-
-    /* ========================================================================
-       4. BOOKING MODAL & MOBILE DRAWER CONTROLS
-       ======================================================================== */
     function openModal(id) {
       const el = document.getElementById(id);
       el.classList.add('open');
@@ -1719,50 +1328,12 @@
       const el = document.getElementById(id);
       el.classList.remove('open');
       el.setAttribute('aria-hidden', 'true');
-      if (!document.querySelector('.modal-backdrop.open')) {
-        document.body.style.overflow = '';
-      }
+      document.body.style.overflow = '';
     }
 
-    function openBookingModal(packageLabel) {
-      document.getElementById('booking-form-view').classList.remove('hidden');
-      document.getElementById('booking-confirm-view').classList.add('hidden');
-
-      if (packageLabel) {
-        const select = document.getElementById('in-package');
-        for (let i = 0; i < select.options.length; i++) {
-          if (select.options[i].value === packageLabel) {
-            select.selectedIndex = i;
-            break;
-          }
-        }
-      }
-      openModal('booking-modal');
-    }
-
-    function closeBookingModal() {
-      closeModal('booking-modal');
-    }
-
-    function submitBookingForm(e) {
-      e.preventDefault();
-      const name = document.getElementById('in-name').value.trim() || 'Friend';
-      const pkg = document.getElementById('in-package').value;
-      const loc = document.getElementById('in-location').value.trim() || 'Peoria & Central Illinois';
-
-      document.getElementById('out-name').textContent = name;
-      document.getElementById('out-package').textContent = pkg;
-      document.getElementById('out-location').textContent = loc;
-
-      document.getElementById('booking-form-view').classList.add('hidden');
-      document.getElementById('booking-confirm-view').classList.remove('hidden');
-    }
-
-    function resetAndCloseBooking() {
-      document.getElementById('booking-form').reset();
-      closeBookingModal();
-    }
-
+    /* ========================================================================
+       4. MOBILE DRAWER, KEYBOARD SHORTCUTS & SCROLL REVEAL
+       ======================================================================== */
     let mobileOpen = false;
     function toggleMobileMenu() {
       const drawer = document.getElementById('mobile-drawer');
@@ -1780,13 +1351,9 @@
       }
     }
 
-    /* ========================================================================
-       5. KEYBOARD SHORTCUTS, STICKY HEADER POLISH & SCROLL REVEAL OBSERVER
-       ======================================================================== */
     document.addEventListener('keydown', (e) => {
       if (e.key === 'Escape') {
         closeLightbox();
-        closeBookingModal();
         if (mobileOpen) toggleMobileMenu();
       } else if (document.getElementById('lightbox-modal').classList.contains('open')) {
         if (e.key === 'ArrowRight') stepLightbox(1);
