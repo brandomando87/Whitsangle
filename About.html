@@ -4,48 +4,57 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>About Whit — Whit's Angle of Life</title>
-  <meta name="description" content="Meet Whit — the human behind Whit's Angle of Life. Sharing everyday happiness through a camera lens from Florida to Peoria, Illinois." />
+  <meta name="description" content="Meet Whit — the human behind Whit's Angle of Life. Sharing everyday happiness and moonlit moments through a camera lens from Florida to Peoria, Illinois." />
 
-  <!-- Google Fonts: Matching Home.html -->
+  <!-- Google Fonts: Matched to Home.html -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet" />
 
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
 
   <style>
     /* ==========================================================================
-       OBSIDIAN & ILLUMINATED BRIDGE DESIGN TOKENS (Matched to Home.html)
+       MOONLIT GRIMOIRE & COZY WITCHY DESIGN TOKENS (Matched to Home.html)
        ========================================================================== */
     :root {
-      --bg-obsidian: #0A0D12;
-      --bg-surface: #11161F;
-      --bg-elevated: #171D28;
-      --border-subtle: #1E2736;
-      --border-bright: rgba(244, 246, 250, 0.16);
+      --bg-night: #0B0812;
+      --bg-velvet: #140F1F;
+      --bg-card: #1A1429;
+      --border-mystic: rgba(196, 168, 245, 0.18);
+      --border-gold: rgba(232, 195, 116, 0.38);
 
-      --text-primary: #F4F6FA;
-      --text-muted: #9AA5B8;
-      --text-dim: #6C778C;
+      --text-cream: #F5EFE6;
+      --text-lavender: #C6BCD8;
+      --text-muted: #9387AA;
 
-      --bridge-blue: #4A90F5;
-      --starlight-gold: #F2B441;
-      --bridge-crimson: #DF4B50;
+      --moon-gold: #E8C374;
+      --amethyst: #B088F9;
+      --rose-berry: #DF6E86;
+      --sage-mist: #8AB89B;
     }
 
     html {
       scroll-behavior: smooth;
       overflow-x: hidden;
-      background-color: var(--bg-obsidian);
+      background-color: var(--bg-night);
     }
 
     body {
-      background-color: var(--bg-obsidian);
-      color: var(--text-primary);
-      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      background-color: var(--bg-night);
+      color: var(--text-cream);
+      font-family: 'Quicksand', -apple-system, BlinkMacSystemFont, sans-serif;
       overflow-x: hidden;
       -webkit-font-smoothing: antialiased;
+    }
+
+    a:focus-visible,
+    button:focus-visible,
+    [tabindex]:focus-visible {
+      outline: 2px solid var(--moon-gold);
+      outline-offset: 3px;
+      border-radius: 6px;
     }
 
     .font-serif-display {
@@ -56,48 +65,57 @@
       font-family: 'Alex Brush', cursive;
       font-weight: 400;
       text-transform: none;
-      line-height: 0.86;
+      line-height: 0.88;
     }
 
-    /* Ambient Midnight Glows */
+    .starfield-bg {
+      background-image:
+        radial-gradient(1.5px 1.5px at 14% 20%, rgba(232, 195, 116, 0.65), transparent),
+        radial-gradient(1px 1px at 30% 44%, rgba(245, 239, 230, 0.45), transparent),
+        radial-gradient(1.8px 1.8px at 52% 14%, rgba(176, 136, 249, 0.55), transparent),
+        radial-gradient(1px 1px at 68% 36%, rgba(232, 195, 116, 0.5), transparent),
+        radial-gradient(1.5px 1.5px at 86% 18%, rgba(245, 239, 230, 0.55), transparent),
+        radial-gradient(1px 1px at 90% 62%, rgba(176, 136, 249, 0.45), transparent),
+        radial-gradient(1.4px 1.4px at 20% 78%, rgba(232, 195, 116, 0.45), transparent),
+        radial-gradient(1px 1px at 74% 84%, rgba(245, 239, 230, 0.4), transparent);
+      background-size: 520px 520px;
+    }
+
     .hero-glow-field {
       background:
-        radial-gradient(ellipse 48% 42% at 22% 34%, rgba(74, 144, 245, 0.14), transparent 72%),
-        radial-gradient(ellipse 38% 36% at 72% 28%, rgba(242, 180, 65, 0.10), transparent 70%),
-        radial-gradient(ellipse 34% 30% at 84% 78%, rgba(223, 75, 80, 0.08), transparent 70%),
-        radial-gradient(ellipse 40% 34% at 14% 76%, rgba(74, 144, 245, 0.06), transparent 70%);
+        radial-gradient(ellipse 48% 42% at 22% 34%, rgba(176, 136, 249, 0.16), transparent 72%),
+        radial-gradient(ellipse 38% 36% at 72% 28%, rgba(232, 195, 116, 0.12), transparent 70%),
+        radial-gradient(ellipse 34% 30% at 84% 78%, rgba(223, 110, 134, 0.09), transparent 70%),
+        radial-gradient(ellipse 40% 34% at 14% 76%, rgba(138, 184, 155, 0.08), transparent 70%);
     }
 
-    .closing-riverfront-glow {
+    .closing-moon-glow {
       background:
-        radial-gradient(ellipse 52% 85% at 18% 100%, rgba(74, 144, 245, 0.22), transparent 65%),
-        radial-gradient(ellipse 44% 75% at 50% 100%, rgba(242, 180, 65, 0.16), transparent 65%),
-        radial-gradient(ellipse 50% 85% at 82% 100%, rgba(223, 75, 80, 0.18), transparent 65%),
-        linear-gradient(180deg, #11161F 0%, #0D121B 100%);
+        radial-gradient(ellipse 52% 85% at 18% 100%, rgba(176, 136, 249, 0.24), transparent 65%),
+        radial-gradient(ellipse 46% 75% at 50% 100%, rgba(232, 195, 116, 0.18), transparent 65%),
+        radial-gradient(ellipse 50% 85% at 84% 100%, rgba(223, 110, 134, 0.16), transparent 65%),
+        linear-gradient(180deg, #161024 0%, #0E0A18 100%);
     }
 
-    /* Sticky Minimalist Split Header */
     .glass-nav {
-      background: rgba(10, 13, 18, 0.82);
+      background: rgba(11, 8, 18, 0.84);
       backdrop-filter: blur(16px);
       -webkit-backdrop-filter: blur(16px);
-      border-bottom: 1px solid rgba(30, 39, 54, 0.85);
+      border-bottom: 1px solid rgba(196, 168, 245, 0.16);
       transition: background-color 0.3s ease, box-shadow 0.3s ease;
     }
 
     .glass-nav.scrolled {
-      background: rgba(10, 13, 18, 0.94);
-      box-shadow: 0 14px 40px -16px rgba(0, 0, 0, 0.85);
+      background: rgba(11, 8, 18, 0.95);
+      box-shadow: 0 14px 40px -16px rgba(0, 0, 0, 0.9);
     }
 
-    /* Nav Links with Luminous Underline */
     .nav-item {
       position: relative;
-      font-size: 0.72rem;
-      font-weight: 500;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-      color: var(--text-muted);
+      font-size: 0.84rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      color: var(--text-lavender);
       transition: color 0.25s ease;
       padding-bottom: 4px;
     }
@@ -109,7 +127,7 @@
       bottom: 0;
       width: 100%;
       height: 1.5px;
-      background: linear-gradient(90deg, var(--bridge-blue), var(--starlight-gold));
+      background: linear-gradient(90deg, var(--amethyst), var(--moon-gold));
       transform: scaleX(0);
       transform-origin: left center;
       transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1);
@@ -117,7 +135,7 @@
 
     .nav-item:hover,
     .nav-item.active {
-      color: var(--text-primary);
+      color: var(--text-cream);
     }
 
     .nav-item:hover::after,
@@ -125,16 +143,16 @@
       transform: scaleX(1);
     }
 
-    /* Oversized Floating Circular Logo Medallion */
+    /* Main Circular Logo Medallion (Logo Kept Completely Alone) */
     .logo-medallion {
       border-radius: 9999px;
       background-color: #0D1017;
       border: 2.5px solid rgba(255, 255, 255, 0.95);
       box-shadow:
         0 20px 48px -10px rgba(0, 0, 0, 0.94),
-        0 0 0 4px rgba(10, 13, 18, 0.9),
-        0 0 28px -2px rgba(74, 144, 245, 0.38),
-        0 0 46px -12px rgba(242, 180, 65, 0.3);
+        0 0 0 4px rgba(11, 8, 18, 0.92),
+        0 0 28px -2px rgba(176, 136, 249, 0.38),
+        0 0 46px -12px rgba(232, 195, 116, 0.32);
       overflow: hidden;
       transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.4s ease;
     }
@@ -143,60 +161,58 @@
       transform: scale(1.045);
       box-shadow:
         0 24px 52px -10px rgba(0, 0, 0, 0.96),
-        0 0 0 4px rgba(10, 13, 18, 0.95),
-        0 0 36px 0px rgba(74, 144, 245, 0.52),
-        0 0 52px -8px rgba(242, 180, 65, 0.4);
+        0 0 0 4px rgba(11, 8, 18, 0.95),
+        0 0 36px 0px rgba(176, 136, 249, 0.52),
+        0 0 54px -8px rgba(232, 195, 116, 0.44);
     }
 
-    /* Buttons */
-    .btn-glow-pill {
-      background: linear-gradient(135deg, rgba(74, 144, 245, 0.18), rgba(242, 180, 65, 0.14));
-      border: 1px solid rgba(74, 144, 245, 0.55);
-      color: var(--text-primary);
-      box-shadow: 0 0 22px -6px rgba(74, 144, 245, 0.55);
+    .btn-mystic-pill {
+      background: linear-gradient(135deg, rgba(176, 136, 249, 0.2), rgba(232, 195, 116, 0.14));
+      border: 1px solid rgba(176, 136, 249, 0.5);
+      color: var(--text-cream);
+      box-shadow: 0 0 22px -6px rgba(176, 136, 249, 0.5);
       transition: all 0.28s ease;
     }
 
-    .btn-glow-pill:hover {
-      background: linear-gradient(135deg, rgba(74, 144, 245, 0.32), rgba(242, 180, 65, 0.24));
-      border-color: var(--starlight-gold);
-      box-shadow: 0 0 28px -4px rgba(242, 180, 65, 0.45);
+    .btn-mystic-pill:hover {
+      background: linear-gradient(135deg, rgba(176, 136, 249, 0.34), rgba(232, 195, 116, 0.24));
+      border-color: var(--moon-gold);
+      box-shadow: 0 0 28px -4px rgba(232, 195, 116, 0.45);
       transform: translateY(-1px);
     }
 
-    .btn-primary-gold {
-      background: linear-gradient(135deg, #F5E6C8 0%, #F2B441 100%);
-      color: #0A0D12;
-      font-weight: 600;
-      box-shadow: 0 12px 28px -10px rgba(242, 180, 65, 0.45);
+    .btn-moon-gold {
+      background: linear-gradient(135deg, #F6E6C2 0%, #E2B45A 100%);
+      color: #161024;
+      font-weight: 700;
+      box-shadow: 0 12px 28px -10px rgba(232, 195, 116, 0.45);
       transition: transform 0.28s ease, box-shadow 0.28s ease, filter 0.28s ease;
     }
 
-    .btn-primary-gold:hover {
+    .btn-moon-gold:hover {
       transform: translateY(-2px);
       filter: brightness(1.06);
-      box-shadow: 0 16px 34px -10px rgba(242, 180, 65, 0.62);
+      box-shadow: 0 16px 34px -10px rgba(232, 195, 116, 0.62);
     }
 
-    .btn-ghost-blue {
-      background: rgba(17, 22, 31, 0.65);
-      border: 1px solid rgba(74, 144, 245, 0.48);
-      color: var(--text-primary);
+    .btn-velvet-ghost {
+      background: rgba(20, 15, 31, 0.72);
+      border: 1px solid rgba(196, 168, 245, 0.42);
+      color: var(--text-cream);
       transition: all 0.28s ease;
     }
 
-    .btn-ghost-blue:hover {
-      background: rgba(74, 144, 245, 0.14);
-      border-color: var(--bridge-blue);
+    .btn-velvet-ghost:hover {
+      background: rgba(176, 136, 249, 0.16);
+      border-color: var(--moon-gold);
       transform: translateY(-2px);
-      box-shadow: 0 10px 26px -12px rgba(74, 144, 245, 0.6);
+      box-shadow: 0 10px 26px -12px rgba(176, 136, 249, 0.55);
     }
 
-    /* Kinetic Marquee Brand Strip */
     .marquee-track {
       display: flex;
       width: max-content;
-      animation: marquee-run 38s linear infinite;
+      animation: marquee-run 42s linear infinite;
     }
 
     .marquee-wrap:hover .marquee-track {
@@ -208,20 +224,19 @@
       100% { transform: translateX(-50%); }
     }
 
-    /* Tri-Color Bridge Gradient Border Utility */
-    .bridge-gradient-border {
+    .celestial-border {
       position: relative;
-      background: var(--bg-surface);
+      background: var(--bg-velvet);
       z-index: 1;
     }
 
-    .bridge-gradient-border::before {
+    .celestial-border::before {
       content: '';
       position: absolute;
       inset: -1px;
       border-radius: inherit;
       padding: 1px;
-      background: linear-gradient(125deg, rgba(74, 144, 245, 0.65), rgba(242, 180, 65, 0.55) 50%, rgba(223, 75, 80, 0.45));
+      background: linear-gradient(125deg, rgba(176, 136, 249, 0.65), rgba(232, 195, 116, 0.58) 50%, rgba(223, 110, 134, 0.48));
       -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
       -webkit-mask-composite: xor;
       mask-composite: exclude;
@@ -229,23 +244,22 @@
       z-index: 2;
     }
 
-    /* Vibe Cards Hover */
+    /* Cozy Tarot-Inspired Vibe Cards */
     .vibe-card {
-      background: var(--bg-surface);
-      border: 1px solid var(--border-subtle);
+      background: linear-gradient(180deg, rgba(26, 20, 41, 0.92), rgba(18, 13, 29, 0.96));
+      border: 1px solid var(--border-mystic);
       transition: transform 0.38s cubic-bezier(0.22, 1, 0.36, 1), border-color 0.3s ease, box-shadow 0.38s ease;
     }
 
     .vibe-card:hover {
       transform: translateY(-4px);
-      border-color: rgba(242, 180, 65, 0.38);
-      box-shadow: 0 22px 46px -22px rgba(0, 0, 0, 0.9);
+      border-color: rgba(232, 195, 116, 0.48);
+      box-shadow: 0 22px 46px -22px rgba(0, 0, 0, 0.9), 0 0 24px -10px rgba(176, 136, 249, 0.3);
     }
 
-    /* Scroll Reveal Animations */
     .reveal {
       opacity: 0;
-      transform: translateY(28px);
+      transform: translateY(24px);
       transition: opacity 0.8s cubic-bezier(0.22, 1, 0.36, 1), transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
     }
 
@@ -254,7 +268,6 @@
       transform: translateY(0);
     }
 
-    /* Lightbox Modal */
     .modal-backdrop {
       opacity: 0;
       pointer-events: none;
@@ -275,26 +288,35 @@
       transform: translateY(0) scale(1);
     }
 
-    /* Custom Dark Scrollbar */
+    @media (prefers-reduced-motion: reduce) {
+      .marquee-track { animation: none; }
+      .reveal { opacity: 1; transform: none; transition: none; }
+      html { scroll-behavior: auto; }
+    }
+
     ::-webkit-scrollbar { width: 8px; }
-    ::-webkit-scrollbar-track { background: #0A0D12; }
-    ::-webkit-scrollbar-thumb { background: #1E2736; border-radius: 9999px; }
-    ::-webkit-scrollbar-thumb:hover { background: #30405A; }
+    ::-webkit-scrollbar-track { background: #0B0812; }
+    ::-webkit-scrollbar-thumb { background: #2A2042; border-radius: 9999px; }
+    ::-webkit-scrollbar-thumb:hover { background: #3E2F61; }
   </style>
 </head>
-<body class="selection:bg-[#4A90F5]/35 selection:text-white">
+<body class="starfield-bg selection:bg-[#B088F9]/35 selection:text-white">
+
+  <a href="#main-content" class="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-50 focus:px-4 focus:py-2 focus:rounded-full focus:bg-[#E8C374] focus:text-[#140F1F] focus:font-bold">
+    Skip to main content
+  </a>
 
   <!-- ========================================================================
-       1. MINIMALIST SPLIT NAVIGATION (MATCHED TO HOME.HTML)
+       1. NAVIGATION (MATCHED TO HOME.HTML, MAIN LOGO UNCHANGED)
        ======================================================================== -->
   <header id="site-header" class="glass-nav sticky top-0 z-40 w-full">
     <div class="max-w-[1340px] mx-auto px-4 sm:px-8">
       <div class="h-24 md:h-[100px] flex items-center justify-between gap-4 relative">
 
         <!-- Left Navigation Links (Desktop) -->
-        <nav class="hidden lg:flex items-center gap-10 flex-1" aria-label="Primary left navigation">
+        <nav class="hidden lg:flex items-center gap-9 flex-1" aria-label="Primary left navigation">
           <a href="Home.html#journal-grid" class="nav-item">Photo Journal</a>
-          <a href="Home.html#featured" class="nav-item">Featured</a>
+          <a href="Home.html#featured" class="nav-item">Moonlit Picks</a>
         </nav>
 
         <!-- Mobile Hamburger Trigger -->
@@ -303,15 +325,15 @@
             type="button"
             onclick="toggleMobileMenu()"
             aria-label="Open navigation menu"
-            class="p-2.5 -ml-2 rounded-lg text-[#F4F6FA] hover:bg-white/5 transition-colors cursor-pointer"
+            class="p-2.5 -ml-2 rounded-lg text-[#F5EFE6] hover:bg-white/5 transition-colors cursor-pointer"
           >
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.7" viewBox="0 0 24 24">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25H12" />
             </svg>
           </button>
         </div>
 
-        <!-- Center Oversized Floating Circular Logo Medallion -->
+        <!-- Center Oversized Floating Circular Logo Medallion (Untouched) -->
         <a
           href="Home.html"
           aria-label="Whit's Angle of Life — Home"
@@ -328,17 +350,17 @@
           </div>
         </a>
 
-        <!-- Right Navigation Links + Home Pill -->
-        <div class="flex items-center justify-end gap-6 lg:gap-9 flex-1">
-          <nav class="hidden lg:flex items-center gap-9" aria-label="Primary right navigation">
-            <a href="about.html" class="nav-item active" aria-current="page">About Whit</a>
+        <!-- Right Navigation Links + Back Home Pill -->
+        <div class="flex items-center justify-end gap-5 lg:gap-8 flex-1">
+          <nav class="hidden lg:flex items-center gap-8" aria-label="Primary right navigation">
+            <a href="About.html" class="nav-item active" aria-current="page">About Whit</a>
           </nav>
 
           <a
             href="Home.html"
-            class="btn-glow-pill px-4 sm:px-6 py-2.5 rounded-full text-[10.5px] sm:text-[11px] font-semibold tracking-[0.2em] uppercase cursor-pointer whitespace-nowrap"
+            class="btn-mystic-pill px-4 sm:px-5 py-2.5 rounded-full text-xs font-semibold tracking-wider whitespace-nowrap"
           >
-            Journal
+            ← Home
           </a>
         </div>
       </div>
@@ -346,345 +368,333 @@
   </header>
 
   <!-- Mobile Slide-Out Navigation Drawer -->
-  <div id="mobile-drawer" class="fixed inset-0 z-50 pointer-events-none opacity-0 transition-opacity duration-300">
+  <div id="mobile-drawer" class="fixed inset-0 z-50 pointer-events-none opacity-0 transition-opacity duration-300" aria-hidden="true">
     <div onclick="toggleMobileMenu()" class="absolute inset-0 bg-black/75 backdrop-blur-sm"></div>
     <aside
       id="mobile-drawer-panel"
-      class="relative w-72 max-w-[82vw] h-full p-7 flex flex-col justify-between -translate-x-full transition-transform duration-300 bg-[#0D1119] border-r border-[#1E2736]"
+      class="relative w-72 max-w-[82vw] h-full p-7 flex flex-col justify-between -translate-x-full transition-transform duration-300 bg-[#120D1D] border-r border-[#C4A8F5]/20"
     >
       <div>
-        <div class="flex items-center justify-between pb-6 mb-7 border-b border-[#1E2736]">
+        <div class="flex items-center justify-between pb-6 mb-7 border-b border-[#C4A8F5]/15">
           <div>
-            <p class="font-serif-display text-xl tracking-[0.12em] uppercase text-[#F4F6FA]">Whit's Angle</p>
-            <p class="text-[10px] tracking-[0.22em] uppercase text-[#F2B441] mt-0.5">About Whit</p>
+            <p class="font-serif-display text-2xl text-[#F5EFE6]">Whit's Angle</p>
+            <p class="text-xs text-[#E8C374] mt-0.5">✦ About Whit</p>
           </div>
-          <button type="button" onclick="toggleMobileMenu()" aria-label="Close menu" class="p-2 rounded-lg text-[#9AA5B8] hover:text-white hover:bg-white/5 cursor-pointer">
+          <button type="button" onclick="toggleMobileMenu()" aria-label="Close menu" class="p-2 rounded-lg text-[#C6BCD8] hover:text-white hover:bg-white/5 cursor-pointer">
             <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
             </svg>
           </button>
         </div>
 
-        <nav class="flex flex-col gap-5">
-          <a href="Home.html" class="nav-item !text-xs">Home</a>
-          <a href="Home.html#journal-grid" class="nav-item !text-xs">Photo Journal</a>
-          <a href="Home.html#featured" class="nav-item !text-xs">Featured Moment</a>
-          <a href="about.html" onclick="toggleMobileMenu()" class="nav-item active !text-xs">About Whit</a>
+        <nav class="flex flex-col gap-5" aria-label="Mobile navigation">
+          <a href="Home.html" class="nav-item">Home</a>
+          <a href="Home.html#journal-grid" class="nav-item">Photo Journal</a>
+          <a href="Home.html#featured" class="nav-item">Moonlit Picks</a>
+          <a href="About.html" onclick="toggleMobileMenu()" class="nav-item active" aria-current="page">✦ About Whit</a>
         </nav>
       </div>
 
-      <div class="pt-6 border-t border-[#1E2736] space-y-3">
-        <a href="Home.html#journal-grid" class="btn-primary-gold block text-center w-full py-3 rounded-full text-[11px] tracking-[0.2em] uppercase">
-          Browse Photos
+      <div class="pt-6 border-t border-[#C4A8F5]/15 space-y-3">
+        <a href="Home.html#journal-grid" class="btn-moon-gold block text-center w-full py-3 rounded-full text-xs tracking-wider uppercase">
+          Wander The Photos
         </a>
-        <p class="text-[10.5px] text-center text-[#6C778C] tracking-wider">Florida &rarr; Peoria, Illinois</p>
+        <p class="text-xs text-center text-[#9387AA]">Florida → Peoria, Illinois</p>
       </div>
     </aside>
   </div>
 
-  <!-- ========================================================================
-       2. ABOUT HERO: COUPLE PHOTO + WHIT'S FRIENDLY STORY
-       ======================================================================== -->
-  <section id="top" class="relative hero-glow-field pt-24 sm:pt-28 lg:pt-32 pb-20 sm:pb-24 lg:pb-28 overflow-hidden">
-    <div class="max-w-[1260px] mx-auto px-5 sm:px-8">
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-14 lg:gap-16 items-center">
+  <main id="main-content">
+    <!-- ========================================================================
+         2. ABOUT HERO: COUPLE PHOTO + WHIT'S REAL, COZY STORY
+         ======================================================================== -->
+    <section id="top" class="relative hero-glow-field pt-24 sm:pt-28 lg:pt-32 pb-20 sm:pb-24 lg:pb-28 overflow-hidden">
+      <div class="max-w-[1260px] mx-auto px-5 sm:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-14 lg:gap-16 items-center">
 
-        <!-- LEFT COLUMN: Photo of Whit & Her Husband (Replace src with your photo filename!) -->
-        <div class="lg:col-span-5 reveal">
-          <div class="relative max-w-[440px] mx-auto lg:mx-0">
-            <!-- Ambient Glow Behind Portrait -->
-            <div class="pointer-events-none absolute -inset-6 rounded-full opacity-65 blur-3xl" style="background: radial-gradient(circle at 30% 25%, rgba(74,144,245,0.22), transparent 55%), radial-gradient(circle at 75% 80%, rgba(242,180,65,0.18), transparent 55%);"></div>
+          <!-- LEFT COLUMN: Tarot-Arch Couple Photo -->
+          <div class="lg:col-span-5 reveal">
+            <div class="relative max-w-[440px] mx-auto lg:mx-0">
+              <div class="pointer-events-none absolute -inset-6 rounded-full opacity-70 blur-3xl" style="background: radial-gradient(circle at 30% 25%, rgba(176,136,249,0.24), transparent 55%), radial-gradient(circle at 75% 80%, rgba(232,195,116,0.2), transparent 55%);"></div>
 
-            <!-- Offset Glowing Geometric Accent Frames -->
-            <div
-              class="absolute -top-4 -left-4 w-full h-full rounded-t-[180px] rounded-b-2xl pointer-events-none"
-              style="border: 1.5px solid rgba(74, 144, 245, 0.55); box-shadow: -10px -10px 30px -16px rgba(74, 144, 245, 0.5);"
-            ></div>
-            <div
-              class="absolute -bottom-4 -right-4 w-3/4 h-3/4 rounded-none pointer-events-none"
-              style="border-right: 1.5px solid rgba(242, 180, 65, 0.65); border-bottom: 1.5px solid rgba(242, 180, 65, 0.65);"
-            ></div>
+              <div
+                class="absolute -top-4 -left-4 w-full h-full rounded-t-[190px] rounded-b-2xl pointer-events-none"
+                style="border: 1.5px solid rgba(176, 136, 249, 0.5); box-shadow: -10px -10px 30px -16px rgba(176, 136, 249, 0.45);"
+              ></div>
+              <div
+                class="absolute -bottom-4 -right-4 w-3/4 h-3/4 rounded-br-2xl pointer-events-none"
+                style="border-right: 1.5px solid rgba(232, 195, 116, 0.6); border-bottom: 1.5px solid rgba(232, 195, 116, 0.6);"
+              ></div>
 
-            <!-- Main Couple Photo Container -->
-            <div
-              onclick="openCoupleLightbox()"
-              class="relative z-10 overflow-hidden rounded-t-[180px] rounded-b-2xl aspect-[4/5] bg-[#11161F] border border-[#1E2736] shadow-[0_28px_60px_-20px_rgba(0,0,0,0.95)] cursor-pointer group"
-            >
-              <!-- REPLACE "whit-and-husband.jpg" WITH YOUR ACTUAL PHOTO FILENAME -->
-              <img
-                id="couple-photo"
-                src="whit-and-husband.jpg"
-                alt="Whit and her husband smiling together"
-                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                onerror="this.style.display='none'; document.getElementById('couple-photo-fallback').style.display='flex';"
-              />
+              <div
+                onclick="openCoupleLightbox()"
+                tabindex="0"
+                role="button"
+                onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openCoupleLightbox();}"
+                aria-label="Expand photo of Whit and her husband"
+                class="relative z-10 overflow-hidden rounded-t-[190px] rounded-b-2xl aspect-[4/5] bg-[#140F1F] border border-[#E8C374]/35 shadow-[0_28px_60px_-20px_rgba(0,0,0,0.95)] cursor-pointer group"
+              >
+                <img
+                  id="couple-photo"
+                  src="whit-and-husband.jpg"
+                  alt="Whit and her husband smiling together"
+                  class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                  onerror="this.style.display='none'; document.getElementById('couple-photo-fallback').style.display='flex';"
+                />
 
-              <!-- Graceful Fallback if Photo Filename Hasn't Been Added Yet -->
-              <div id="couple-photo-fallback" class="hidden w-full h-full flex-col items-center justify-center text-center p-8 bg-gradient-to-b from-[#141B27] to-[#0D121B]">
-                <div class="w-14 h-14 rounded-full bg-[#171D28] border border-[#4A90F5]/40 flex items-center justify-center mb-4 text-[#F2B441]">
-                  <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M6.827 6.175A2.31 2.31 0 015.186 7.23c-.38.054-.757.112-1.134.175C2.999 7.58 2.25 8.507 2.25 9.574V18a2.25 2.25 0 002.25 2.25h15A2.25 2.25 0 0021.75 18V9.574c0-1.067-.75-1.994-1.802-2.169a47.865 47.865 0 00-1.134-.175 2.31 2.31 0 01-1.64-1.055l-.822-1.316a2.192 2.192 0 00-1.736-1.039 48.774 48.774 0 00-5.232 0 2.192 2.192 0 00-1.736 1.039l-.821 1.316z" />
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M16.5 12.75a4.5 4.5 0 11-9 0 4.5 4.5 0 019 0z" />
-                  </svg>
+                <!-- Graceful Fallback -->
+                <div id="couple-photo-fallback" class="hidden w-full h-full flex-col items-center justify-center text-center p-8 bg-gradient-to-b from-[#1A132A] to-[#0E0A18]">
+                  <div class="w-14 h-14 rounded-full bg-[#140F1F] border border-[#E8C374]/45 flex items-center justify-center mb-4 text-[#E8C374] text-xl">
+                    ☾
+                  </div>
+                  <p class="font-serif-display text-2xl text-[#F5EFE6] mb-2">Whit &amp; Her Husband</p>
+                  <p class="text-xs text-[#C6BCD8] leading-relaxed max-w-[230px]">
+                    Save your photo in this folder as <code class="text-[#E8C374]">whit-and-husband.jpg</code> (or update the <code class="text-[#B088F9]">src</code> in About.html).
+                  </p>
                 </div>
-                <p class="font-serif-display text-2xl text-[#F4F6FA] mb-2">Whit &amp; Her Husband</p>
-                <p class="text-xs text-[#9AA5B8] leading-relaxed max-w-[230px]">
-                  Save your photo in this folder as <code class="text-[#F2B441]">whit-and-husband.jpg</code> (or update the <code class="text-[#4A90F5]">src</code> in about.html).
-                </p>
+
+                <div class="absolute inset-0 bg-gradient-to-t from-[#0B0812]/80 via-transparent to-transparent pointer-events-none"></div>
+                <span class="absolute top-6 right-5 px-3 py-1 rounded-full bg-[#140F1F]/80 backdrop-blur-md border border-[#E8C374]/35 text-[11px] font-semibold text-[#F5EFE6] opacity-90 group-hover:opacity-100 transition-all">
+                  Expand →
+                </span>
               </div>
 
-              <div class="absolute inset-0 bg-gradient-to-t from-[#0A0D12]/80 via-transparent to-transparent pointer-events-none"></div>
-              <span class="absolute top-6 right-5 px-3 py-1 rounded-full bg-[#0A0D12]/75 backdrop-blur-md border border-white/15 text-[9.5px] tracking-[0.2em] uppercase text-[#F4F6FA] opacity-85 group-hover:opacity-100 group-hover:border-[#F2B441]/60 transition-all">
-                Expand &rarr;
+              <!-- Floating Permission Tag -->
+              <div class="absolute -bottom-5 left-4 right-4 sm:right-auto z-20 px-4 py-3 rounded-2xl bg-[#140F1F]/94 backdrop-blur-md border border-[#E8C374]/30 shadow-2xl flex items-center gap-3">
+                <span class="text-[#E8C374] text-sm shrink-0" aria-hidden="true">✦</span>
+                <div>
+                  <p class="text-xs font-semibold text-[#F5EFE6]">Me &amp; My Biggest Supporter</p>
+                  <p class="text-[11px] text-[#C6BCD8]">Posted with his official permission</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- RIGHT COLUMN: Cozy, Witchy-Vibey Personal Story -->
+          <div class="lg:col-span-7 reveal" style="transition-delay: 120ms;">
+            <div class="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-[#140F1F]/90 border border-[#C4A8F5]/25 mb-7">
+              <span class="text-[#E8C374] text-xs" aria-hidden="true">☾</span>
+              <span class="text-xs font-semibold tracking-wider text-[#C6BCD8]">
+                Meet The Human Behind The Camera
               </span>
             </div>
 
-            <!-- Floating Dark-Glass Permission Tag -->
-            <div class="absolute -bottom-5 left-4 right-4 sm:right-auto z-20 px-4 py-3 rounded-xl bg-[#11161F]/92 backdrop-blur-md border border-[#1E2736] shadow-2xl flex items-center gap-3">
-              <span class="w-2 h-2 rounded-full bg-[#F2B441] shadow-[0_0_8px_#F2B441] shrink-0"></span>
+            <h1 class="font-serif-display font-medium text-[2.95rem] sm:text-[3.85rem] xl:text-[4.35rem] leading-[1.06] text-[#F5EFE6] mb-7">
+              Hey there, I'm
+              <span class="font-script text-[4.1rem] sm:text-[5.2rem] xl:text-[5.9rem] text-[#E8C374] inline-block ml-2 align-baseline translate-y-2 drop-shadow-[0_4px_24px_rgba(232,195,116,0.3)]">
+                Whit
+              </span>
+            </h1>
+
+            <div class="space-y-5 text-[15px] sm:text-base leading-[1.86] text-[#C6BCD8]">
+              <p class="text-[#F5EFE6] text-base sm:text-[17px] leading-[1.82]">
+                No age, no labels, no rigid boxes needed here—I'm just a human out here trying to figure out life, soaking up the good energy, and snapping photos of whatever makes me smile along the way.
+              </p>
+              <p>
+                I'm lucky to do this whole wild life thing alongside an awesome, endlessly supportive husband who always has my back. (And yes—the only reason he's included with me in this photo is because I got his official permission to post him!) We also have a kiddo together, though we keep their world tucked safely off the internet.
+              </p>
+              <p>
+                We recently made the move up from <strong class="text-[#F5EFE6] font-semibold">Florida</strong> and are settling into our new chapter as a proudly <strong class="text-[#F5EFE6] font-semibold">pet-friendly family</strong>. Wherever we land, my camera is usually close by.
+              </p>
+              <p>
+                I've always loved photography. More than anything, I just want people to feel my happiness through a camera lens—even if my own visual lenses are a little cracked at the moment and currently getting repaired so I can see the full brightness of it all. Until everything is crystal clear again, this little space is how I share the joy I see right in front of me.
+              </p>
+            </div>
+
+            <!-- Signature & Back to Journal CTA -->
+            <div class="mt-10 pt-7 border-t border-[#C4A8F5]/18 flex flex-wrap items-center justify-between gap-6">
               <div>
-                <p class="text-[10px] font-semibold tracking-[0.2em] uppercase text-[#F4F6FA]">Me &amp; My Biggest Supporter</p>
-                <p class="text-[10.5px] text-[#9AA5B8]">Posted with his official permission</p>
+                <p class="font-script text-5xl text-[#F5EFE6] leading-none">— Whit</p>
+                <p class="text-xs text-[#9387AA] mt-2">
+                  Just figuring it out, frame by frame
+                </p>
+              </div>
+              <div class="flex flex-wrap items-center gap-3">
+                <a href="Home.html#journal-grid" class="btn-moon-gold px-7 py-3.5 rounded-full text-xs sm:text-sm tracking-wide inline-flex items-center gap-2">
+                  <span>Wander The Photos</span>
+                  <span aria-hidden="true">→</span>
+                </a>
               </div>
             </div>
           </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         3. MOONLIT MARQUEE STRIP
+         ======================================================================== -->
+    <div class="marquee-wrap w-full py-4 bg-[#140F1F]/90 border-y border-[#C4A8F5]/18 overflow-hidden select-none" aria-hidden="true">
+      <div class="marquee-track text-xs font-semibold tracking-[0.2em] uppercase text-[#C6BCD8]">
+        <div class="flex items-center shrink-0">
+          <span class="mx-6 text-[#E8C374]">✦</span>
+          <span class="text-[#F5EFE6]">Just A Human Figuring Out Life</span>
+          <span class="mx-6 text-[#B088F9]">☾</span>
+          <span>Florida To Illinois</span>
+          <span class="mx-6 text-[#DF6E86]">✦</span>
+          <span class="text-[#F5EFE6]">Pet-Friendly Crew</span>
+          <span class="mx-6 text-[#8AB89B]">☾</span>
+          <span>Happiness Through The Lens</span>
+          <span class="mx-6 text-[#E8C374]">✦</span>
+          <span class="text-[#F5EFE6]">Real Moments Only</span>
+        </div>
+        <div class="flex items-center shrink-0">
+          <span class="mx-6 text-[#E8C374]">✦</span>
+          <span class="text-[#F5EFE6]">Just A Human Figuring Out Life</span>
+          <span class="mx-6 text-[#B088F9]">☾</span>
+          <span>Florida To Illinois</span>
+          <span class="mx-6 text-[#DF6E86]">✦</span>
+          <span class="text-[#F5EFE6]">Pet-Friendly Crew</span>
+          <span class="mx-6 text-[#8AB89B]">☾</span>
+          <span>Happiness Through The Lens</span>
+          <span class="mx-6 text-[#E8C374]">✦</span>
+          <span class="text-[#F5EFE6]">Real Moments Only</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ========================================================================
+         4. COZY SNAPSHOT CARDS ("FOUR LITTLE CARDS")
+         ======================================================================== -->
+    <section class="py-24 sm:py-28 px-5 sm:px-8">
+      <div class="max-w-[1260px] mx-auto">
+
+        <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-14 reveal">
+          <div>
+            <p class="text-xs font-semibold tracking-[0.22em] uppercase text-[#B088F9] mb-2.5">
+              ✦ A Little Snapshot
+            </p>
+            <h2 class="font-serif-display font-medium text-4xl sm:text-5xl text-[#F5EFE6]">
+              The Vibe In
+              <span class="font-script text-5xl sm:text-6xl text-[#E8C374] ml-1.5">Four Cards</span>
+            </h2>
+          </div>
+          <p class="text-sm sm:text-[15px] text-[#C6BCD8] max-w-md leading-relaxed">
+            What makes this cozy little corner of the internet feel like home.
+          </p>
         </div>
 
-        <!-- RIGHT COLUMN: Super Friendly About Me Copy -->
-        <div class="lg:col-span-7 reveal" style="transition-delay: 120ms;">
-          <!-- Eyebrow Tag -->
-          <div class="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-[#11161F]/90 border border-[#1E2736] mb-7">
-            <span class="w-1.5 h-1.5 rounded-full bg-[#4A90F5] shadow-[0_0_8px_#4A90F5]"></span>
-            <span class="text-[10px] sm:text-[10.5px] font-medium tracking-[0.24em] uppercase text-[#9AA5B8]">
-              Meet The Human Behind The Camera
-            </span>
-          </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 lg:gap-6 reveal">
 
-          <!-- Headline -->
-          <h1 class="font-serif-display font-light text-[2.85rem] sm:text-[3.8rem] xl:text-[4.3rem] leading-[1.06] tracking-[0.02em] text-[#F4F6FA] mb-7">
-            Hey there, I'm
-            <span class="font-script text-[4rem] sm:text-[5.2rem] xl:text-[5.8rem] text-[#F2B441] inline-block ml-2 align-baseline translate-y-2 drop-shadow-[0_4px_24px_rgba(242,180,65,0.28)]">
-              Whit
-            </span>
-          </h1>
-
-          <!-- About Me Body Copy -->
-          <div class="space-y-5 text-sm sm:text-[15.5px] font-light leading-[1.86] text-[#9AA5B8]">
-            <p class="text-[#F4F6FA]/95 text-base sm:text-[16.5px] leading-[1.8]">
-              No age, no labels, no rigid boxes needed here—I'm just a human out here trying to figure out life, soaking up the good moments, and snapping photos of whatever makes me smile along the way.
-            </p>
-            <p>
-              I'm lucky to do this whole life thing alongside an awesome, endlessly supportive husband who always has my back. (And yes—the only reason he's included with me in this photo is because I got his official permission to post him!) We also have a kiddo together, though we keep their world tucked safely off the internet.
-            </p>
-            <p>
-              We recently made the move up from <strong class="text-[#F4F6FA] font-medium">Florida</strong> and are settling into our new chapter as a proudly <strong class="text-[#F4F6FA] font-medium">pet-friendly family</strong>. Wherever we land, my camera is usually close by.
-            </p>
-            <p>
-              I've always loved photography. More than anything, I just want people to feel my happiness through a camera lens—even if my own visual lenses are a little cracked at the moment and currently getting repaired so I can see the full brightness of it all. Until everything is crystal clear again, this site is how I share the joy I see right in front of me.
-            </p>
-          </div>
-
-          <!-- Script Signature & CTA -->
-          <div class="mt-10 pt-7 border-t border-[#1E2736] flex flex-wrap items-center justify-between gap-6">
+          <article class="vibe-card rounded-3xl p-7 flex flex-col justify-between">
             <div>
-              <p class="font-script text-5xl text-[#F4F6FA] leading-none">— Whit</p>
-              <p class="text-[10.5px] tracking-[0.22em] uppercase text-[#6C778C] mt-2">
-                Just Figuring It Out, Frame By Frame
+              <div class="inline-flex items-center gap-2 mb-5">
+                <span class="text-[#B088F9]" aria-hidden="true">☾</span>
+                <span class="text-xs font-semibold tracking-wider uppercase text-[#B088F9]">I &bull; The Mindset</span>
+              </div>
+              <h3 class="font-serif-display text-2xl text-[#F5EFE6] mb-3">Just Being Human</h3>
+              <p class="text-sm leading-[1.8] text-[#C6BCD8]">
+                Age and labels don't really tell anyone's story anyway. I'm just here staying curious, enjoying the ride, and figuring life out as I go.
               </p>
             </div>
-            <div class="flex flex-wrap items-center gap-3">
-              <a href="Home.html#journal-grid" class="btn-primary-gold px-7 py-3.5 rounded-full text-[11px] tracking-[0.2em] uppercase inline-flex items-center gap-2">
-                <span>Browse The Journal</span>
-                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
-                </svg>
-              </a>
+          </article>
+
+          <article class="vibe-card rounded-3xl p-7 flex flex-col justify-between">
+            <div>
+              <div class="inline-flex items-center gap-2 mb-5">
+                <span class="text-[#E8C374]" aria-hidden="true">✦</span>
+                <span class="text-xs font-semibold tracking-wider uppercase text-[#E8C374]">II &bull; New Chapter</span>
+              </div>
+              <h3 class="font-serif-display text-2xl text-[#F5EFE6] mb-3">Florida → Peoria</h3>
+              <p class="text-sm leading-[1.8] text-[#C6BCD8]">
+                We recently traded Florida sunshine for Illinois skies, riverfront reflections, and four real seasons—with plenty of fresh magic to shoot.
+              </p>
             </div>
-          </div>
-        </div>
+          </article>
 
-      </div>
-    </div>
-  </section>
-
-  <!-- ========================================================================
-       3. KINETIC MARQUEE STRIP (CUSTOMIZED FOR ABOUT PAGE)
-       ======================================================================== -->
-  <div class="marquee-wrap w-full py-4 bg-[#11161F]/90 border-y border-[#1E2736] overflow-hidden select-none">
-    <div class="marquee-track text-[10.5px] sm:text-[11px] font-medium tracking-[0.26em] uppercase text-[#9AA5B8]">
-      <!-- Copy 1 -->
-      <div class="flex items-center shrink-0">
-        <span class="mx-6 w-1.5 h-1.5 rounded-full bg-[#4A90F5] shadow-[0_0_8px_#4A90F5]"></span>
-        <span class="text-[#F4F6FA]">Just A Human Figuring Out Life</span>
-        <span class="mx-6 w-1.5 h-1.5 rounded-full bg-[#F2B441] shadow-[0_0_8px_#F2B441]"></span>
-        <span>Florida To Illinois</span>
-        <span class="mx-6 w-1.5 h-1.5 rounded-full bg-[#DF4B50] shadow-[0_0_8px_#DF4B50]"></span>
-        <span class="text-[#F4F6FA]">Pet-Friendly Crew</span>
-        <span class="mx-6 w-1.5 h-1.5 rounded-full bg-[#4A90F5] shadow-[0_0_8px_#4A90F5]"></span>
-        <span>Happiness Through The Lens</span>
-        <span class="mx-6 w-1.5 h-1.5 rounded-full bg-[#F2B441] shadow-[0_0_8px_#F2B441]"></span>
-        <span class="text-[#F4F6FA]">Real Moments Only</span>
-      </div>
-      <!-- Copy 2 -->
-      <div class="flex items-center shrink-0" aria-hidden="true">
-        <span class="mx-6 w-1.5 h-1.5 rounded-full bg-[#4A90F5] shadow-[0_0_8px_#4A90F5]"></span>
-        <span class="text-[#F4F6FA]">Just A Human Figuring Out Life</span>
-        <span class="mx-6 w-1.5 h-1.5 rounded-full bg-[#F2B441] shadow-[0_0_8px_#F2B441]"></span>
-        <span>Florida To Illinois</span>
-        <span class="mx-6 w-1.5 h-1.5 rounded-full bg-[#DF4B50] shadow-[0_0_8px_#DF4B50]"></span>
-        <span class="text-[#F4F6FA]">Pet-Friendly Crew</span>
-        <span class="mx-6 w-1.5 h-1.5 rounded-full bg-[#4A90F5] shadow-[0_0_8px_#4A90F5]"></span>
-        <span>Happiness Through The Lens</span>
-        <span class="mx-6 w-1.5 h-1.5 rounded-full bg-[#F2B441] shadow-[0_0_8px_#F2B441]"></span>
-        <span class="text-[#F4F6FA]">Real Moments Only</span>
-      </div>
-    </div>
-  </div>
-
-  <!-- ========================================================================
-       4. QUICK SNAPSHOT CARDS ("THE SHORT VERSION")
-       ======================================================================== -->
-  <section class="py-24 sm:py-28 px-5 sm:px-8">
-    <div class="max-w-[1260px] mx-auto">
-
-      <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-14 reveal">
-        <div>
-          <p class="text-[10.5px] font-medium tracking-[0.3em] uppercase text-[#4A90F5] mb-3">
-            A Little Snapshot
-          </p>
-          <h2 class="font-serif-display font-light text-4xl sm:text-5xl tracking-[0.04em] text-[#F4F6FA]">
-            The Vibe In
-            <span class="font-script text-5xl sm:text-6xl text-[#F2B441] ml-1.5">Four Frames</span>
-          </h2>
-        </div>
-        <p class="text-sm font-light text-[#9AA5B8] max-w-md leading-relaxed">
-          What makes this little corner of the internet feel like home.
-        </p>
-      </div>
-
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 lg:gap-6 reveal">
-
-        <!-- Card 1: Just Human -->
-        <article class="vibe-card rounded-2xl p-7 flex flex-col justify-between">
-          <div>
-            <div class="inline-flex items-center gap-2 mb-5">
-              <span class="w-2 h-2 rounded-full bg-[#4A90F5] shadow-[0_0_8px_#4A90F5]"></span>
-              <span class="text-[10px] font-semibold tracking-[0.24em] uppercase text-[#4A90F5]">01 &bull; The Mindset</span>
+          <article class="vibe-card rounded-3xl p-7 flex flex-col justify-between">
+            <div>
+              <div class="inline-flex items-center gap-2 mb-5">
+                <span class="text-[#DF6E86]" aria-hidden="true">☾</span>
+                <span class="text-xs font-semibold tracking-wider uppercase text-[#DF6E86]">III &bull; Home Crew</span>
+              </div>
+              <h3 class="font-serif-display text-2xl text-[#F5EFE6] mb-3">Family &amp; Pets</h3>
+              <p class="text-sm leading-[1.8] text-[#C6BCD8]">
+                Backed by an endlessly supportive husband, our kiddo (whose privacy comes first), and a whole lot of love for our pet-friendly household.
+              </p>
             </div>
-            <h3 class="font-serif-display text-2xl text-[#F4F6FA] mb-3">Just Being Human</h3>
-            <p class="text-xs sm:text-[13.5px] font-light leading-[1.8] text-[#9AA5B8]">
-              Age and labels don't really tell anyone's story anyway. I'm just here staying curious, enjoying the ride, and figuring life out as I go.
-            </p>
-          </div>
-        </article>
+          </article>
 
-        <!-- Card 2: Florida to Peoria -->
-        <article class="vibe-card rounded-2xl p-7 flex flex-col justify-between">
-          <div>
-            <div class="inline-flex items-center gap-2 mb-5">
-              <span class="w-2 h-2 rounded-full bg-[#F2B441] shadow-[0_0_8px_#F2B441]"></span>
-              <span class="text-[10px] font-semibold tracking-[0.24em] uppercase text-[#F2B441]">02 &bull; New Chapter</span>
+          <article class="vibe-card rounded-3xl p-7 flex flex-col justify-between">
+            <div>
+              <div class="inline-flex items-center gap-2 mb-5">
+                <span class="text-[#8AB89B]" aria-hidden="true">✦</span>
+                <span class="text-xs font-semibold tracking-wider uppercase text-[#8AB89B]">IV &bull; Why Photos</span>
+              </div>
+              <h3 class="font-serif-display text-2xl text-[#F5EFE6] mb-3">Full Happiness</h3>
+              <p class="text-sm leading-[1.8] text-[#C6BCD8]">
+                Even while my own eyes are getting a bit of repair work so I can take in the full picture, my camera lets me share the happiness I feel right now.
+              </p>
             </div>
-            <h3 class="font-serif-display text-2xl text-[#F4F6FA] mb-3">Florida &rarr; Peoria</h3>
-            <p class="text-xs sm:text-[13.5px] font-light leading-[1.8] text-[#9AA5B8]">
-              We recently traded Florida sunshine for Illinois skies, riverfront views, and four real seasons—and there's plenty of fresh scenery to shoot.
-            </p>
-          </div>
-        </article>
+          </article>
 
-        <!-- Card 3: Family & Pets -->
-        <article class="vibe-card rounded-2xl p-7 flex flex-col justify-between">
-          <div>
-            <div class="inline-flex items-center gap-2 mb-5">
-              <span class="w-2 h-2 rounded-full bg-[#DF4B50] shadow-[0_0_8px_#DF4B50]"></span>
-              <span class="text-[10px] font-semibold tracking-[0.24em] uppercase text-[#DF4B50]">03 &bull; Home Team</span>
-            </div>
-            <h3 class="font-serif-display text-2xl text-[#F4F6FA] mb-3">Family &amp; Pets</h3>
-            <p class="text-xs sm:text-[13.5px] font-light leading-[1.8] text-[#9AA5B8]">
-              Backed by an endlessly supportive husband, our kiddo (whose privacy comes first), and a whole lot of love for our pet-friendly household.
-            </p>
-          </div>
-        </article>
-
-        <!-- Card 4: Through The Lens -->
-        <article class="vibe-card rounded-2xl p-7 flex flex-col justify-between">
-          <div>
-            <div class="inline-flex items-center gap-2 mb-5">
-              <span class="w-2 h-2 rounded-full bg-[#4A90F5] shadow-[0_0_8px_#4A90F5]"></span>
-              <span class="text-[10px] font-semibold tracking-[0.24em] uppercase text-[#4A90F5]">04 &bull; Why Photos</span>
-            </div>
-            <h3 class="font-serif-display text-2xl text-[#F4F6FA] mb-3">Full Happiness</h3>
-            <p class="text-xs sm:text-[13.5px] font-light leading-[1.8] text-[#9AA5B8]">
-              Even while my own eyes are getting a bit of repair work so I can take in the full picture, my camera lets me share the happiness I feel right now.
-            </p>
-          </div>
-        </article>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- ========================================================================
-       5. HIGHLIGHT QUOTE CARD
-       ======================================================================== -->
-  <section class="pb-24 sm:pb-28 px-5 sm:px-8">
-    <div class="max-w-[1040px] mx-auto reveal">
-      <div class="bridge-gradient-border rounded-3xl p-8 sm:p-12 lg:p-14 text-center shadow-[0_28px_60px_-24px_rgba(0,0,0,0.92)]">
-        <span class="inline-block text-[10.5px] font-medium tracking-[0.3em] uppercase text-[#F2B441] mb-5">
-          The Heart Of It
-        </span>
-        <blockquote class="font-serif-display italic font-light text-2xl sm:text-3xl lg:text-[2.15rem] leading-[1.4] text-[#F4F6FA] max-w-3xl mx-auto">
-          "I just want people to see my happiness through a camera lens—even while my own visual lenses are getting repaired so I can see the full brightness of it all."
-        </blockquote>
-        <div class="w-24 h-[1.5px] mx-auto my-7" style="background: linear-gradient(90deg, #4A90F5, #F2B441, #DF4B50);"></div>
-        <p class="text-xs tracking-[0.22em] uppercase text-[#9AA5B8]">
-          Thanks for stopping by my little corner of the world
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <!-- ========================================================================
-       6. CLOSING VISUAL BANNER (MATCHED TO HOME.HTML)
-       ======================================================================== -->
-  <section class="pb-20 sm:pb-24 px-5 sm:px-8">
-    <div class="max-w-[1260px] mx-auto">
-      <div class="closing-riverfront-glow relative rounded-3xl border border-[#1E2736] px-6 sm:px-14 py-16 sm:py-20 text-center overflow-hidden shadow-[0_32px_70px_-24px_rgba(0,0,0,0.95)] reveal">
-        <img
-          src="IMG_20261124_080445.jpg"
-          alt=""
-          aria-hidden="true"
-          class="pointer-events-none absolute inset-0 w-full h-full object-cover object-center opacity-[0.18]"
-        />
-        <div class="pointer-events-none absolute inset-0 bg-gradient-to-b from-[#0A0D12]/80 via-[#0D121B]/72 to-[#0A0D12]/88"></div>
-        <div class="absolute top-0 inset-x-0 h-[2px] bg-gradient-to-r from-transparent via-[#4A90F5] via-[#F2B441] to-transparent opacity-80 z-10"></div>
-
-        <div class="relative z-10 max-w-2xl mx-auto">
-          <p class="text-[10.5px] font-medium tracking-[0.32em] uppercase text-[#F2B441] mb-4">
-            See What I've Been Capturing
-          </p>
-          <h2 class="font-serif-display font-light text-4xl sm:text-5xl md:text-[3.3rem] leading-[1.1] text-[#F4F6FA] mb-5">
-            Ready to look through my
-            <span class="font-script text-5xl sm:text-6xl md:text-[4.2rem] text-[#F2B441] inline-block ml-1.5 align-baseline">lens?</span>
-          </h2>
-          <p class="text-sm sm:text-[15px] font-light text-[#9AA5B8] leading-relaxed mb-8 max-w-lg mx-auto">
-            Head back to the live photo journal for riverfront reflections, twilight moons, and colorful everyday corners.
-          </p>
-          <a
-            href="Home.html#journal-grid"
-            class="btn-primary-gold inline-block px-9 py-4 rounded-full text-[11.5px] tracking-[0.22em] uppercase cursor-pointer"
-          >
-            Go To Photo Journal
-          </a>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
+
+    <!-- ========================================================================
+         5. HIGHLIGHT QUOTE CARD
+         ======================================================================== -->
+    <section class="pb-24 sm:pb-28 px-5 sm:px-8">
+      <div class="max-w-[1040px] mx-auto reveal">
+        <div class="celestial-border rounded-3xl p-8 sm:p-12 lg:p-14 text-center shadow-[0_28px_60px_-24px_rgba(0,0,0,0.92)]">
+          <span class="inline-block text-xs font-semibold tracking-[0.24em] uppercase text-[#E8C374] mb-5">
+            ✦ The Heart Of It ✦
+          </span>
+          <blockquote class="font-serif-display italic text-2xl sm:text-3xl lg:text-[2.2rem] leading-[1.42] text-[#F5EFE6] max-w-3xl mx-auto">
+            "I just want people to see my happiness through a camera lens—even while my own visual lenses are getting repaired so I can see the full brightness of it all."
+          </blockquote>
+          <div class="w-24 h-[1.5px] mx-auto my-7" style="background: linear-gradient(90deg, #B088F9, #E8C374, #DF6E86);"></div>
+          <p class="text-xs font-semibold tracking-[0.18em] uppercase text-[#C6BCD8]">
+            Thanks for stopping by my little corner of the world
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         6. CLOSING MOONLIT BANNER
+         ======================================================================== -->
+    <section class="pb-20 sm:pb-24 px-5 sm:px-8">
+      <div class="max-w-[1260px] mx-auto">
+        <div class="closing-moon-glow relative rounded-3xl border border-[#C4A8F5]/22 px-6 sm:px-14 py-16 sm:py-20 text-center overflow-hidden shadow-[0_32px_70px_-24px_rgba(0,0,0,0.95)] reveal">
+          <img
+            src="IMG_20261124_080445.jpg"
+            alt=""
+            aria-hidden="true"
+            class="pointer-events-none absolute inset-0 w-full h-full object-cover object-center opacity-[0.16]"
+          />
+          <div class="pointer-events-none absolute inset-0 bg-gradient-to-b from-[#0B0812]/80 via-[#140F1F]/72 to-[#0B0812]/90"></div>
+          <div class="absolute top-0 inset-x-0 h-[2px] bg-gradient-to-r from-transparent via-[#B088F9] via-[#E8C374] to-transparent opacity-80 z-10"></div>
+
+          <div class="relative z-10 max-w-2xl mx-auto">
+            <p class="text-xs font-semibold tracking-[0.24em] uppercase text-[#E8C374] mb-4">
+              ☾ See What I've Been Capturing ☾
+            </p>
+            <h2 class="font-serif-display font-medium text-4xl sm:text-5xl md:text-[3.3rem] leading-[1.1] text-[#F5EFE6] mb-5">
+              Ready to look through my
+              <span class="font-script text-5xl sm:text-6xl md:text-[4.2rem] text-[#E8C374] inline-block ml-1.5 align-baseline">lens?</span>
+            </h2>
+            <p class="text-sm sm:text-[15.5px] text-[#C6BCD8] leading-relaxed mb-8 max-w-lg mx-auto">
+              Head back to the photo journal for riverfront reflections, twilight moons, and colorful everyday corners.
+            </p>
+            <a
+              href="Home.html#journal-grid"
+              class="btn-moon-gold inline-block px-9 py-4 rounded-full text-xs sm:text-sm tracking-wide cursor-pointer"
+            >
+              Go To Photo Journal →
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
 
   <!-- ========================================================================
-       7. REFINED DARK FOOTER (MATCHED TO HOME.HTML)
+       7. FOOTER (MATCHED TO HOME.HTML, MAIN LOGO UNCHANGED)
        ======================================================================== -->
-  <footer class="pt-16 pb-12 px-5 sm:px-8 bg-[#080B10] border-t border-[#1E2736]">
+  <footer class="pt-16 pb-12 px-5 sm:px-8 bg-[#08060E] border-t border-[#C4A8F5]/16">
     <div class="max-w-[1260px] mx-auto flex flex-col items-center text-center">
 
       <a href="Home.html" aria-label="Back to Home" class="mb-7">
@@ -699,23 +709,23 @@
         </div>
       </a>
 
-      <h3 class="font-serif-display text-2xl sm:text-[1.75rem] tracking-[0.12em] uppercase text-[#F4F6FA] mb-2">
+      <h3 class="font-serif-display text-2xl sm:text-3xl tracking-wide text-[#F5EFE6] mb-1.5">
         Whit's Angle of Life
       </h3>
-      <p class="text-xs tracking-[0.2em] uppercase text-[#9AA5B8] mb-7">
-        A Personal Photo Journal &bull; Peoria, Illinois
+      <p class="text-xs tracking-[0.18em] uppercase text-[#C6BCD8] mb-7">
+        A Cozy Photo Journal ✦ Peoria, Illinois
       </p>
 
-      <div class="w-full max-w-md h-[1.5px] mb-8" style="background: linear-gradient(90deg, transparent, #4A90F5 28%, #F2B441 50%, #DF4B50 72%, transparent);"></div>
+      <div class="w-full max-w-md h-[1.5px] mb-8" style="background: linear-gradient(90deg, transparent, #B088F9 28%, #E8C374 50%, #DF6E86 72%, transparent);"></div>
 
       <nav class="flex flex-wrap items-center justify-center gap-x-8 gap-y-3 mb-8" aria-label="Footer navigation">
         <a href="Home.html" class="nav-item">Home</a>
         <a href="Home.html#journal-grid" class="nav-item">Photo Journal</a>
-        <a href="Home.html#featured" class="nav-item">Featured</a>
-        <a href="about.html" class="nav-item active">About Whit</a>
+        <a href="Home.html#featured" class="nav-item">Moonlit Picks</a>
+        <a href="About.html" class="nav-item active" aria-current="page">About Whit</a>
       </nav>
 
-      <p class="text-[11px] tracking-[0.14em] text-[#6C778C]">
+      <p class="text-xs text-[#9387AA]">
         &copy; 2026 Whit's Angle of Life. All Photos By Whit.
       </p>
     </div>
@@ -724,46 +734,43 @@
   <!-- ========================================================================
        COUPLE PHOTO LIGHTBOX MODAL
        ======================================================================== -->
-  <div id="couple-lightbox" class="modal-backdrop fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-6 bg-[#05070B]/92 backdrop-blur-lg" aria-hidden="true">
+  <div id="couple-lightbox" class="modal-backdrop fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-6 bg-[#07040C]/92 backdrop-blur-lg" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="couple-modal-title">
     <div onclick="closeCoupleLightbox()" class="absolute inset-0"></div>
-    <div class="modal-panel relative z-10 w-full max-w-3xl rounded-2xl overflow-hidden bg-[#0E131B] border border-[#1E2736] shadow-[0_32px_90px_rgba(0,0,0,0.95)]">
-      <div class="flex items-center justify-between gap-4 px-5 sm:px-7 py-4 border-b border-[#1E2736]">
+    <div class="modal-panel relative z-10 w-full max-w-3xl rounded-3xl overflow-hidden bg-[#130E1E] border border-[#C4A8F5]/25 shadow-[0_32px_90px_rgba(0,0,0,0.95)]">
+      <div class="flex items-center justify-between gap-4 px-5 sm:px-7 py-4 border-b border-[#C4A8F5]/18">
         <div>
-          <span class="text-[10px] font-semibold tracking-[0.26em] uppercase text-[#F2B441]">About Whit</span>
-          <h4 class="font-serif-display text-xl sm:text-2xl text-[#F4F6FA] mt-0.5">Me &amp; My Awesome Husband</h4>
+          <span class="text-xs font-semibold text-[#E8C374]">✦ About Whit</span>
+          <h4 id="couple-modal-title" class="font-serif-display text-2xl text-[#F5EFE6] mt-0.5">Me &amp; My Awesome Husband</h4>
         </div>
         <button
           type="button"
           onclick="closeCoupleLightbox()"
           aria-label="Close photo"
-          class="w-9 h-9 rounded-full bg-[#171D28] hover:bg-[#1E2736] border border-[#1E2736] text-[#F4F6FA] flex items-center justify-center transition-colors cursor-pointer"
+          class="w-9 h-9 rounded-full bg-[#1F1730] hover:bg-[#2C2144] border border-[#C4A8F5]/25 text-[#F5EFE6] flex items-center justify-center transition-colors cursor-pointer"
         >
           <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
           </svg>
         </button>
       </div>
-      <div class="bg-[#070A0F] flex items-center justify-center max-h-[70vh] p-4">
+      <div class="bg-[#090610] flex items-center justify-center max-h-[70vh] p-4">
         <img
           id="couple-lightbox-img"
           src="whit-and-husband.jpg"
           alt="Whit and her husband"
-          class="max-w-full max-h-[64vh] object-contain rounded-lg"
+          class="max-w-full max-h-[64vh] object-contain rounded-xl"
         />
       </div>
-      <div class="px-5 sm:px-7 py-4 border-t border-[#1E2736] bg-[#11161F]">
-        <p class="text-xs sm:text-sm font-light text-[#9AA5B8]">
+      <div class="px-5 sm:px-7 py-4 border-t border-[#C4A8F5]/18 bg-[#140F1F]">
+        <p class="text-xs sm:text-sm text-[#C6BCD8]">
           The only reason he's featured on the site is because he gave his official stamp of approval.
         </p>
       </div>
     </div>
   </div>
 
-  <!-- ========================================================================
-       JAVASCRIPT: LOGO FALLBACK, MOBILE MENU, LIGHTBOX & SCROLL REVEAL
-       ======================================================================== -->
   <script>
-    /* Inline SVG Fallback for Wesbitelogo.jpg (Matched to Home.html) */
+    /* Inline SVG Fallback for Wesbitelogo.jpg (Unchanged) */
     function createBrandLogoSVG(uid) {
       return `
       <svg viewBox="0 0 320 320" xmlns="http://www.w3.org/2000/svg" class="w-full h-full block" role="img" aria-label="Whit's Angle of Life Photography Circular Bridge Logo">
@@ -861,10 +868,10 @@
           </g>
           <path d="M22 234 Q160 284 298 234 L298 312 L22 312 Z" fill="#090C12" opacity="0.97" />
         </g>
-        <text fill="#FFFFFF" font-family="'Plus Jakarta Sans', Arial, sans-serif" font-weight="700" font-size="23.5" letter-spacing="2.2">
+        <text fill="#FFFFFF" font-family="Arial, sans-serif" font-weight="700" font-size="23.5" letter-spacing="2.2">
           <textPath href="#top-text-${uid}" startOffset="50%" text-anchor="middle">WHIT'S ANGLE OF LIFE</textPath>
         </text>
-        <text fill="#FFFFFF" font-family="'Plus Jakarta Sans', Arial, sans-serif" font-weight="700" font-size="18" letter-spacing="5.4">
+        <text fill="#FFFFFF" font-family="Arial, sans-serif" font-weight="700" font-size="18" letter-spacing="5.4">
           <textPath href="#bot-text-${uid}" startOffset="50%" text-anchor="middle">PHOTOGRAPHY</textPath>
         </text>
         <circle cx="160" cy="160" r="152" fill="none" stroke="#FFFFFF" stroke-width="5.5" />
@@ -875,7 +882,6 @@
       node.innerHTML = createBrandLogoSVG(node.getAttribute('data-logo-svg'));
     });
 
-    /* Mobile Drawer */
     let mobileOpen = false;
     function toggleMobileMenu() {
       const drawer = document.getElementById('mobile-drawer');
@@ -884,16 +890,17 @@
 
       if (mobileOpen) {
         drawer.classList.remove('pointer-events-none', 'opacity-0');
+        drawer.setAttribute('aria-hidden', 'false');
         panel.classList.remove('-translate-x-full');
         document.body.style.overflow = 'hidden';
       } else {
         drawer.classList.add('pointer-events-none', 'opacity-0');
+        drawer.setAttribute('aria-hidden', 'true');
         panel.classList.add('-translate-x-full');
         document.body.style.overflow = '';
       }
     }
 
-    /* Couple Photo Lightbox */
     function openCoupleLightbox() {
       const photo = document.getElementById('couple-photo');
       if (!photo || photo.style.display === 'none') return;
