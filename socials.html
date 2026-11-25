@@ -5,6 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Socials — Whit's Angle of Life</title>
   <meta name="description" content="Connect with Whit's Angle of Life — social spaces are brewing soon. Bookmark the cozy photo journal in the meantime." />
+  <meta name="theme-color" content="#0B0812" />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='31' fill='%230B0812' stroke='%23E8C374' stroke-width='2'/%3E%3Cpath d='M36 15a16 16 0 1 0 14 23.5A12.5 12.5 0 1 1 36 15z' fill='%23E8C374'/%3E%3Cpath d='M45 17l1.6 3.8 3.8 1.6-3.8 1.6-1.6 3.8-1.6-3.8-3.8-1.6 3.8-1.6z' fill='%23B088F9'/%3E%3C/svg%3E" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Socials — Whit's Angle of Life" />
+  <meta property="og:description" content="Connect with Whit's Angle of Life — social spaces are brewing soon. Bookmark the cozy photo journal in the meantime." />
+  <meta property="og:image" content="IMG_20261124_080445.jpg" />
 
   <!-- Google Fonts: Matched to index.html & about.html -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -285,6 +291,65 @@
     ::-webkit-scrollbar-track { background: #0B0812; }
     ::-webkit-scrollbar-thumb { background: #2A2042; border-radius: 9999px; }
     ::-webkit-scrollbar-thumb:hover { background: #3E2F61; }
+
+    /* Gentle Ambient Twinkle & Floating Back-to-Top Moon */
+    @keyframes star-twinkle {
+      0%, 100% { opacity: 0.45; }
+      50% { opacity: 0.9; }
+    }
+
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 0;
+      background-image:
+        radial-gradient(1.6px 1.6px at 22% 28%, rgba(232, 195, 116, 0.55), transparent),
+        radial-gradient(1.4px 1.4px at 78% 22%, rgba(176, 136, 249, 0.5), transparent),
+        radial-gradient(1.5px 1.5px at 56% 68%, rgba(245, 239, 230, 0.4), transparent),
+        radial-gradient(1.3px 1.3px at 14% 82%, rgba(223, 110, 134, 0.4), transparent);
+      background-size: 640px 640px;
+      animation: star-twinkle 7s ease-in-out infinite;
+    }
+
+    #back-to-top {
+      opacity: 0;
+      pointer-events: none;
+      transform: translateY(12px);
+      transition: opacity 0.3s ease, transform 0.3s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    #back-to-top.show {
+      opacity: 1;
+      pointer-events: auto;
+      transform: translateY(0);
+    }
+
+    /* Dedication Modal */
+    .gift-modal {
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.28s ease;
+    }
+
+    .gift-modal.open {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .gift-modal .gift-panel {
+      transform: translateY(16px) scale(0.97);
+      transition: transform 0.34s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+    .gift-modal.open .gift-panel {
+      transform: translateY(0) scale(1);
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      body::before { animation: none; }
+    }
   </style>
 </head>
 <body class="starfield-bg selection:bg-[#B088F9]/35 selection:text-white">
@@ -520,7 +585,7 @@
       <div class="max-w-[1060px] mx-auto reveal">
         <div class="celestial-border rounded-3xl p-8 sm:p-12 text-center shadow-[0_28px_60px_-24px_rgba(0,0,0,0.92)]">
           <span class="inline-block text-xs font-semibold tracking-[0.24em] uppercase text-[#E8C374] mb-4">
-            ✦ Right Here Right Now ✦
+            ✦ Right Here, Right Now ✦
           </span>
           <h2 class="font-serif-display text-3xl sm:text-4xl text-[#F5EFE6] mb-4">
             Want To Share The Journal In The Meantime?
@@ -589,8 +654,63 @@
       <p class="text-xs text-[#9387AA]">
         &copy; 2026 Whit's Angle of Life. All Photos By Whit.
       </p>
+      <button
+        type="button"
+        onclick="openGiftNote()"
+        class="mt-3 text-[11px] tracking-wider text-[#B088F9]/80 hover:text-[#E8C374] transition-colors cursor-pointer"
+      >
+        ✦ Made with love for Whit ☾
+      </button>
     </div>
   </footer>
+
+
+  <!-- Floating Back-to-Top Moon Button -->
+  <button
+    type="button"
+    id="back-to-top"
+    onclick="window.scrollTo({ top: 0, behavior: 'smooth' })"
+    aria-label="Back to top"
+    class="fixed bottom-6 right-5 sm:right-7 z-30 w-11 h-11 rounded-full bg-[#140F1F]/90 backdrop-blur-md border border-[#E8C374]/40 text-[#E8C374] hover:border-[#E8C374] hover:bg-[#1E1630] shadow-[0_12px_30px_-8px_rgba(0,0,0,0.9)] flex items-center justify-center cursor-pointer"
+  >
+    <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24" aria-hidden="true">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M5 15l7-7 7 7" />
+    </svg>
+  </button>
+
+  <!-- Hidden Gift Dedication Modal (Customize anytime!) -->
+  <div id="gift-note-modal" class="gift-modal fixed inset-0 z-50 flex items-center justify-center p-4 bg-[#07040C]/90 backdrop-blur-lg" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="gift-note-title">
+    <div onclick="closeGiftNote()" class="absolute inset-0"></div>
+    <div class="gift-panel celestial-border relative z-10 w-full max-w-lg rounded-3xl p-7 sm:p-10 text-center shadow-[0_32px_90px_rgba(0,0,0,0.95)]">
+      <button
+        type="button"
+        onclick="closeGiftNote()"
+        aria-label="Close note"
+        class="absolute top-5 right-5 w-9 h-9 rounded-full bg-[#1F1730] hover:bg-[#2C2144] border border-[#C4A8F5]/25 text-[#F5EFE6] flex items-center justify-center transition-colors cursor-pointer"
+      >
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </button>
+
+      <div class="w-14 h-14 mx-auto mb-5 rounded-full bg-[#1A1429] border border-[#E8C374]/45 flex items-center justify-center text-[#E8C374] text-2xl shadow-[0_0_24px_-4px_rgba(232,195,116,0.45)]" aria-hidden="true">
+        ☾
+      </div>
+      <p class="text-xs font-semibold tracking-[0.22em] uppercase text-[#B088F9] mb-2">
+        ✦ A Little Note For Whit ✦
+      </p>
+      <h3 id="gift-note-title" class="font-serif-display text-3xl sm:text-4xl text-[#F5EFE6] mb-4">
+        Your Own Corner Of The Sky
+      </h3>
+      <p class="text-sm sm:text-[15.5px] leading-[1.85] text-[#C6BCD8] mb-6">
+        Made with love so you always have a cozy, moonlit home of your own to share the magic you notice every day. Keep looking up, keep chasing the good light, and never stop sharing your happiness through the lens.
+      </p>
+      <div class="w-20 h-[1.5px] mx-auto mb-5" style="background: linear-gradient(90deg, #B088F9, #E8C374, #DF6E86);"></div>
+      <p class="font-script text-4xl text-[#E8C374] leading-none">
+        Always in your corner
+      </p>
+    </div>
+  </div>
 
   <script>
     function createBrandLogoSVG(uid) {
@@ -720,22 +840,76 @@
     document.querySelectorAll('.reveal').forEach((el) => revealObserver.observe(el));
 
     function copySiteLink() {
-      const url = window.location.origin && window.location.origin !== 'null'
-        ? window.location.origin
-        : window.location.href;
+      let url = window.location.href;
+      try {
+        url = new URL('index.html', window.location.href).href;
+      } catch (e) {
+        url = window.location.href;
+      }
       const status = document.getElementById('copy-status');
 
+      const showCopied = () => {
+        status.textContent = '✦ Journal link copied to your clipboard!';
+        setTimeout(() => { status.textContent = ''; }, 3500);
+      };
+
       if (navigator.clipboard && navigator.clipboard.writeText) {
-        navigator.clipboard.writeText(url).then(() => {
-          status.textContent = '✦ Journal link copied to your clipboard!';
-          setTimeout(() => { status.textContent = ''; }, 3500);
-        }).catch(() => {
-          status.textContent = 'Bookmark this page in your browser to come back anytime ☾';
+        navigator.clipboard.writeText(url).then(showCopied).catch(() => {
+          fallbackCopy(url, status, showCopied);
         });
       } else {
-        status.textContent = 'Bookmark this page in your browser to come back anytime ☾';
+        fallbackCopy(url, status, showCopied);
       }
     }
+
+    function fallbackCopy(text, statusEl, onSuccess) {
+      try {
+        const ta = document.createElement('textarea');
+        ta.value = text;
+        ta.style.position = 'fixed';
+        ta.style.opacity = '0';
+        document.body.appendChild(ta);
+        ta.select();
+        document.execCommand('copy');
+        document.body.removeChild(ta);
+        onSuccess();
+      } catch (e) {
+        statusEl.textContent = 'Bookmark this page in your browser to come back anytime ☾';
+      }
+    }
+
+    /* Back-to-Top Moon Button Visibility */
+    const backToTopBtn = document.getElementById('back-to-top');
+    if (backToTopBtn) {
+      window.addEventListener('scroll', () => {
+        backToTopBtn.classList.toggle('show', window.scrollY > 420);
+      }, { passive: true });
+    }
+
+    /* Gift Dedication Note Modal */
+    function openGiftNote() {
+      const modal = document.getElementById('gift-note-modal');
+      if (!modal) return;
+      modal.classList.add('open');
+      modal.setAttribute('aria-hidden', 'false');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeGiftNote() {
+      const modal = document.getElementById('gift-note-modal');
+      if (!modal) return;
+      modal.classList.remove('open');
+      modal.setAttribute('aria-hidden', 'true');
+      document.body.style.overflow = '';
+    }
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        const giftModal = document.getElementById('gift-note-modal');
+        if (giftModal && giftModal.classList.contains('open')) closeGiftNote();
+      }
+    });
+
   </script>
 </body>
 </html>
