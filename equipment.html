@@ -1,0 +1,793 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Equipment Used — Whit's Angle of Life</title>
+  <meta name="description" content="The pocket-sized gear behind Whit's Angle of Life — capturing moonlit skies, riverfront reflections, and everyday magic on a Google Pixel 11 Pro XL." />
+
+  <!-- Google Fonts: Matched to index.html & about.html -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    :root {
+      --bg-night: #0B0812;
+      --bg-velvet: #140F1F;
+      --bg-card: #1A1429;
+      --border-mystic: rgba(196, 168, 245, 0.18);
+      --border-gold: rgba(232, 195, 116, 0.38);
+
+      --text-cream: #F5EFE6;
+      --text-lavender: #C6BCD8;
+      --text-muted: #9387AA;
+
+      --moon-gold: #E8C374;
+      --amethyst: #B088F9;
+      --rose-berry: #DF6E86;
+      --sage-mist: #8AB89B;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      overflow-x: hidden;
+      background-color: var(--bg-night);
+    }
+
+    body {
+      background-color: var(--bg-night);
+      color: var(--text-cream);
+      font-family: 'Quicksand', -apple-system, BlinkMacSystemFont, sans-serif;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a:focus-visible,
+    button:focus-visible,
+    [tabindex]:focus-visible {
+      outline: 2px solid var(--moon-gold);
+      outline-offset: 3px;
+      border-radius: 6px;
+    }
+
+    .font-serif-display {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+    }
+
+    .font-script {
+      font-family: 'Alex Brush', cursive;
+      font-weight: 400;
+      text-transform: none;
+      line-height: 0.88;
+    }
+
+    .starfield-bg {
+      background-image:
+        radial-gradient(1.5px 1.5px at 14% 20%, rgba(232, 195, 116, 0.65), transparent),
+        radial-gradient(1px 1px at 30% 44%, rgba(245, 239, 230, 0.45), transparent),
+        radial-gradient(1.8px 1.8px at 52% 14%, rgba(176, 136, 249, 0.55), transparent),
+        radial-gradient(1px 1px at 68% 36%, rgba(232, 195, 116, 0.5), transparent),
+        radial-gradient(1.5px 1.5px at 86% 18%, rgba(245, 239, 230, 0.55), transparent),
+        radial-gradient(1px 1px at 90% 62%, rgba(176, 136, 249, 0.45), transparent),
+        radial-gradient(1.4px 1.4px at 20% 78%, rgba(232, 195, 116, 0.45), transparent),
+        radial-gradient(1px 1px at 74% 84%, rgba(245, 239, 230, 0.4), transparent);
+      background-size: 520px 520px;
+    }
+
+    .hero-glow-field {
+      background:
+        radial-gradient(ellipse 48% 42% at 22% 34%, rgba(176, 136, 249, 0.16), transparent 72%),
+        radial-gradient(ellipse 38% 36% at 72% 28%, rgba(232, 195, 116, 0.12), transparent 70%),
+        radial-gradient(ellipse 34% 30% at 84% 78%, rgba(223, 110, 134, 0.09), transparent 70%),
+        radial-gradient(ellipse 40% 34% at 14% 76%, rgba(138, 184, 155, 0.08), transparent 70%);
+    }
+
+    .closing-moon-glow {
+      background:
+        radial-gradient(ellipse 52% 85% at 18% 100%, rgba(176, 136, 249, 0.24), transparent 65%),
+        radial-gradient(ellipse 46% 75% at 50% 100%, rgba(232, 195, 116, 0.18), transparent 65%),
+        radial-gradient(ellipse 50% 85% at 84% 100%, rgba(223, 110, 134, 0.16), transparent 65%),
+        linear-gradient(180deg, #161024 0%, #0E0A18 100%);
+    }
+
+    .glass-nav {
+      background: rgba(11, 8, 18, 0.84);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-bottom: 1px solid rgba(196, 168, 245, 0.16);
+      transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .glass-nav.scrolled {
+      background: rgba(11, 8, 18, 0.95);
+      box-shadow: 0 14px 40px -16px rgba(0, 0, 0, 0.9);
+    }
+
+    .nav-item {
+      position: relative;
+      font-size: 0.84rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      color: var(--text-lavender);
+      transition: color 0.25s ease;
+      padding-bottom: 4px;
+    }
+
+    .nav-item::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: 1.5px;
+      background: linear-gradient(90deg, var(--amethyst), var(--moon-gold));
+      transform: scaleX(0);
+      transform-origin: left center;
+      transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+    .nav-item:hover,
+    .nav-item.active {
+      color: var(--text-cream);
+    }
+
+    .nav-item:hover::after,
+    .nav-item.active::after {
+      transform: scaleX(1);
+    }
+
+    .logo-medallion {
+      border-radius: 9999px;
+      background-color: #0D1017;
+      border: 2.5px solid rgba(255, 255, 255, 0.95);
+      box-shadow:
+        0 20px 48px -10px rgba(0, 0, 0, 0.94),
+        0 0 0 4px rgba(11, 8, 18, 0.92),
+        0 0 28px -2px rgba(176, 136, 249, 0.38),
+        0 0 46px -12px rgba(232, 195, 116, 0.32);
+      overflow: hidden;
+      transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.4s ease;
+    }
+
+    .logo-medallion:hover {
+      transform: scale(1.045);
+      box-shadow:
+        0 24px 52px -10px rgba(0, 0, 0, 0.96),
+        0 0 0 4px rgba(11, 8, 18, 0.95),
+        0 0 36px 0px rgba(176, 136, 249, 0.52),
+        0 0 54px -8px rgba(232, 195, 116, 0.44);
+    }
+
+    .btn-mystic-pill {
+      background: linear-gradient(135deg, rgba(176, 136, 249, 0.2), rgba(232, 195, 116, 0.14));
+      border: 1px solid rgba(176, 136, 249, 0.5);
+      color: var(--text-cream);
+      box-shadow: 0 0 22px -6px rgba(176, 136, 249, 0.5);
+      transition: all 0.28s ease;
+    }
+
+    .btn-mystic-pill:hover {
+      background: linear-gradient(135deg, rgba(176, 136, 249, 0.34), rgba(232, 195, 116, 0.24));
+      border-color: var(--moon-gold);
+      box-shadow: 0 0 28px -4px rgba(232, 195, 116, 0.45);
+      transform: translateY(-1px);
+    }
+
+    .btn-moon-gold {
+      background: linear-gradient(135deg, #F6E6C2 0%, #E2B45A 100%);
+      color: #161024;
+      font-weight: 700;
+      box-shadow: 0 12px 28px -10px rgba(232, 195, 116, 0.45);
+      transition: transform 0.28s ease, box-shadow 0.28s ease, filter 0.28s ease;
+    }
+
+    .btn-moon-gold:hover {
+      transform: translateY(-2px);
+      filter: brightness(1.06);
+      box-shadow: 0 16px 34px -10px rgba(232, 195, 116, 0.62);
+    }
+
+    .btn-velvet-ghost {
+      background: rgba(20, 15, 31, 0.72);
+      border: 1px solid rgba(196, 168, 245, 0.42);
+      color: var(--text-cream);
+      transition: all 0.28s ease;
+    }
+
+    .btn-velvet-ghost:hover {
+      background: rgba(176, 136, 249, 0.16);
+      border-color: var(--moon-gold);
+      transform: translateY(-2px);
+      box-shadow: 0 10px 26px -12px rgba(176, 136, 249, 0.55);
+    }
+
+    .marquee-track {
+      display: flex;
+      width: max-content;
+      animation: marquee-run 42s linear infinite;
+    }
+
+    .marquee-wrap:hover .marquee-track {
+      animation-play-state: paused;
+    }
+
+    @keyframes marquee-run {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+
+    .celestial-border {
+      position: relative;
+      background: var(--bg-velvet);
+      z-index: 1;
+    }
+
+    .celestial-border::before {
+      content: '';
+      position: absolute;
+      inset: -1px;
+      border-radius: inherit;
+      padding: 1px;
+      background: linear-gradient(125deg, rgba(176, 136, 249, 0.65), rgba(232, 195, 116, 0.58) 50%, rgba(223, 110, 134, 0.48));
+      -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+      -webkit-mask-composite: xor;
+      mask-composite: exclude;
+      pointer-events: none;
+      z-index: 2;
+    }
+
+    .vibe-card {
+      background: linear-gradient(180deg, rgba(26, 20, 41, 0.92), rgba(18, 13, 29, 0.96));
+      border: 1px solid var(--border-mystic);
+      transition: transform 0.38s cubic-bezier(0.22, 1, 0.36, 1), border-color 0.3s ease, box-shadow 0.38s ease;
+    }
+
+    .vibe-card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(232, 195, 116, 0.48);
+      box-shadow: 0 22px 46px -22px rgba(0, 0, 0, 0.9), 0 0 24px -10px rgba(176, 136, 249, 0.3);
+    }
+
+    .social-slot {
+      background: linear-gradient(180deg, rgba(26, 20, 41, 0.85), rgba(18, 13, 29, 0.94));
+      border: 1px dashed rgba(196, 168, 245, 0.3);
+      transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1), border-color 0.3s ease, box-shadow 0.35s ease;
+    }
+
+    .social-slot:hover {
+      transform: translateY(-3px);
+      border-color: rgba(232, 195, 116, 0.5);
+      box-shadow: 0 20px 44px -22px rgba(0, 0, 0, 0.9), 0 0 22px -12px rgba(176, 136, 249, 0.32);
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.8s cubic-bezier(0.22, 1, 0.36, 1), transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .marquee-track { animation: none; }
+      .reveal { opacity: 1; transform: none; transition: none; }
+      html { scroll-behavior: auto; }
+    }
+
+    ::-webkit-scrollbar { width: 8px; }
+    ::-webkit-scrollbar-track { background: #0B0812; }
+    ::-webkit-scrollbar-thumb { background: #2A2042; border-radius: 9999px; }
+    ::-webkit-scrollbar-thumb:hover { background: #3E2F61; }
+  </style>
+</head>
+<body class="starfield-bg selection:bg-[#B088F9]/35 selection:text-white">
+
+  <a href="#main-content" class="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-50 focus:px-4 focus:py-2 focus:rounded-full focus:bg-[#E8C374] focus:text-[#140F1F] focus:font-bold">
+    Skip to main content
+  </a>
+
+  <!-- NAVIGATION -->
+  <header id="site-header" class="glass-nav sticky top-0 z-40 w-full">
+    <div class="max-w-[1340px] mx-auto px-4 sm:px-8">
+      <div class="h-24 md:h-[100px] flex items-center justify-between gap-4 relative">
+
+        <nav class="hidden lg:flex items-center gap-8 flex-1" aria-label="Primary left navigation">
+          <a href="index.html#journal-grid" class="nav-item">Photo Journal</a>
+          <a href="about.html" class="nav-item">About Whit</a>
+        </nav>
+
+        <div class="flex lg:hidden items-center flex-1">
+          <button
+            type="button"
+            onclick="toggleMobileMenu()"
+            aria-label="Open navigation menu"
+            class="p-2.5 -ml-2 rounded-lg text-[#F5EFE6] hover:bg-white/5 transition-colors cursor-pointer"
+          >
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25H12" />
+            </svg>
+          </button>
+        </div>
+
+        <a
+          href="index.html"
+          aria-label="Whit's Angle of Life — Home"
+          class="relative z-30 flex items-center justify-center shrink-0 translate-y-6 sm:translate-y-7 md:translate-y-9"
+        >
+          <div class="logo-medallion w-[104px] h-[104px] sm:w-[124px] sm:h-[124px] md:w-[148px] md:h-[148px] flex items-center justify-center">
+            <img
+              src="Wesbitelogo.jpg"
+              alt="Whit's Angle of Life Photography Logo"
+              class="w-full h-full object-cover"
+              onerror="this.style.display='none'; this.nextElementSibling.style.display='block';"
+            />
+            <div class="w-full h-full hidden" data-logo-svg="header"></div>
+          </div>
+        </a>
+
+        <div class="flex items-center justify-end gap-5 lg:gap-8 flex-1">
+          <nav class="hidden lg:flex items-center gap-8" aria-label="Primary right navigation">
+            <a href="equipment.html" class="nav-item active" aria-current="page">Gear</a>
+            <a href="socials.html" class="nav-item">Socials</a>
+          </nav>
+
+          <a
+            href="index.html"
+            class="btn-mystic-pill px-4 sm:px-5 py-2.5 rounded-full text-xs font-semibold tracking-wider whitespace-nowrap"
+          >
+            ← Home
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- MOBILE DRAWER -->
+  <div id="mobile-drawer" class="fixed inset-0 z-50 pointer-events-none opacity-0 transition-opacity duration-300" aria-hidden="true">
+    <div onclick="toggleMobileMenu()" class="absolute inset-0 bg-black/75 backdrop-blur-sm"></div>
+    <aside
+      id="mobile-drawer-panel"
+      class="relative w-72 max-w-[82vw] h-full p-7 flex flex-col justify-between -translate-x-full transition-transform duration-300 bg-[#120D1D] border-r border-[#C4A8F5]/20"
+    >
+      <div>
+        <div class="flex items-center justify-between pb-6 mb-7 border-b border-[#C4A8F5]/15">
+          <div>
+            <p class="font-serif-display text-2xl text-[#F5EFE6]">Whit's Angle</p>
+            <p class="text-xs text-[#E8C374] mt-0.5">✦ Gear &amp; Equipment</p>
+          </div>
+          <button type="button" onclick="toggleMobileMenu()" aria-label="Close menu" class="p-2 rounded-lg text-[#C6BCD8] hover:text-white hover:bg-white/5 cursor-pointer">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+        </div>
+
+        <nav class="flex flex-col gap-5" aria-label="Mobile navigation">
+          <a href="index.html" class="nav-item">Home</a>
+          <a href="index.html#journal-grid" class="nav-item">Photo Journal</a>
+          <a href="index.html#featured" class="nav-item">Moonlit Picks</a>
+          <a href="about.html" class="nav-item">About Whit</a>
+          <a href="equipment.html" onclick="toggleMobileMenu()" class="nav-item active" aria-current="page">✦ Gear</a>
+          <a href="socials.html" class="nav-item">Socials</a>
+          <a href="copyright.html" class="nav-item">Copyright</a>
+        </nav>
+      </div>
+
+      <div class="pt-6 border-t border-[#C4A8F5]/15 space-y-3">
+        <a href="index.html#journal-grid" class="btn-moon-gold block text-center w-full py-3 rounded-full text-xs tracking-wider uppercase">
+          Wander The Photos
+        </a>
+        <p class="text-xs text-center text-[#9387AA]">Shot on Google Pixel 11 Pro XL</p>
+      </div>
+    </aside>
+  </div>
+
+  <main id="main-content">
+    <!-- EQUIPMENT HERO -->
+    <section id="top" class="relative hero-glow-field pt-24 sm:pt-28 lg:pt-32 pb-20 sm:pb-24 overflow-hidden">
+      <div class="max-w-[1260px] mx-auto px-5 sm:px-8">
+        <div class="max-w-3xl mx-auto text-center reveal">
+          <div class="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-[#140F1F]/90 border border-[#C4A8F5]/25 mb-7">
+            <span class="text-[#E8C374] text-xs" aria-hidden="true">☾</span>
+            <span class="text-xs font-semibold tracking-wider text-[#C6BCD8]">
+              What's In My Pocket <span class="text-[#E8C374] mx-1">✦</span> No Heavy Gear Bags Required
+            </span>
+          </div>
+
+          <h1 class="font-serif-display font-medium text-[2.95rem] sm:text-[3.95rem] xl:text-[4.55rem] leading-[1.06] text-[#F5EFE6] mb-7">
+            Pocket-Sized
+            <span class="font-script text-[4.1rem] sm:text-[5.4rem] xl:text-[6.1rem] text-[#E8C374] inline-block ml-2 align-baseline translate-y-2 drop-shadow-[0_4px_24px_rgba(232,195,116,0.3)]">
+              Magic
+            </span>
+          </h1>
+
+          <p class="text-[15.5px] sm:text-[17px] leading-[1.85] text-[#C6BCD8] max-w-2xl mx-auto">
+            People always assume you need a ten-pound backpack full of lenses to catch something worth keeping. Around here, I believe the best camera is the one that's actually in your hand the second the moon hangs low over a red light or the river turns to glass.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURED RIG SPOTLIGHT: GOOGLE PIXEL 11 PRO XL -->
+    <section class="pb-24 sm:pb-28 px-5 sm:px-8">
+      <div class="max-w-[1260px] mx-auto">
+        <article class="celestial-border rounded-3xl overflow-hidden grid grid-cols-1 lg:grid-cols-12 shadow-[0_28px_60px_-24px_rgba(0,0,0,0.92)] reveal">
+
+          <div class="lg:col-span-5 relative p-8 sm:p-12 flex flex-col items-center justify-center bg-gradient-to-br from-[#1B132D] via-[#120D1F] to-[#0B0812] overflow-hidden">
+            <div class="pointer-events-none absolute -inset-6 opacity-70 blur-3xl" style="background: radial-gradient(circle at 40% 35%, rgba(176,136,249,0.28), transparent 55%), radial-gradient(circle at 70% 75%, rgba(232,195,116,0.22), transparent 55%);"></div>
+
+            <div class="relative z-10 w-[210px] sm:w-[235px] aspect-[9/19] rounded-[34px] p-2.5 bg-[#0D0A15] border-2 border-[#E8C374]/45 shadow-[0_28px_60px_-14px_rgba(0,0,0,0.95),0_0_32px_-8px_rgba(176,136,249,0.45)]">
+              <div class="absolute top-4 left-1/2 -translate-x-1/2 w-2.5 h-2.5 rounded-full bg-[#1C162B] border border-[#C4A8F5]/30 z-20"></div>
+              <div class="relative w-full h-full rounded-[25px] overflow-hidden bg-[#140F1F]">
+                <img
+                  src="IMG_20261124_080345.jpg"
+                  alt="Blue hour moon shot captured on the Google Pixel 11 Pro XL"
+                  class="w-full h-full object-cover"
+                />
+                <div class="absolute inset-0 bg-gradient-to-t from-[#0B0812]/90 via-transparent to-[#0B0812]/25"></div>
+                <div class="absolute bottom-4 inset-x-3 text-center">
+                  <span class="inline-block px-2.5 py-1 rounded-full bg-[#140F1F]/85 border border-[#E8C374]/40 text-[10px] font-semibold tracking-wider uppercase text-[#E8C374]">
+                    ✦ Shot On Pixel
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            <p class="relative z-10 text-xs text-[#9387AA] mt-6 text-center">
+              Real frame straight from the pocket camera
+            </p>
+          </div>
+
+          <div class="lg:col-span-7 p-8 sm:p-11 lg:p-14 flex flex-col justify-between bg-[#140F1F]">
+            <div>
+              <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#1A1429] border border-[#E8C374]/35 mb-5">
+                <span class="text-[#E8C374] text-xs" aria-hidden="true">✦</span>
+                <span class="text-[11px] font-semibold tracking-[0.16em] uppercase text-[#E8C374]">Current Everyday Companion</span>
+              </div>
+
+              <h2 class="font-serif-display text-3xl sm:text-4xl lg:text-[2.75rem] text-[#F5EFE6] leading-[1.12] mb-5">
+                Google Pixel 11 Pro XL
+              </h2>
+
+              <div class="space-y-4 text-sm sm:text-[15.5px] leading-[1.85] text-[#C6BCD8]">
+                <p class="text-[#F5EFE6]">
+                  Right now, every single photo you see in <strong class="font-semibold text-[#E8C374]">Whit's Angle of Life</strong> starts right here—with my <strong class="font-semibold">Google Pixel 11 Pro XL</strong>.
+                </p>
+                <p>
+                  I love it because it never gets in the way of living life. Whether we're out exploring the Peoria riverfront, catching twilight from a stoplight, or stumbling onto a burst of street art, I can pull it out in two seconds and lock in the exact light, mood, and happiness I felt in that moment.
+                </p>
+                <p>
+                  It handles tricky blue-hour moons, deep twilight shadows, and crisp water reflections like an absolute champ—giving me pro-level clarity without hauling around a giant camera bag.
+                </p>
+              </div>
+            </div>
+
+            <div class="mt-8 pt-7 border-t border-[#C4A8F5]/18 grid grid-cols-1 sm:grid-cols-3 gap-4">
+              <div class="rounded-2xl bg-[#1A1429]/80 border border-[#C4A8F5]/15 p-4">
+                <p class="text-xs font-semibold uppercase tracking-wider text-[#B088F9] mb-1">Low-Light Ready</p>
+                <p class="text-xs text-[#C6BCD8] leading-relaxed">Pulls in glowing moons and moody evening skies cleanly.</p>
+              </div>
+              <div class="rounded-2xl bg-[#1A1429]/80 border border-[#C4A8F5]/15 p-4">
+                <p class="text-xs font-semibold uppercase tracking-wider text-[#E8C374] mb-1">Always On Hand</p>
+                <p class="text-xs text-[#C6BCD8] leading-relaxed">Zero setup time—ready the second real magic happens.</p>
+              </div>
+              <div class="rounded-2xl bg-[#1A1429]/80 border border-[#C4A8F5]/15 p-4">
+                <p class="text-xs font-semibold uppercase tracking-wider text-[#8AB89B] mb-1">True-To-Life Color</p>
+                <p class="text-xs text-[#C6BCD8] leading-relaxed">Keeps autumn leaves, concrete art, and water reflections rich.</p>
+              </div>
+            </div>
+          </div>
+
+        </article>
+      </div>
+    </section>
+
+    <!-- MARQUEE RIBBON -->
+    <div class="marquee-wrap w-full py-4 bg-[#140F1F]/90 border-y border-[#C4A8F5]/18 overflow-hidden select-none" aria-hidden="true">
+      <div class="marquee-track text-xs font-semibold tracking-[0.2em] uppercase text-[#C6BCD8]">
+        <div class="flex items-center shrink-0">
+          <span class="mx-6 text-[#E8C374]">✦</span>
+          <span class="text-[#F5EFE6]">Google Pixel 11 Pro XL</span>
+          <span class="mx-6 text-[#B088F9]">☾</span>
+          <span>Natural Light Only</span>
+          <span class="mx-6 text-[#DF6E86]">✦</span>
+          <span class="text-[#F5EFE6]">No Heavy Camera Bags</span>
+          <span class="mx-6 text-[#8AB89B]">☾</span>
+          <span>Heart Over Hardware</span>
+          <span class="mx-6 text-[#E8C374]">✦</span>
+          <span class="text-[#F5EFE6]">Ready At A Moment's Notice</span>
+        </div>
+        <div class="flex items-center shrink-0">
+          <span class="mx-6 text-[#E8C374]">✦</span>
+          <span class="text-[#F5EFE6]">Google Pixel 11 Pro XL</span>
+          <span class="mx-6 text-[#B088F9]">☾</span>
+          <span>Natural Light Only</span>
+          <span class="mx-6 text-[#DF6E86]">✦</span>
+          <span class="text-[#F5EFE6]">No Heavy Camera Bags</span>
+          <span class="mx-6 text-[#8AB89B]">☾</span>
+          <span>Heart Over Hardware</span>
+          <span class="mx-6 text-[#E8C374]">✦</span>
+          <span class="text-[#F5EFE6]">Ready At A Moment's Notice</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- THE KIT IN FOUR CARDS -->
+    <section class="py-24 sm:py-28 px-5 sm:px-8">
+      <div class="max-w-[1260px] mx-auto">
+
+        <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-14 reveal">
+          <div>
+            <p class="text-xs font-semibold tracking-[0.22em] uppercase text-[#B088F9] mb-2.5">
+              ✦ Behind The Frames
+            </p>
+            <h2 class="font-serif-display font-medium text-4xl sm:text-5xl text-[#F5EFE6]">
+              The Kit In
+              <span class="font-script text-5xl sm:text-6xl text-[#E8C374] ml-1.5">Four Cards</span>
+            </h2>
+          </div>
+          <p class="text-sm sm:text-[15px] text-[#C6BCD8] max-w-md leading-relaxed">
+            Everything that actually goes into making a photo feel alive around here.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 lg:gap-6 reveal">
+
+          <article class="vibe-card rounded-3xl p-7 flex flex-col justify-between">
+            <div>
+              <div class="inline-flex items-center gap-2 mb-5">
+                <span class="text-[#B088F9]" aria-hidden="true">☾</span>
+                <span class="text-xs font-semibold tracking-wider uppercase text-[#B088F9]">I &bull; The Camera</span>
+              </div>
+              <h3 class="font-serif-display text-2xl text-[#F5EFE6] mb-3">Pixel 11 Pro XL</h3>
+              <p class="text-sm leading-[1.8] text-[#C6BCD8]">
+                My trusty pocket powerhouse. Crisp optics, awesome night-sky performance, and fast enough to catch fleeting moments before they disappear.
+              </p>
+            </div>
+          </article>
+
+          <article class="vibe-card rounded-3xl p-7 flex flex-col justify-between">
+            <div>
+              <div class="inline-flex items-center gap-2 mb-5">
+                <span class="text-[#E8C374]" aria-hidden="true">✦</span>
+                <span class="text-xs font-semibold tracking-wider uppercase text-[#E8C374]">II &bull; The Light</span>
+              </div>
+              <h3 class="font-serif-display text-2xl text-[#F5EFE6] mb-3">Sky &amp; Streetglow</h3>
+              <p class="text-sm leading-[1.8] text-[#C6BCD8]">
+                No studio strobes or stiff reflectors—just golden hour, blue hour, full moons, glowing traffic lights, and whatever the Illinois sky serves up.
+              </p>
+            </div>
+          </article>
+
+          <article class="vibe-card rounded-3xl p-7 flex flex-col justify-between">
+            <div>
+              <div class="inline-flex items-center gap-2 mb-5">
+                <span class="text-[#DF6E86]" aria-hidden="true">☾</span>
+                <span class="text-xs font-semibold tracking-wider uppercase text-[#DF6E86]">III &bull; The Touch</span>
+              </div>
+              <h3 class="font-serif-display text-2xl text-[#F5EFE6] mb-3">Honest Edits</h3>
+              <p class="text-sm leading-[1.8] text-[#C6BCD8]">
+                A gentle nudge to warmth, shadow, or crop when needed—never overcooked. Every frame stays true to how the moment actually felt.
+              </p>
+            </div>
+          </article>
+
+          <article class="vibe-card rounded-3xl p-7 flex flex-col justify-between">
+            <div>
+              <div class="inline-flex items-center gap-2 mb-5">
+                <span class="text-[#8AB89B]" aria-hidden="true">✦</span>
+                <span class="text-xs font-semibold tracking-wider uppercase text-[#8AB89B]">IV &bull; What's Next</span>
+              </div>
+              <h3 class="font-serif-display text-2xl text-[#F5EFE6] mb-3">Room To Grow</h3>
+              <p class="text-sm leading-[1.8] text-[#C6BCD8]">
+                As this adventure unfolds, maybe a mini tripod or new camera joins the lineup someday—and I'll keep this page updated as the kit evolves!
+              </p>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- HIGHLIGHT QUOTE CARD -->
+    <section class="pb-24 sm:pb-28 px-5 sm:px-8">
+      <div class="max-w-[1040px] mx-auto reveal">
+        <div class="celestial-border rounded-3xl p-8 sm:p-12 lg:p-14 text-center shadow-[0_28px_60px_-24px_rgba(0,0,0,0.92)]">
+          <span class="inline-block text-xs font-semibold tracking-[0.24em] uppercase text-[#E8C374] mb-5">
+            ✦ The Philosophy ✦
+          </span>
+          <blockquote class="font-serif-display italic text-2xl sm:text-3xl lg:text-[2.2rem] leading-[1.42] text-[#F5EFE6] max-w-3xl mx-auto">
+            "You don't need a suitcase full of glass to capture something real—just a camera you love, a little curiosity, and the habit of looking up."
+          </blockquote>
+          <div class="w-24 h-[1.5px] mx-auto my-7" style="background: linear-gradient(90deg, #B088F9, #E8C374, #DF6E86);"></div>
+          <p class="text-xs font-semibold tracking-[0.18em] uppercase text-[#C6BCD8]">
+            See what the Pixel 11 Pro XL has been catching lately
+          </p>
+          <div class="mt-7">
+            <a href="index.html#journal-grid" class="btn-moon-gold inline-block px-8 py-3.5 rounded-full text-xs sm:text-sm tracking-wide">
+              Explore The Photo Journal →
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="pt-16 pb-12 px-5 sm:px-8 bg-[#08060E] border-t border-[#C4A8F5]/16">
+    <div class="max-w-[1260px] mx-auto flex flex-col items-center text-center">
+
+      <a href="index.html" aria-label="Back to Home" class="mb-7">
+        <div class="logo-medallion w-[148px] h-[148px] sm:w-[164px] sm:h-[164px] flex items-center justify-center">
+          <img
+            src="Wesbitelogo.jpg"
+            alt="Whit's Angle of Life Photography Logo"
+            class="w-full h-full object-cover"
+            onerror="this.style.display='none'; this.nextElementSibling.style.display='block';"
+          />
+          <div class="w-full h-full hidden" data-logo-svg="footer"></div>
+        </div>
+      </a>
+
+      <h3 class="font-serif-display text-2xl sm:text-3xl tracking-wide text-[#F5EFE6] mb-1.5">
+        Whit's Angle of Life
+      </h3>
+      <p class="text-xs tracking-[0.18em] uppercase text-[#C6BCD8] mb-7">
+        A Cozy Photo Journal ✦ Peoria, Illinois
+      </p>
+
+      <div class="w-full max-w-md h-[1.5px] mb-8" style="background: linear-gradient(90deg, transparent, #B088F9 28%, #E8C374 50%, #DF6E86 72%, transparent);"></div>
+
+      <nav class="flex flex-wrap items-center justify-center gap-x-8 gap-y-3 mb-8" aria-label="Footer navigation">
+        <a href="index.html" class="nav-item">Home</a>
+        <a href="index.html#journal-grid" class="nav-item">Photo Journal</a>
+        <a href="index.html#featured" class="nav-item">Moonlit Picks</a>
+        <a href="about.html" class="nav-item">About Whit</a>
+        <a href="equipment.html" class="nav-item active" aria-current="page">Gear</a>
+        <a href="socials.html" class="nav-item">Socials</a>
+        <a href="copyright.html" class="nav-item">Copyright</a>
+      </nav>
+
+      <p class="text-xs text-[#9387AA]">
+        &copy; 2026 Whit's Angle of Life. All Photos By Whit.
+      </p>
+    </div>
+  </footer>
+
+  <script>
+    function createBrandLogoSVG(uid) {
+      return `
+      <svg viewBox="0 0 320 320" xmlns="http://www.w3.org/2000/svg" class="w-full h-full block" role="img" aria-label="Whit's Angle of Life Photography Circular Bridge Logo">
+        <defs>
+          <clipPath id="clip-${uid}"><circle cx="160" cy="160" r="136" /></clipPath>
+          <linearGradient id="sky-${uid}" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="#090D16" /><stop offset="55%" stop-color="#121C30" /><stop offset="100%" stop-color="#1D2B44" />
+          </linearGradient>
+          <linearGradient id="river-${uid}" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="#101829" /><stop offset="100%" stop-color="#070B12" />
+          </linearGradient>
+          <linearGradient id="pier-${uid}" x1="0" y1="0" x2="1" y2="0">
+            <stop offset="0%" stop-color="#4A90F5" /><stop offset="22%" stop-color="#1B2947" /><stop offset="76%" stop-color="#5B2232" /><stop offset="100%" stop-color="#DF4B50" />
+          </linearGradient>
+          <path id="top-text-${uid}" d="M 42,158 A 118,118 0 0,1 278,158" />
+          <path id="bot-text-${uid}" d="M 48,188 A 120,120 0 0,0 272,188" />
+        </defs>
+        <circle cx="160" cy="160" r="159" fill="#0F131A" />
+        <g clip-path="url(#clip-${uid})">
+          <rect x="18" y="18" width="284" height="186" fill="url(#sky-${uid})" />
+          <rect x="18" y="138" width="284" height="22" fill="#22324F" opacity="0.45" />
+          <g fill="#F2B441">
+            <circle cx="92" cy="76" r="1.4" /><circle cx="114" cy="64" r="1.2" /><circle cx="134" cy="88" r="1.3" />
+            <circle cx="152" cy="62" r="1.5" /><circle cx="176" cy="74" r="1.2" /><circle cx="104" cy="108" r="1.1" />
+            <circle cx="128" cy="116" r="1.3" /><circle cx="78" cy="126" r="1.2" /><circle cx="62" cy="142" r="1.1" /><circle cx="196" cy="84" r="1.2" />
+          </g>
+          <path d="M22 204 L22 178 L38 178 L38 183 L52 183 L52 165 L68 165 L68 174 L82 174 L82 160 L98 160 L98 176 L112 176 L112 171 L126 171 L126 204 Z" fill="#080B12" />
+          <g fill="#F2B441" opacity="0.92">
+            <rect x="56" y="170" width="2.6" height="2.6" /><rect x="61" y="170" width="2.6" height="2.6" /><rect x="56" y="176" width="2.6" height="2.6" />
+            <rect x="86" y="166" width="2.6" height="2.6" /><rect x="91" y="166" width="2.6" height="2.6" /><rect x="86" y="172" width="2.6" height="2.6" />
+            <rect x="91" y="172" width="2.6" height="2.6" /><rect x="74" y="180" width="2.6" height="2.6" /><rect x="102" y="182" width="2.6" height="2.6" />
+            <rect x="116" y="178" width="2.6" height="2.6" /><rect x="42" y="186" width="2.6" height="2.6" />
+          </g>
+          <rect x="18" y="200" width="284" height="102" fill="url(#river-${uid})" />
+          <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M116 184 Q130 158 148 164 Q166 124 196 84 L238 90 L294 126" stroke="#4A90F5" stroke-width="3.4" />
+            <path d="M120 185 L130 162 L139 180 L152 150 L164 174 L178 122 L192 166 L206 92 L222 158 L238 96 L256 154 L274 114 L290 148" stroke="#F2B441" stroke-width="2.1" />
+            <path d="M188 92 L188 166 M212 90 L212 162 M234 92 L234 156 M258 106 L258 150" stroke="#4A90F5" stroke-width="2.2" />
+            <path d="M198 164 L205 112 L212 162 M254 152 L263 116 L272 148" stroke="#DF4B50" stroke-width="3.3" />
+          </g>
+          <path d="M112 190 L298 148 L298 164 L112 197 Z" fill="#080B12" />
+          <path d="M112 190 L298 148" stroke="#4A90F5" stroke-width="2.8" />
+          <g fill="#F8D27A">
+            <circle cx="130" cy="184" r="1.4" /><circle cx="146" cy="180" r="1.5" /><circle cx="164" cy="176" r="1.6" />
+            <circle cx="182" cy="172" r="1.7" /><circle cx="200" cy="168" r="1.8" /><circle cx="218" cy="164" r="1.9" />
+            <circle cx="238" cy="159" r="2.0" /><circle cx="258" cy="154" r="2.0" />
+          </g>
+          <path d="M122 194 L144 190 L144 214 L122 214 Z" fill="url(#pier-${uid})" stroke="#080B11" stroke-width="1.5" />
+          <path d="M148 188 L184 182 L184 222 L176 222 L176 204 Q166 196 156 204 L156 222 L148 222 Z" fill="url(#pier-${uid})" stroke="#080B11" stroke-width="1.8" />
+          <path d="M180 176 L256 166 L256 234 L242 234 L242 202 Q218 190 194 202 L194 234 L180 234 Z" fill="url(#pier-${uid})" stroke="#080B11" stroke-width="2.2" />
+          <rect x="192" y="214" width="52" height="14" fill="#1C273F" opacity="0.88" />
+          <g stroke-linecap="round">
+            <line x1="60" y1="214" x2="108" y2="214" stroke="#F2B441" stroke-width="3.2" opacity="0.88" />
+            <line x1="74" y1="224" x2="122" y2="224" stroke="#F2B441" stroke-width="2.5" opacity="0.72" />
+            <line x1="142" y1="226" x2="196" y2="226" stroke="#4A90F5" stroke-width="3.6" opacity="0.88" />
+            <line x1="160" y1="238" x2="214" y2="238" stroke="#4A90F5" stroke-width="4.2" opacity="0.92" />
+            <line x1="148" y1="248" x2="198" y2="248" stroke="#4A90F5" stroke-width="3.0" opacity="0.72" />
+            <line x1="216" y1="240" x2="266" y2="240" stroke="#DF4B50" stroke-width="4.0" opacity="0.9" />
+            <line x1="202" y1="252" x2="254" y2="252" stroke="#DF4B50" stroke-width="3.2" opacity="0.78" />
+          </g>
+          <g fill="#05070B" stroke="#05070B" stroke-linecap="round">
+            <path d="M44 268 L52 146 L61 146 L57 268 Z" />
+            <path d="M55 164 L30 124 M57 154 L88 106 M57 140 L108 80 M55 146 L40 102" stroke-width="3.6" fill="none" />
+            <path d="M136 268 L151 130 L162 130 L151 268 Z" />
+            <path d="M154 152 L114 108 M156 142 L130 82 M156 136 L158 64 M157 144 L192 90 M157 156 L198 118" stroke-width="3.5" fill="none" />
+            <path d="M266 258 L272 148 L280 148 L278 258 Z" />
+            <path d="M272 164 L246 132 M274 150 L256 112" stroke-width="3" fill="none" />
+          </g>
+          <path d="M22 234 Q160 284 298 234 L298 312 L22 312 Z" fill="#090C12" opacity="0.97" />
+        </g>
+        <text fill="#FFFFFF" font-family="Arial, sans-serif" font-weight="700" font-size="23.5" letter-spacing="2.2">
+          <textPath href="#top-text-${uid}" startOffset="50%" text-anchor="middle">WHIT'S ANGLE OF LIFE</textPath>
+        </text>
+        <text fill="#FFFFFF" font-family="Arial, sans-serif" font-weight="700" font-size="18" letter-spacing="5.4">
+          <textPath href="#bot-text-${uid}" startOffset="50%" text-anchor="middle">PHOTOGRAPHY</textPath>
+        </text>
+        <circle cx="160" cy="160" r="152" fill="none" stroke="#FFFFFF" stroke-width="5.5" />
+      </svg>`;
+    }
+
+    document.querySelectorAll('[data-logo-svg]').forEach((node) => {
+      node.innerHTML = createBrandLogoSVG(node.getAttribute('data-logo-svg'));
+    });
+
+    let mobileOpen = false;
+    function toggleMobileMenu() {
+      const drawer = document.getElementById('mobile-drawer');
+      const panel = document.getElementById('mobile-drawer-panel');
+      mobileOpen = !mobileOpen;
+
+      if (mobileOpen) {
+        drawer.classList.remove('pointer-events-none', 'opacity-0');
+        drawer.setAttribute('aria-hidden', 'false');
+        panel.classList.remove('-translate-x-full');
+        document.body.style.overflow = 'hidden';
+      } else {
+        drawer.classList.add('pointer-events-none', 'opacity-0');
+        drawer.setAttribute('aria-hidden', 'true');
+        panel.classList.add('-translate-x-full');
+        document.body.style.overflow = '';
+      }
+    }
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && mobileOpen) toggleMobileMenu();
+    });
+
+    window.addEventListener('scroll', () => {
+      const header = document.getElementById('site-header');
+      header.classList.toggle('scrolled', window.scrollY > 20);
+    }, { passive: true });
+
+    const revealObserver = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            revealObserver.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.1, rootMargin: '0px 0px -40px 0px' }
+    );
+
+    document.querySelectorAll('.reveal').forEach((el) => revealObserver.observe(el));
+
+  </script>
+</body>
+</html>

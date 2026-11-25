@@ -6,7 +6,7 @@
   <title>About Whit — Whit's Angle of Life</title>
   <meta name="description" content="Meet Whit — the human behind Whit's Angle of Life. Sharing everyday happiness and moonlit moments through a camera lens from Florida to Peoria, Illinois." />
 
-  <!-- Google Fonts: Matched to Home.html -->
+  <!-- Google Fonts: Matched to index.html -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet" />
@@ -16,7 +16,7 @@
 
   <style>
     /* ==========================================================================
-       MOONLIT GRIMOIRE & COZY WITCHY DESIGN TOKENS (Matched to Home.html)
+       MOONLIT GRIMOIRE & COZY WITCHY DESIGN TOKENS (Matched to index.html)
        ========================================================================== */
     :root {
       --bg-night: #0B0812;
@@ -307,16 +307,16 @@
   </a>
 
   <!-- ========================================================================
-       1. NAVIGATION (MATCHED TO HOME.HTML, MAIN LOGO UNCHANGED)
+       1. NAVIGATION (MATCHED TO INDEX.HTML, MAIN LOGO UNCHANGED)
        ======================================================================== -->
   <header id="site-header" class="glass-nav sticky top-0 z-40 w-full">
     <div class="max-w-[1340px] mx-auto px-4 sm:px-8">
       <div class="h-24 md:h-[100px] flex items-center justify-between gap-4 relative">
 
         <!-- Left Navigation Links (Desktop) -->
-        <nav class="hidden lg:flex items-center gap-9 flex-1" aria-label="Primary left navigation">
-          <a href="Home.html#journal-grid" class="nav-item">Photo Journal</a>
-          <a href="Home.html#featured" class="nav-item">Moonlit Picks</a>
+        <nav class="hidden lg:flex items-center gap-8 flex-1" aria-label="Primary left navigation">
+          <a href="index.html#journal-grid" class="nav-item">Photo Journal</a>
+          <a href="about.html" class="nav-item active" aria-current="page">About Whit</a>
         </nav>
 
         <!-- Mobile Hamburger Trigger -->
@@ -335,7 +335,7 @@
 
         <!-- Center Oversized Floating Circular Logo Medallion (Untouched) -->
         <a
-          href="Home.html"
+          href="index.html"
           aria-label="Whit's Angle of Life — Home"
           class="relative z-30 flex items-center justify-center shrink-0 translate-y-6 sm:translate-y-7 md:translate-y-9"
         >
@@ -353,11 +353,12 @@
         <!-- Right Navigation Links + Back Home Pill -->
         <div class="flex items-center justify-end gap-5 lg:gap-8 flex-1">
           <nav class="hidden lg:flex items-center gap-8" aria-label="Primary right navigation">
-            <a href="About.html" class="nav-item active" aria-current="page">About Whit</a>
+            <a href="equipment.html" class="nav-item">Gear</a>
+            <a href="socials.html" class="nav-item">Socials</a>
           </nav>
 
           <a
-            href="Home.html"
+            href="index.html"
             class="btn-mystic-pill px-4 sm:px-5 py-2.5 rounded-full text-xs font-semibold tracking-wider whitespace-nowrap"
           >
             ← Home
@@ -388,15 +389,18 @@
         </div>
 
         <nav class="flex flex-col gap-5" aria-label="Mobile navigation">
-          <a href="Home.html" class="nav-item">Home</a>
-          <a href="Home.html#journal-grid" class="nav-item">Photo Journal</a>
-          <a href="Home.html#featured" class="nav-item">Moonlit Picks</a>
-          <a href="About.html" onclick="toggleMobileMenu()" class="nav-item active" aria-current="page">✦ About Whit</a>
+          <a href="index.html" class="nav-item">Home</a>
+          <a href="index.html#journal-grid" class="nav-item">Photo Journal</a>
+          <a href="index.html#featured" class="nav-item">Moonlit Picks</a>
+          <a href="about.html" onclick="toggleMobileMenu()" class="nav-item active" aria-current="page">✦ About Whit</a>
+          <a href="equipment.html" class="nav-item">Gear</a>
+          <a href="socials.html" class="nav-item">Socials</a>
+          <a href="copyright.html" class="nav-item">Copyright</a>
         </nav>
       </div>
 
       <div class="pt-6 border-t border-[#C4A8F5]/15 space-y-3">
-        <a href="Home.html#journal-grid" class="btn-moon-gold block text-center w-full py-3 rounded-full text-xs tracking-wider uppercase">
+        <a href="index.html#journal-grid" class="btn-moon-gold block text-center w-full py-3 rounded-full text-xs tracking-wider uppercase">
           Wander The Photos
         </a>
         <p class="text-xs text-center text-[#9387AA]">Florida → Peoria, Illinois</p>
@@ -449,7 +453,7 @@
                   </div>
                   <p class="font-serif-display text-2xl text-[#F5EFE6] mb-2">Whit &amp; Her Husband</p>
                   <p class="text-xs text-[#C6BCD8] leading-relaxed max-w-[230px]">
-                    Save your photo in this folder as <code class="text-[#E8C374]">whit-and-husband.jpg</code> (or update the <code class="text-[#B088F9]">src</code> in About.html).
+                    Save your photo in this folder as <code class="text-[#E8C374]">whit-and-husband.jpg</code> (or update the <code class="text-[#B088F9]">src</code> in about.html).
                   </p>
                 </div>
 
@@ -510,7 +514,7 @@
                 </p>
               </div>
               <div class="flex flex-wrap items-center gap-3">
-                <a href="Home.html#journal-grid" class="btn-moon-gold px-7 py-3.5 rounded-full text-xs sm:text-sm tracking-wide inline-flex items-center gap-2">
+                <a href="index.html#journal-grid" class="btn-moon-gold px-7 py-3.5 rounded-full text-xs sm:text-sm tracking-wide inline-flex items-center gap-2">
                   <span>Wander The Photos</span>
                   <span aria-hidden="true">→</span>
                 </a>
@@ -680,7 +684,7 @@
               Head back to the photo journal for riverfront reflections, twilight moons, and colorful everyday corners.
             </p>
             <a
-              href="Home.html#journal-grid"
+              href="index.html#journal-grid"
               class="btn-moon-gold inline-block px-9 py-4 rounded-full text-xs sm:text-sm tracking-wide cursor-pointer"
             >
               Go To Photo Journal →
@@ -692,12 +696,12 @@
   </main>
 
   <!-- ========================================================================
-       7. FOOTER (MATCHED TO HOME.HTML, MAIN LOGO UNCHANGED)
+       7. FOOTER (MATCHED TO INDEX.HTML, MAIN LOGO UNCHANGED)
        ======================================================================== -->
   <footer class="pt-16 pb-12 px-5 sm:px-8 bg-[#08060E] border-t border-[#C4A8F5]/16">
     <div class="max-w-[1260px] mx-auto flex flex-col items-center text-center">
 
-      <a href="Home.html" aria-label="Back to Home" class="mb-7">
+      <a href="index.html" aria-label="Back to Home" class="mb-7">
         <div class="logo-medallion w-[148px] h-[148px] sm:w-[164px] sm:h-[164px] flex items-center justify-center">
           <img
             src="Wesbitelogo.jpg"
@@ -719,10 +723,13 @@
       <div class="w-full max-w-md h-[1.5px] mb-8" style="background: linear-gradient(90deg, transparent, #B088F9 28%, #E8C374 50%, #DF6E86 72%, transparent);"></div>
 
       <nav class="flex flex-wrap items-center justify-center gap-x-8 gap-y-3 mb-8" aria-label="Footer navigation">
-        <a href="Home.html" class="nav-item">Home</a>
-        <a href="Home.html#journal-grid" class="nav-item">Photo Journal</a>
-        <a href="Home.html#featured" class="nav-item">Moonlit Picks</a>
-        <a href="About.html" class="nav-item active" aria-current="page">About Whit</a>
+        <a href="index.html" class="nav-item">Home</a>
+        <a href="index.html#journal-grid" class="nav-item">Photo Journal</a>
+        <a href="index.html#featured" class="nav-item">Moonlit Picks</a>
+        <a href="about.html" class="nav-item active" aria-current="page">About Whit</a>
+        <a href="equipment.html" class="nav-item">Gear</a>
+        <a href="socials.html" class="nav-item">Socials</a>
+        <a href="copyright.html" class="nav-item">Copyright</a>
       </nav>
 
       <p class="text-xs text-[#9387AA]">
